@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Add Ads</title>
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="./js/script.js"></script>
+</head>
+<style>
+    body {
+            font-family: "Noto Kufi Arabic", sans-serif;
+        }
+    .rtl-list {
+    list-style-position: inside;
+    padding-right: 4em;
+}
+
+.rtl-list li {
+    position: relative;
+    padding-right: 1.5em; 
+    direction: rtl; 
+}
+
+.rtl-list li::before {
+    content: '•'; 
+    position: absolute;
+    right: 0;
+    color: white; 
+    font-size: 1.5em; 
+}
+
+</style>
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto">
+        <!-- Start Navbar -->
+                <nav class="bg-[#C10D10] dark:bg-gray-900 w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+                    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
+                        <a href="index.html" class="flex items-center space-x-3 md:order-2">
+                            <img src="./images/Group.png" class="h-12 w-8" alt="Logo">
+                        </a>
+                        <div class="flex md:order-1 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                            <button type="button" class="text-[#C10D10] bg-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center">تسجيل الدخول</button>
+                            <button id="menu-toggle" data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+                                <span class="sr-only">Open main menu</span>
+                                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                                </svg>
+                            </button>                    
+                        </div>
+                        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                            <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                                <li>
+                                    <a href="contactUs.html" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">تواصل معنا</a>
+                                </li>
+                                <li>
+                                    <a href="services.html" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">الخدمات </a>
+                                </li>
+                                <li>
+                                    <a href="addAds.html" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">اضف إعلان</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">الإعلانات </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+        <!-- End Navbar -->
+
+        <!-- Start Header -->
+            <div class="">
+                <div class="p-10">
+                    <h2 class="text-[#C10D10] font-bold lg:text-4xl mb-5">أختار باقتك الإعلانية</h2>
+                    <p class="lg:font-bold lg:text-2xl">انت الان مشترك في باقة :</p>
+                </div>
+                <!-- Slider -->
+                <div class="flex justify-center">
+                    <img src="./images/amico.png" alt="">
+                </div>
+            </div>
+        <!-- End Header -->
+
+        <!-- Start Second Part -->
+            <div class="">
+                <div class="p-10">
+                    <h2 class="text-[#C10D10] font-bold lg:text-4xl mb-5">إضافة إعلان</h2>
+                    <p class="font-bold lg:text-2xl">املأ تفاصيل سيارتك تلقائياً عن طريق إدخال رقم الهيكل / رقم VIN</p>
+                </div>
+                <div class="flex justify-center">
+                    <img src="./images/Carfinance-pana1.png" alt="Carfinance-pana1">
+                </div>
+                <div class="relative mt-5">
+                    <label for="numberof" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white "  >رقم الشاصي / القاعدة</label>
+                    <input type="text" id="numberof" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg  block w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 font-bold" placeholder="رقم الشاصي / القاعدة" required />
+                    <p class="absolute  mt-2" style="left: 50%;">لن يظهر هذا الرقم في إعلانك</p>
+                </div>
+                <div class="flex justify-center mt-10">
+                    <button type="submit" class="text-white bg-[#C10D10]  lg:font-medium rounded-lg text-sm lg:w-1/2 mt-5  px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">الملء التلقائي لتفاصيل سيارتي</button>
+                </div>
+                <div class="lg:pr-10">
+                    <h2 class="text-[#C10D10] font-bold lg:text-4xl mb-5 mt-5">ملء التفاصيل يدوياً</h2>
+                    <p class="lg:font-bold lg:text-2xl">عرفنا أكثر على سيارتك !</p>
+                    <div class="lg:p-10">
+                        <div class="grid gap-6 mb-6 md:grid-cols-2">
+                            
+                            <form class="max-w-sm ">
+                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">الامارة</label>
+                                <select id="countries" class="bg-white border border-gray-300 text-[#929191] text-sm rounded-lg  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option selected>اختار الامارة</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="FR">France</option>
+                                <option value="DE">Germany</option>
+                                </select>
+                            </form>
+        
+                            <form class="max-w-sm ">
+                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">المنطقة</label>
+                                <select id="countries" class="bg-white border border-gray-300 text-[#929191] text-sm rounded-lg  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option selected>اختار المنطقة</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="FR">France</option>
+                                <option value="DE">Germany</option>
+                                </select>
+                            </form>
+                            <form class="max-w-sm ">
+                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> الشركة المصنعة</label>
+                                <select id="countries" class="bg-white border border-gray-300 text-[#929191] text-sm rounded-lg  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option selected>اختار الشركة المصنعة</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="FR">France</option>
+                                <option value="DE">Germany</option>
+                                </select>
+                            </form>
+        
+                            <form class="max-w-sm ">
+                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">الموديل</label>
+                                <select id="countries" class="bg-white border border-gray-300 text-[#929191] text-sm rounded-lg  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option selected>اختار الموديل</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="FR">France</option>
+                                <option value="DE">Germany</option>
+                                </select>
+                            </form>
+                            <form class="max-w-sm ">
+                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">الفئة</label>
+                                <select id="countries" class="bg-white border border-gray-300 text-[#929191] text-sm rounded-lg  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option selected>اختار الفئة</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="FR">France</option>
+                                <option value="DE">Germany</option>
+                                </select>
+                            </form>
+        
+                            <form class="max-w-sm ">
+                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">المواصفات الإقليمية</label>
+                                <select id="countries" class="bg-white border border-gray-300 text-[#929191] text-sm rounded-lg  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option selected>اختار المواصفات الإقليمية</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="FR">France</option>
+                                <option value="DE">Germany</option>
+                                </select>
+                            </form>
+                            <form class="max-w-sm ">
+                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> نوع الجسم</label>
+                                <select id="countries" class="bg-white border border-gray-300 text-[#929191] text-sm rounded-lg  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option selected>اختار نوع الجسم</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="FR">France</option>
+                                <option value="DE">Germany</option>
+                                </select>
+                            </form>
+                            <form class="max-w-sm ">
+                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">جهة القيادة</label>
+                                <select id="countries" class="bg-white border border-gray-300 text-[#929191] text-sm rounded-lg  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option selected>اختار جهة القيادة</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="FR">France</option>
+                                <option value="DE">Germany</option>
+                                </select>
+                            </form>    <form class="max-w-sm ">
+                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">عدد الابواب</label>
+                                <select id="countries" class="bg-white border border-gray-300 text-[#929191] text-sm rounded-lg  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option selected>اختار عدد الابواب</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="FR">France</option>
+                                <option value="DE">Germany</option>
+                                </select>
+                            </form>    <form class="max-w-sm ">
+                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">عدد المقاعد</label>
+                                <select id="countries" class="bg-white border border-gray-300 text-[#929191] text-sm rounded-lg  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option selected>اختار عدد المقاعد</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="FR">France</option>
+                                <option value="DE">Germany</option>
+                                </select>
+                            </form>    <form class="max-w-sm ">
+                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">السنة</label>
+                                <select id="countries" class="bg-white border border-gray-300 text-[#929191] text-sm rounded-lg  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option selected>اختار السنة</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="FR">France</option>
+                                <option value="DE">Germany</option>
+                                </select>
+                            </form>    <form class="max-w-sm ">
+                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">الكيلو مترات</label>
+                                <select id="countries" class="bg-white border border-gray-300 text-[#929191] text-sm rounded-lg  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option selected>اكتب الكيلو مترات</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="FR">France</option>
+                                <option value="DE">Germany</option>
+                                </select>
+                            </form> 
+                            </form>    <form class="max-w-sm ">
+                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">السعر</label>
+                                <select id="countries" class="bg-white border border-gray-300 text-[#929191] text-sm rounded-lg  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option selected>اكتب السعر</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="FR">France</option>
+                                <option value="DE">Germany</option>
+                                </select>
+                            </form>
+                            <form class="max-w-sm ">
+                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">نوع البائع</label>
+                                <select id="countries" class="bg-white border border-gray-300 text-[#929191] text-sm rounded-lg  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option selected>اختار نوع البائع</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="FR">France</option>
+                                <option value="DE">Germany</option>
+                                </select>
+                            </form> 
+                            <form class="max-w-sm ">
+                                <div>
+                                    <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">رقم التواصل</label>
+                                    <input type="" id="phone" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="اكتب رقم الهاتف"  required />
+                                </div>
+                            </form> 
+                            <form class="max-w-sm">
+                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> كيف تفضل التواصل معك ؟</label>
+                               <div class="flex gap-3">
+                                <div class="flex items-center mb-4 bg-white rounded-md p-2 gap-2">
+                                    <input type="checkbox" id="phone" name="phone" class="mr-2">
+                                    <label for="phone" class="text-sm text-gray-700 dark:text-white">الهاتف</label>
+                                </div>
+                                <div class="flex items-center mb-4 bg-white rounded-md p-2 gap-2">
+                                    <input type="checkbox" id="whatsapp" name="whatsapp" class="mr-2">
+                                    <label for="whatsapp" class="text-sm text-gray-700 dark:text-white">واتساب</label>
+                                </div>
+                                <div class="flex items-center mb-4 bg-white rounded-md p-2 gap-2">
+                                    <input type="checkbox" id="both" name="both" class="mr-2">
+                                    <label for="both" class="text-sm text-gray-700 dark:text-white">الاثنين معاً</label>
+                                </div>
+                               </div>
+                            </form>
+                            
+                    
+                            
+                        </div>
+                        <div class="flex justify-center">
+                            <a href="./finishAds.html"class="text-white bg-[#C10D10] font-medium rounded-lg text-sm w-1/2 px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                <button type="submit" >
+                                    التالي
+                                </button>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        <!-- End Second Part -->
+
+        <!-- Start Footer --> 
+            <footer class="bg-[#C10D10] mt-5">
+            <div class="flex flex-col md:flex-row-reverse items-center md:justify-between">    
+                <ul class="flex  flex-row md:absolute md:right-44 gap-5 md:gap-52 font-bold text-xl md:text-2xl text-white">
+                <li>من نحن</li> 
+                <li>اتصل بنا</li>
+                <li>تواصل معنا</li>
+                </ul>
+                <div class="mb-5 md:mb-0 p-5">
+                    <img src="./images/Group2.png" alt="logp">
+                </div>
+            </div>
+    
+            
+    
+            <div class="flex flex-col md:flex-row mt-5 mb-5 gap-5">
+                <div class="text-right">
+                    <h2 class="text-white text-[18px] pr-[1em] md:pr-[4em]">التطبيق الاول من نوعه الذي يقدم خدمات متكاملة</h2>
+                    <ul class="rtl-list text-white text-[18px]">
+                        <li>بيع وشراء السيارات</li>
+                        <li>خدمات أخرى متعلقة بالسيارات</li>
+                        <li>تصميم إعلان سيارات باستخدام الذكاء الاصطناعي (منشور/قصة)</li>
+                        <li>استخدام رقم الهيكل VIN لملء بيانات السيارة</li>
+                    </ul>
+                </div>
+    
+                <!-- Social Media -->
+                <div class="flex flex-col ">
+                    <div class="flex items-center gap-5" >
+                        <div class="font-normal text-white grid gap-4 mr-5">
+                            <p>فيسبوك</p>
+                            <p> واتساب</p>
+                            <p>تويتر</p>
+                        </div>
+                        <div class="grid gap-6 text-white">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                            <ion-icon name="logo-whatsapp"></ion-icon>
+                            <ion-icon name="logo-twitter"></ion-icon>
+    
+                        </div>
+                    </div>
+                </div>
+    
+                <form class="w-full md:w-auto p-5">
+                    <div>
+                        <div>
+                            <input type="text" id="first_name" class="bg-white border-gray-300 text-gray-900 text-sm rounded-lg w-full md:w-[300px] mb-5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-right" placeholder="الاسم" required />
+                        </div>
+                        <div>
+                            <input type="text" id="last_name" class="bg-white border-gray-300 text-gray-900 text-sm rounded-lg w-full md:w-[300px] mb-5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-right" placeholder="الايميل" required />
+                        </div>
+                        <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-right" placeholder="اترك تعليقك"></textarea>
+                    </div>
+                </form>
+            </div>
+    
+            <hr>
+            <div class="mt-5 mr-5 md:mr-10 md:flex items-center justify-between" >
+                <div class="flex items-center justify-between ow mb-5" >
+                    <h2 class="text-white font-normal">طورت بواسطة : </h2>
+                    <img src="./images/Group186.png" alt="Group186">
+                </div>
+                <div class="flex justify-between ow font-normal text-white" >
+                    <p>جميع الحقوق محفوظة</p>
+                    <a href="" style="text-decoration: underline;">2G9 UAE.</a>
+                </div>
+            </div>
+            </footer>
+        <!-- End Footer -->
+    </div>
+</body>
+</html>
