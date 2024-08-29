@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"  rel="stylesheet" />
+
     <title>Details</title>
     <!-- Icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -42,8 +44,7 @@
 
 
 </style>
-<body>
-    <div class="container mx-auto">
+<body class="bg-gray-50">
         <!-- Start Navbar -->
             <nav class="bg-[#C10D10] dark:bg-gray-900 w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
                 <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
@@ -62,47 +63,87 @@
                     <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                         <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                             <li>
-                                <a href="contactUs.html" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">تواصل معنا</a>
+                                <a href="#" class="block py-2 px-3 text-white rounded">الإعلانات </a>
                             </li>
                             <li>
-                                <a href="services.html" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">الخدمات </a>
+                                <a href="addAds.html" class="block py-2 px-3 text-white rounded">اضف إعلان</a>
                             </li>
                             <li>
-                                <a href="addAds.html" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">اضف إعلان</a>
+                                <a href="services.html" class="block py-2 px-3 text-white rounded">الخدمات </a>
                             </li>
                             <li>
-                                <a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">الإعلانات </a>
+                                <a href="contactUs.html" class="block py-2 px-3 text-white rounded">تواصل معنا</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
         <!-- End Navbar -->
+        <div class="container mx-auto">
 
         <!-- Start Slider -->
-            <img src="./images/Screenshot 2024-08-28 161737.png" alt="" style="    width: -webkit-fill-available;">
+            <div id="indicators-carousel" class="relative w-full mt-5 mb-5" data-carousel="static">
+                <!-- Carousel wrapper -->
+                <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                    <!-- Item 1 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                        <img src="./images/header.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Rectangle2">
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="./images/header.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Rectangle2">
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="./images/header.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Rectangle2">
+                    </div>
+                </div>
+                <!-- Slider indicators -->
+                <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2">
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                </div>
+                <!-- Slider controls -->
+                <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                        </svg>
+                        <span class="sr-only">Previous</span>
+                    </span>
+                </button>
+                <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                        </svg>
+                        <span class="sr-only">Next</span>
+                    </span>
+                </button>
+            </div>
         <!-- End Slider -->
 
         <!-- Start Content -->
             <div class="">
-                <div class=" pr-20 flex gap-20">
+                <div class="lg:pr-20 lg:flex gap-20">
                     <h2 class="font-bold">تسلا موديل اكس - بحالة جيدة جدا شامل الشاحن الاصلي ومحطة شحن المنزل</h2>
                     <div class="flex gap-10 border border-[#BCBEC0] rounded-md p-1">
-                        <p class="flex items-center gap-3 text-[#6D6E70] font-bold">
+                        <p class="flex items-center gap-3 text-[#6D6E70] lg:font-bold text-[11px] lg:text-xl">
                             خليجي
                             <ion-icon name="globe-outline"></ion-icon>
                         </p>
-                        <p class="flex items-center gap-3 text-[#6D6E70] font-bold">
+                        <p class="flex items-center gap-3 text-[#6D6E70] lg:font-bold text-[11px] lg:text-xl">
                             85,000 KM
                             <ion-icon name="time-outline"></ion-icon>
                         </p>
-                        <p class="flex items-center gap-3 text-[#6D6E70] font-bold">
+                        <p class="flex items-center gap-3 text-[#6D6E70] lg:font-bold text-[11px] lg:text-xl">
                             2024
                             <ion-icon name="calendar-clear-outline"></ion-icon>
                         </p>
                     </div>
                 </div>
-                <div class="pr-20 flex gap-2">
+                <div class="lg:pr-20 flex gap-2">
                     <p class="text-[#C10D10] font-bold">80,000 </p>
                     <span>د.إ</span>
                 </div>
@@ -126,7 +167,7 @@
                                     4 ابواب
                                 </td>
                             </tr>
-                            <tr class="bg-white dark:bg-gray-800">
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                 <th scope="row" class="px-6 py-4 font-medium text-black whitespace-nowrap dark:text-white">
                                     سعة البطارية ( كيلو  وات  ساعة )
                                 </th>
@@ -230,7 +271,7 @@
                                         <img src="./images/Ellipse1830.png" alt="Ellipse1830">
                                         <div class="">
                                             <h2>سلطان</h2>
-                                            <p class="font-normal">حساب موثق</p>
+                                            <p class="font-normal text-[7px]">حساب موثق</p>
                                         </div>
                                     </div>
                                 </th>
@@ -268,25 +309,14 @@
 
             </div>
         <!-- End Content -->
-
+    </div>
         <!-- Start Footer --> 
             <footer class="bg-[#C10D10] mt-5">
-            <div class="flex flex-col md:flex-row-reverse items-center md:justify-between">    
-                <ul class="flex  flex-row md:absolute md:right-44 gap-5 md:gap-52 font-bold text-xl md:text-2xl text-white">
-                <li>من نحن</li> 
-                <li>اتصل بنا</li>
-                <li>تواصل معنا</li>
-                </ul>
-                <div class="mb-5 md:mb-0 p-5">
-                    <img src="./images/Group2.png" alt="logp">
-                </div>
-            </div>
-    
-            
-    
-            <div class="flex flex-col md:flex-row mt-5 mb-5 gap-5">
-                <div class="text-right">
-                    <h2 class="text-white text-[18px] pr-[1em] md:pr-[4em]">التطبيق الاول من نوعه الذي يقدم خدمات متكاملة</h2>
+            <div class="lg:flex ">
+
+                <div class="p-5">
+                    <h2 class="font-bold text-xl md:text-2xl text-white mb-5">من نحن</h2>
+                    <h6 class="text-white text-[18px] ">التطبيق الاول من نوعه الذي يقدم خدمات متكاملة</h6>
                     <ul class="rtl-list text-white text-[18px]">
                         <li>بيع وشراء السيارات</li>
                         <li>خدمات أخرى متعلقة بالسيارات</li>
@@ -294,51 +324,62 @@
                         <li>استخدام رقم الهيكل VIN لملء بيانات السيارة</li>
                     </ul>
                 </div>
-    
-                <!-- Social Media -->
-                <div class="flex flex-col ">
-                    <div class="flex items-center gap-5" >
-                        <div class="font-normal text-white grid gap-4 mr-5">
-                            <p>فيسبوك</p>
-                            <p> واتساب</p>
-                            <p>تويتر</p>
-                        </div>
-                        <div class="grid gap-6 text-white">
-                            <ion-icon name="logo-facebook"></ion-icon>
-                            <ion-icon name="logo-whatsapp"></ion-icon>
-                            <ion-icon name="logo-twitter"></ion-icon>
-    
+
+                <div class="p-5">
+                    <h2 class="font-bold text-xl md:text-2xl text-white mb-5"> تواصل معنا</h2>
+                    <div class="flex flex-col ">
+                        <div class="flex items-center gap-5" >
+                            <div class="font-normal text-white grid gap-4">
+                                <p>فيسبوك</p>
+                                <p> واتساب</p>
+                                <p>تويتر</p>
+                            </div>
+                            <div class="grid gap-6 text-white">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                                <ion-icon name="logo-whatsapp"></ion-icon>
+                                <ion-icon name="logo-twitter"></ion-icon>
+        
+                            </div>
                         </div>
                     </div>
                 </div>
-    
-                <form class="w-full md:w-auto p-5">
-                    <div>
+
+                <div class="p-5">
+                    <h2 class="font-bold text-xl md:text-2xl text-white mb-5">اتصل بنا</h2>
+                    <form class="w-full md:w-auto  ">
                         <div>
-                            <input type="text" id="first_name" class="bg-white border-gray-300 text-gray-900 text-sm rounded-lg w-full md:w-[300px] mb-5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-right" placeholder="الاسم" required />
+                            <div>
+                                <input type="text" id="first_name" class="bg-white border-gray-300 text-gray-900 text-sm rounded-lg w-full md:w-[300px] mb-5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-right" placeholder="الاسم" required />
+                            </div>
+                            <div>
+                                <input type="text" id="last_name" class="bg-white border-gray-300 text-gray-900 text-sm rounded-lg w-full md:w-[300px] mb-5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-right" placeholder="الايميل" required />
+                            </div>
+                            <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-right" placeholder="اترك تعليقك"></textarea>
                         </div>
-                        <div>
-                            <input type="text" id="last_name" class="bg-white border-gray-300 text-gray-900 text-sm rounded-lg w-full md:w-[300px] mb-5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-right" placeholder="الايميل" required />
-                        </div>
-                        <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-right" placeholder="اترك تعليقك"></textarea>
-                    </div>
-                </form>
+                    </form>
+                </div>
+
+                <div class="pt-2">
+                    <img src="./images/Group2.png" alt="">
+                </div>
             </div>
-    
+
             <hr>
+
             <div class="mt-5 mr-5 md:mr-10 md:flex items-center justify-between" >
                 <div class="flex items-center justify-between ow mb-5" >
                     <h2 class="text-white font-normal">طورت بواسطة : </h2>
                     <img src="./images/Group186.png" alt="Group186">
                 </div>
-                <div class="flex justify-between ow font-normal text-white" >
+                <div class="flex justify-between ow font-normal text-white ml-5" >
                     <p>جميع الحقوق محفوظة</p>
                     <a href="" style="text-decoration: underline;">2G9 UAE.</a>
                 </div>
-            </div>
+            </div> 
+
             </footer>
         <!-- End Footer -->
+        <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
 
-    </div>
 </body>
 </html>
