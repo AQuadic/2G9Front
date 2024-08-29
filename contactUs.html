@@ -42,7 +42,7 @@
 </style>
 <body class="bg-gray-50">
         <!-- Start Navbar -->
-                <nav class="bg-[#C10D10] dark:bg-gray-900 w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+                <nav class="bg-[#C10D10]  w-full z-20 top-0 start-0 border-b border-gray-200 ">
                     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
                         <a href="index.html" class="flex items-center space-x-3 md:order-2">
                             <img src="./images/Group.png" class="h-12 w-8" alt="Logo">
@@ -57,7 +57,7 @@
                             </button>                    
                         </div>
                         <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-                            <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                            <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
                                 <li>
                                     <a href="#" class="block py-2 px-3 text-white rounded">الإعلانات </a>
                                 </li>
@@ -84,22 +84,22 @@
                     <div class="grid gap-6 mb-6 md:grid-cols-2">
                         <div>
                             <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">الاسم</label>
-                            <input type="text" id="first_name"  class="bg-white  text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all" placeholder="اكتب اسمك" required />
+                            <input type="text" id="first_name"  class="bg-white  text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all outline-none" placeholder="اكتب اسمك" required />
                         </div>
                         
                         <div>
                             <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">الايميل</label>
-                            <input type="text" id="last_name"  class="bg-white  text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all" placeholder="اكتب الايميل" required />
+                            <input type="text" id="last_name"  class="bg-white  text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all outline-none" placeholder="اكتب الايميل" required />
                         </div>
 
                         <div>
                             <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">رقم الهاتف</label>
-                            <input type="" id="phone"  class="bg-white  text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all" placeholder="اكتب رقم الهاتف" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required />
+                            <input type="" id="phone"  class="bg-white  text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all outline-none" placeholder="اكتب رقم الهاتف" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required />
                         </div>
 
                         <div>
                             <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">تعليقك</label>
-                            <textarea id="message" rows="4"  class="bg-white  text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all" placeholder="اترك تعليقك"></textarea>
+                            <textarea id="message" rows="4"  class="bg-white  text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all outline-none" placeholder="اترك تعليقك"></textarea>
                         </div>
                     </div>
                     <div class="flex justify-center">
@@ -114,7 +114,7 @@
     </div>
 
         <!-- Start Footer --> 
-        <footer class="bg-[#C10D10] mt-5">
+            <footer class="bg-[#C10D10] mt-5">
             <div class="lg:flex ">
 
                 <div class="p-5">
@@ -152,12 +152,12 @@
                     <form class="w-full md:w-auto  ">
                         <div>
                             <div>
-                                <input type="text" id="first_name" class="bg-white border-gray-300 text-gray-900 text-sm rounded-lg w-full md:w-[300px] mb-5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-right" placeholder="الاسم" required />
+                                <input type="text" id="first_name" class="bg-white border-gray-300 text-gray-900 text-sm rounded-lg w-full md:w-[300px] mb-5 p-2.5  text-right outline-none" placeholder="الاسم" required />
                             </div>
                             <div>
-                                <input type="text" id="last_name" class="bg-white border-gray-300 text-gray-900 text-sm rounded-lg w-full md:w-[300px] mb-5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-right" placeholder="الايميل" required />
+                                <input type="text" id="last_name" class="bg-white border-gray-300 text-gray-900 text-sm rounded-lg w-full md:w-[300px] mb-5 p-2.5  text-right outline-none" placeholder="الايميل" required />
                             </div>
-                            <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-right" placeholder="اترك تعليقك"></textarea>
+                            <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 text-right outline-none" placeholder="اترك تعليقك"></textarea>
                         </div>
                     </form>
                 </div>
