@@ -17,6 +17,42 @@
     <script src="./js/script.js"></script>
 </head>
 <style>
+     html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
     body {
             font-family: "Noto Kufi Arabic", sans-serif;
         }
@@ -78,16 +114,7 @@
         <!-- End Navbar -->
         <div class="container mx-auto">
         <!-- Start Header -->
-            <div class="">
-                <div class="p-10">
-                    <h2 class="text-[#C10D10] font-bold lg:text-4xl mb-5">أختار باقتك الإعلانية</h2>
-                    <p class="lg:font-bold lg:text-2xl">انت الان مشترك في باقة :</p>
-                </div>
-                <!-- Slider -->
-                <div class="flex justify-center">
-                    <img src="./images/amico.png" alt="">
-                </div>
-            </div>
+    
         <!-- End Header -->
 
         <!-- Start Second Part -->
@@ -362,5 +389,7 @@
 
             </footer>
         <!-- End Footer -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
 </body>
 </html>
