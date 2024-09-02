@@ -13,46 +13,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css">
 
-    <script src="./js/script.js"></script>
 </head>
 <style>
-     html,
-    body {
-      position: relative;
-      height: 100%;
-    }
-
-    body {
-      background: #eee;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
-      margin: 0;
-      padding: 0;
-    }
-
-    swiper-container {
-      width: 100%;
-      height: 100%;
-    }
-
-    swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  
     body {
             font-family: "Noto Kufi Arabic", sans-serif;
         }
@@ -114,7 +80,59 @@
         <!-- End Navbar -->
         <div class="container mx-auto">
         <!-- Start Header -->
-    
+            <section >
+                <div class="p-10">
+                    <h2 class="text-[#C10D10] font-bold lg:text-4xl mb-5">أختار باقتك الإعلانية</h2>
+                    <p class="font-bold lg:text-2xl">انت الان مشترك في باقة : </p>
+                </div>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="content swiper-slide bg-white border-[0.2rem] border-opacity-10 border-white rounded-lg border-b-[0.4rem] border-t-[0.4rem] overflow-hidden h-[28rem] w-[25rem]">
+                            <img src="Image2.jpg" alt="" class="w-full rounded-b-lg">
+                            <div class="text-content flex flex-col justify-center items-center">
+                                <h3 class="text-[1.7rem] text-white bg-[#39CE8A] w-full flex justify-center p-5 font-medium">الباقة الذهبية</h3>
+                                <p class="max-w-[22rem] text-[0.8rem] font-bold text-center p-5  mt-10">هذة باقة العميل الذهبية</p>
+                                <p class="max-w-[22rem] text-[0.8rem] font-bold text-center p-3">200 درهم</p>
+                                <button class="btn bg-[#39CE8A] py-[0.5rem] border-2 border-[#39CE8A] outline-none text-[0.8rem] rounded-lg mt-10 text-white w-3/5  cursor-pointer">استخدم هذه الباقة</button>
+                            </div>
+                        </div>
+
+                        <div class="content swiper-slide bg-white border-[0.2rem] border-opacity-10 border-white rounded-lg border-b-[0.4rem] border-t-[0.4rem] overflow-hidden h-[28rem] w-[25rem]">
+                            <img src="Image2.jpg" alt="" class="w-full rounded-b-lg">
+                            <div class="text-content flex flex-col justify-center items-center">
+                                <h3 class="text-[1.7rem] text-white bg-[#39CE8A] w-full flex justify-center p-5 font-medium">الباقة الترحيبية</h3>
+                                <p class="max-w-[22rem] text-[0.8rem] font-bold text-center p-5">هذة باقة العميل المجانية</p>
+                                <p class="max-w-[22rem] text-[0.8rem] font-bold text-center p-3">مجاناً</p>
+                                <div class="flex gap-10">
+                                    <div class="flex flex-col items-center justify-center text-white rounded-md gap-5 bg-[#C10D10] w-40 h-36">
+                                        <p>تم استخدام</p>
+                                        <p class="font-bold">0</p>
+                                        <p>ads</p>
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center text-white rounded-md gap-5 bg-[#39CE8A] w-40 h-36">
+                                        <p>متبقي</p>
+                                        <p class="font-bold">30</p>
+                                        <p>ads</p>
+                                    </div>
+                                </div>
+                                <button class="btn bg-[#39CE8A] py-[0.5rem] border-2 border-[#39CE8A] outline-none text-[0.8rem] rounded-lg mt-10 text-white w-3/5  cursor-pointer">استخدم هذه الباقة</button>
+                            </div>
+                        </div>
+
+                        <div class="content swiper-slide bg-white border-[0.2rem] border-opacity-10 border-white rounded-lg border-b-[0.4rem] border-t-[0.4rem] overflow-hidden h-[28rem] w-[25rem]">
+                            <img src="Image2.jpg" alt="" class="w-full rounded-b-lg">
+                            <div class="text-content flex flex-col justify-center items-center">
+                                <h3 class="text-[1.7rem] text-white bg-[#39CE8A] w-full flex justify-center p-5 font-medium ">الباقة الفضية</h3>
+                                <p class="max-w-[22rem] text-[0.8rem] font-bold text-center p-5  mt-10">هذة باقة العميل الفضية</p>
+                                <p class="max-w-[22rem] text-[0.8rem] font-bold text-center p-3">مجاناً</p>
+                                <button class="btn bg-[#39CE8A] py-[0.5rem] border-2 border-[#39CE8A] outline-none text-[0.8rem] rounded-lg mt-10 text-white w-3/5  cursor-pointer">استخدم هذه الباقة</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <!-- End Header -->
+
         <!-- End Header -->
 
         <!-- Start Second Part -->
@@ -389,7 +407,9 @@
 
             </footer>
         <!-- End Footer -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="./js/script.js"></script>
 
 </body>
 </html>
