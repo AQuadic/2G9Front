@@ -20,64 +20,45 @@
     body {
             font-family: "Noto Kufi Arabic", sans-serif;
         }
-    .rtl-list {
-list-style-position: inside;
-padding-right: 4em;
-}
-
-.rtl-list li {
-position: relative;
-padding-right: 1.5em; 
-direction: rtl; 
-}
-
-.rtl-list li::before {
-content: '•'; 
-position: absolute;
-right: 0;
-color: white; 
-font-size: 1.5em; 
-}
-
 </style>
 <body class="bg-gray-50">
         <!-- Start Navbar -->
-        <nav class="bg-[#C10D10]  w-full z-20 top-0 start-0 border-b border-gray-200 ">
-            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
-                <a href="index.html" class="flex items-center space-x-3 md:order-2">
-                    <img src="./images/Group.png" class="h-12 w-8" alt="Logo">
-                </a>
-                <div class="flex md:order-1 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                    <button type="button" class="text-[#C10D10] bg-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center">تسجيل الدخول</button>
-                    <button id="menu-toggle" data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                        </svg>
-                    </button>                    
+            <nav class="bg-[#C10D10]  w-full z-20 top-0 start-0 border-b border-gray-200 ">
+                <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
+                    <a href="index.html" class="flex items-center space-x-3 md:order-2">
+                        <img src="./images/Group.png" class="h-12 w-8" alt="Logo">
+                    </a>
+                    <div class="flex md:order-1 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                        <button type="button" class="text-[#C10D10] bg-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center">تسجيل الدخول</button>
+                        <button id="menu-toggle" data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                            </svg>
+                        </button>                    
+                    </div>
+                    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+                            <li>
+                                <a href="#" class="block py-2 px-3 text-white rounded">الإعلانات </a>
+                            </li>
+                            <li>
+                                <a href="addAds.html" class="block py-2 px-3 text-white rounded">اضف إعلان</a>
+                            </li>
+                            <li>
+                                <a href="services.html" class="block py-2 px-3 text-white rounded">الخدمات </a>
+                            </li>
+                            <li>
+                                <a href="contactUs.html" class="block py-2 px-3 text-white rounded">تواصل معنا</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-                    <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
-                        <li>
-                            <a href="#" class="block py-2 px-3 text-white rounded">الإعلانات </a>
-                        </li>
-                        <li>
-                            <a href="addAds.html" class="block py-2 px-3 text-white rounded">اضف إعلان</a>
-                        </li>
-                        <li>
-                            <a href="services.html" class="block py-2 px-3 text-white rounded">الخدمات </a>
-                        </li>
-                        <li>
-                            <a href="contactUs.html" class="block py-2 px-3 text-white rounded">تواصل معنا</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+            </nav>
         <!-- End Navbar -->
-        <div class="container mx-auto">
+        
         <!-- Start Header -->
-            <header>
+            <header class="container mx-auto">
                 <div class="p-10">
                     <h2 class="text-[#C10D10] font-bold lg:text-4xl mb-5">خدمات غسيل السيارات</h2>
                     <p class="font-bold lg:text-2xl">خدمة غسيل السيارات توفر لك فرصة للحفاظ على مظهر سيارتك بشكل رائع و نظيف .<br>
@@ -90,78 +71,78 @@ font-size: 1.5em;
         <!-- End Header -->
 
         <!-- Start Cards -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                <img class="w-full" src="./images/image3.png" alt="Tesla Model X">
-                <ion-icon name="heart-outline" class="absolute top-0 left-0 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
-                <div class="p-6">
-                    <h2 class="font-bold text-xl mb-2 text-right">غسيل السيارات Car Wash</h2>
-                    <div class="flex justify-between items-center mt-6 mb-4">
-                        <p class="font-bold text-2xl">250 د.إ</p>
-                        <a href="washing.html">
-                            <a href="./washing.html">
-                                <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md">
-                                مزيد التفاصيل
-                            </button>
+            <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
+                    <img class="w-full" src="./images/image3.png" alt="Tesla Model X">
+                    <ion-icon name="heart-outline" class="absolute top-0 left-0 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
+                    <div class="p-6">
+                        <h2 class="font-bold text-xl mb-2 text-right">غسيل السيارات Car Wash</h2>
+                        <div class="flex justify-between items-center mt-6 mb-4">
+                            <p class="font-bold text-2xl">250 د.إ</p>
+                            <a href="washing.html">
+                                <a href="./washing.html">
+                                    <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md">
+                                    مزيد التفاصيل
+                                </button>
+                                </a>
                             </a>
-                        </a>
-                    </div>
-                    <hr>
-                    <div class="flex items-center text-[#837F7F] mt-2 gap-2 text-[18px] font-bold">
-                        <ion-icon name="location-outline"></ion-icon>
-                        <p>دبي - رأس الخور</p>
+                        </div>
+                        <hr>
+                        <div class="flex items-center text-[#837F7F] mt-2 gap-2 text-[18px] font-bold">
+                            <ion-icon name="location-outline"></ion-icon>
+                            <p>دبي - رأس الخور</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-    
-            <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                <img class="w-full" src="./images/image2.png" alt="Tesla Model X">
-                <ion-icon name="heart-outline" class="absolute top-0 left-0 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
-                <div class="p-6">
-                    <h2 class="font-bold text-xl mb-2 text-right">غسيل السيارات Car Wash</h2>
-                    <div class="flex justify-between items-center mt-4 mb-4">
-                        <p class="font-bold text-2xl">250 د.إ</p>
-                        <a href="washing.html">
-                            <a href="./washing.html">
-                                <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md">
-                                مزيد التفاصيل
-                            </button>
+        
+                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
+                    <img class="w-full" src="./images/image2.png" alt="Tesla Model X">
+                    <ion-icon name="heart-outline" class="absolute top-0 left-0 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
+                    <div class="p-6">
+                        <h2 class="font-bold text-xl mb-2 text-right">غسيل السيارات Car Wash</h2>
+                        <div class="flex justify-between items-center mt-4 mb-4">
+                            <p class="font-bold text-2xl">250 د.إ</p>
+                            <a href="washing.html">
+                                <a href="./washing.html">
+                                    <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md">
+                                    مزيد التفاصيل
+                                </button>
+                                </a>
                             </a>
-                        </a>
+                        </div>
+                        <hr>
+                        <div class="flex items-center text-[#837F7F] mt-2 gap-2 text-[18px] font-bold">
+                            <ion-icon name="location-outline"></ion-icon>
+                            <p>الشارقة</p>
+                        </div>
                     </div>
-                    <hr>
-                    <div class="flex items-center text-[#837F7F] mt-2 gap-2 text-[18px] font-bold">
-                        <ion-icon name="location-outline"></ion-icon>
-                        <p>الشارقة</p>
+                </div>
+        
+                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
+                    <img class="w-full" src="./images/image.png" alt="Tesla Model X">
+                    <ion-icon name="heart-outline" class="absolute top-0 left-0 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
+                    <div class="p-6">
+                        <h2 class="font-bold text-xl mb-2 text-right">غسيل السيارات Car Wash</h2>
+                        <div class="flex justify-between items-center mt-6 mb-4">
+                            <p class="font-bold text-2xl">250 د.إ</p>
+                            <a href="washing.html">
+                                <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md">
+                                    مزيد التفاصيل
+                                </button>
+                            </a>
+                        </div>
+                        <hr>
+                        <div class="flex items-center text-[#837F7F] mt-2 gap-2 text-[18px] font-bold">
+                            <ion-icon name="location-outline"></ion-icon>
+                            <p>عجمان</p>
+                        </div>
                     </div>
                 </div>
             </div>
-    
-            <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                <img class="w-full" src="./images/image.png" alt="Tesla Model X">
-                <ion-icon name="heart-outline" class="absolute top-0 left-0 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
-                <div class="p-6">
-                    <h2 class="font-bold text-xl mb-2 text-right">غسيل السيارات Car Wash</h2>
-                    <div class="flex justify-between items-center mt-6 mb-4">
-                        <p class="font-bold text-2xl">250 د.إ</p>
-                        <a href="washing.html">
-                            <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md">
-                                مزيد التفاصيل
-                            </button>
-                        </a>
-                    </div>
-                    <hr>
-                    <div class="flex items-center text-[#837F7F] mt-2 gap-2 text-[18px] font-bold">
-                        <ion-icon name="location-outline"></ion-icon>
-                        <p>عجمان</p>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- End Cards -->
 
         <!-- Start Second Part -->
-            <header>
+            <header class="container mx-auto">
                 <div class="p-10">
                     <h2 class="text-[#C10D10] font-bold lg:text-4xl mb-5">خدمات صيانة السيارات</h2>
                     <p class="font-bold lg:text-2xl">
@@ -176,229 +157,228 @@ font-size: 1.5em;
         <!-- End Second Part -->
 
         <!-- Start Second Cards -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                    <img class="w-full" src="./images/image4.png" alt="image4">
-                    <ion-icon name="heart-outline" class="absolute top-0 left-0 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
-                    <div class="p-6">
-                        <h2 class="font-bold text-xl mb-2 text-right">فيوتشر لصيانة السيارات</h2>
-                        <p>سيقدم المعرض كافة التقنيات الجديدة في مجال السيارات، والحلول للمستهلكين 
-                            الذين يرغبون في شراء سيارة كهربائية، 
-                            وكل ذلك بأسعار خاصة ومغرية سيقدم المعرض كافة
-                            </p>
-                        <div class="flex justify-between items-center mt-6 mb-4">
-                            <a href="./serving.html">
-                                <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md">
-                                مزيد التفاصيل
-                            </button>
-                            </a>
-                        </div>
-                        <hr>
-                        <div class="flex items-center text-[#837F7F] mt-2 gap-2 text-[18px] font-bold">
-                            <ion-icon name="location-outline"></ion-icon>
-                            <p>دبي - رأس الخور</p>
+            <div class="container mx-auto">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
+                        <img class="w-full" src="./images/image4.png" alt="image4">
+                        <ion-icon name="heart-outline" class="absolute top-0 left-0 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
+                        <div class="p-6">
+                            <h2 class="font-bold text-xl mb-2 text-right">فيوتشر لصيانة السيارات</h2>
+                            <p>سيقدم المعرض كافة التقنيات الجديدة في مجال السيارات، والحلول للمستهلكين 
+                                الذين يرغبون في شراء سيارة كهربائية، 
+                                وكل ذلك بأسعار خاصة ومغرية سيقدم المعرض كافة
+                                </p>
+                            <div class="flex justify-between items-center mt-6 mb-4">
+                                <a href="./serving.html">
+                                    <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md">
+                                    مزيد التفاصيل
+                                </button>
+                                </a>
+                            </div>
+                            <hr>
+                            <div class="flex items-center text-[#837F7F] mt-2 gap-2 text-[18px] font-bold">
+                                <ion-icon name="location-outline"></ion-icon>
+                                <p>دبي - رأس الخور</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                    <img class="w-full" src="./images/image5.png" alt="image5">
-                    <ion-icon name="heart-outline" class="absolute top-0 left-0 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
-                    <div class="p-6">
-                        <h2 class="font-bold text-xl mb-2 text-right">فيوتشر لصيانة السيارات</h2>
-                        <p>سيقدم المعرض كافة التقنيات الجديدة في مجال السيارات، والحلول للمستهلكين 
-                            الذين يرغبون في شراء سيارة كهربائية، 
-                            وكل ذلك بأسعار خاصة ومغرية سيقدم المعرض كافة
-                            </p>
-                        <div class="flex justify-between items-center mt-6 mb-4">
-                            <a href="./serving.html">
-                                <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md">
-                                مزيد التفاصيل
-                            </button>
-                            </a>
-                        </div>
-                        <hr>
-                        <div class="flex items-center text-[#837F7F] mt-2 gap-2 text-[18px] font-bold">
-                            <ion-icon name="location-outline"></ion-icon>
-                            <p>الشارقة </p>
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
+                        <img class="w-full" src="./images/image5.png" alt="image5">
+                        <ion-icon name="heart-outline" class="absolute top-0 left-0 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
+                        <div class="p-6">
+                            <h2 class="font-bold text-xl mb-2 text-right">فيوتشر لصيانة السيارات</h2>
+                            <p>سيقدم المعرض كافة التقنيات الجديدة في مجال السيارات، والحلول للمستهلكين 
+                                الذين يرغبون في شراء سيارة كهربائية، 
+                                وكل ذلك بأسعار خاصة ومغرية سيقدم المعرض كافة
+                                </p>
+                            <div class="flex justify-between items-center mt-6 mb-4">
+                                <a href="./serving.html">
+                                    <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md">
+                                    مزيد التفاصيل
+                                </button>
+                                </a>
+                            </div>
+                            <hr>
+                            <div class="flex items-center text-[#837F7F] mt-2 gap-2 text-[18px] font-bold">
+                                <ion-icon name="location-outline"></ion-icon>
+                                <p>الشارقة </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-        
+            
 
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                    <img class="w-full" src="./images/image6.png" alt="image6">
-                    <ion-icon name="heart-outline" class="absolute top-0 left-0 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
-                    <div class="p-6">
-                        <h2 class="font-bold text-xl mb-2 text-right">فيوتشر لصيانة السيارات</h2>
-                        <p>سيقدم المعرض كافة التقنيات الجديدة في مجال السيارات، والحلول للمستهلكين 
-                            الذين يرغبون في شراء سيارة كهربائية، 
-                            وكل ذلك بأسعار خاصة ومغرية سيقدم المعرض كافة
-                            </p>
-                        <div class="flex justify-between items-center mt-6 mb-4">
-                            <a href="./serving.html">
-                                <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md">
-                                مزيد التفاصيل
-                            </button>
-                            </a>
-                        </div>
-                        <hr>
-                        <div class="flex items-center text-[#837F7F] mt-2 gap-2 text-[18px] font-bold">
-                            <ion-icon name="location-outline"></ion-icon>
-                            <p>عجمان </p>
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
+                        <img class="w-full" src="./images/image6.png" alt="image6">
+                        <ion-icon name="heart-outline" class="absolute top-0 left-0 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
+                        <div class="p-6">
+                            <h2 class="font-bold text-xl mb-2 text-right">فيوتشر لصيانة السيارات</h2>
+                            <p>سيقدم المعرض كافة التقنيات الجديدة في مجال السيارات، والحلول للمستهلكين 
+                                الذين يرغبون في شراء سيارة كهربائية، 
+                                وكل ذلك بأسعار خاصة ومغرية سيقدم المعرض كافة
+                                </p>
+                            <div class="flex justify-between items-center mt-6 mb-4">
+                                <a href="./serving.html">
+                                    <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md">
+                                    مزيد التفاصيل
+                                </button>
+                                </a>
+                            </div>
+                            <hr>
+                            <div class="flex items-center text-[#837F7F] mt-2 gap-2 text-[18px] font-bold">
+                                <ion-icon name="location-outline"></ion-icon>
+                                <p>عجمان </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                    <img class="w-full" src="./images/image4.png" alt="image4">
-                    <ion-icon name="heart-outline" class="absolute top-0 left-0 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
-                    <div class="p-6">
-                        <h2 class="font-bold text-xl mb-2 text-right">فيوتشر لصيانة السيارات</h2>
-                        <p>سيقدم المعرض كافة التقنيات الجديدة في مجال السيارات، والحلول للمستهلكين 
-                            الذين يرغبون في شراء سيارة كهربائية، 
-                            وكل ذلك بأسعار خاصة ومغرية سيقدم المعرض كافة
-                            </p>
-                        <div class="flex justify-between items-center mt-6 mb-4">
-                            <a href="./serving.html">
-                                <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md">
-                                مزيد التفاصيل
-                            </button>
-                            </a>
-                        </div>
-                        <hr>
-                        <div class="flex items-center text-[#837F7F] mt-2 gap-2 text-[18px] font-bold">
-                            <ion-icon name="location-outline"></ion-icon>
-                            <p>دبي - رأس الخور</p>
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
+                        <img class="w-full" src="./images/image4.png" alt="image4">
+                        <ion-icon name="heart-outline" class="absolute top-0 left-0 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
+                        <div class="p-6">
+                            <h2 class="font-bold text-xl mb-2 text-right">فيوتشر لصيانة السيارات</h2>
+                            <p>سيقدم المعرض كافة التقنيات الجديدة في مجال السيارات، والحلول للمستهلكين 
+                                الذين يرغبون في شراء سيارة كهربائية، 
+                                وكل ذلك بأسعار خاصة ومغرية سيقدم المعرض كافة
+                                </p>
+                            <div class="flex justify-between items-center mt-6 mb-4">
+                                <a href="./serving.html">
+                                    <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md">
+                                    مزيد التفاصيل
+                                </button>
+                                </a>
+                            </div>
+                            <hr>
+                            <div class="flex items-center text-[#837F7F] mt-2 gap-2 text-[18px] font-bold">
+                                <ion-icon name="location-outline"></ion-icon>
+                                <p>دبي - رأس الخور</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                    <img class="w-full" src="./images/image5.png" alt="image5">
-                    <ion-icon name="heart-outline" class="absolute top-0 left-0 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
-                    <div class="p-6">
-                        <h2 class="font-bold text-xl mb-2 text-right">فيوتشر لصيانة السيارات</h2>
-                        <p>سيقدم المعرض كافة التقنيات الجديدة في مجال السيارات، والحلول للمستهلكين 
-                            الذين يرغبون في شراء سيارة كهربائية، 
-                            وكل ذلك بأسعار خاصة ومغرية سيقدم المعرض كافة
-                            </p>
-                        <div class="flex justify-between items-center mt-6 mb-4">
-                            <a href="./serving.html">
-                                <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md">
-                                مزيد التفاصيل
-                            </button>
-                            </a>
-                        </div>
-                        <hr>
-                        <div class="flex items-center text-[#837F7F] mt-2 gap-2 text-[18px] font-bold">
-                            <ion-icon name="location-outline"></ion-icon>
-                            <p>الشارقة </p>
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
+                        <img class="w-full" src="./images/image5.png" alt="image5">
+                        <ion-icon name="heart-outline" class="absolute top-0 left-0 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
+                        <div class="p-6">
+                            <h2 class="font-bold text-xl mb-2 text-right">فيوتشر لصيانة السيارات</h2>
+                            <p>سيقدم المعرض كافة التقنيات الجديدة في مجال السيارات، والحلول للمستهلكين 
+                                الذين يرغبون في شراء سيارة كهربائية، 
+                                وكل ذلك بأسعار خاصة ومغرية سيقدم المعرض كافة
+                                </p>
+                            <div class="flex justify-between items-center mt-6 mb-4">
+                                <a href="./serving.html">
+                                    <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md">
+                                    مزيد التفاصيل
+                                </button>
+                                </a>
+                            </div>
+                            <hr>
+                            <div class="flex items-center text-[#837F7F] mt-2 gap-2 text-[18px] font-bold">
+                                <ion-icon name="location-outline"></ion-icon>
+                                <p>الشارقة </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-        
+            
 
-                <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                    <img class="w-full" src="./images/image6.png" alt="image6">
-                    <ion-icon name="heart-outline" class="absolute top-0 left-0 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
-                    <div class="p-6">
-                        <h2 class="font-bold text-xl mb-2 text-right">فيوتشر لصيانة السيارات</h2>
-                        <p>سيقدم المعرض كافة التقنيات الجديدة في مجال السيارات، والحلول للمستهلكين 
-                            الذين يرغبون في شراء سيارة كهربائية، 
-                            وكل ذلك بأسعار خاصة ومغرية سيقدم المعرض كافة
-                            </p>
-                        <div class="flex justify-between items-center mt-6 mb-4">
-                            <a href="./serving.html">
-                                <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md">
-                                مزيد التفاصيل
-                            </button>
-                            </a>
-                        </div>
-                        <hr>
-                        <div class="flex items-center text-[#837F7F] mt-2 gap-2 text-[18px] font-bold">
-                            <ion-icon name="location-outline"></ion-icon>
-                            <p>عجمان </p>
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
+                        <img class="w-full" src="./images/image6.png" alt="image6">
+                        <ion-icon name="heart-outline" class="absolute top-0 left-0 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
+                        <div class="p-6">
+                            <h2 class="font-bold text-xl mb-2 text-right">فيوتشر لصيانة السيارات</h2>
+                            <p>سيقدم المعرض كافة التقنيات الجديدة في مجال السيارات، والحلول للمستهلكين 
+                                الذين يرغبون في شراء سيارة كهربائية، 
+                                وكل ذلك بأسعار خاصة ومغرية سيقدم المعرض كافة
+                                </p>
+                            <div class="flex justify-between items-center mt-6 mb-4">
+                                <a href="./serving.html">
+                                    <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md">
+                                    مزيد التفاصيل
+                                </button>
+                                </a>
+                            </div>
+                            <hr>
+                            <div class="flex items-center text-[#837F7F] mt-2 gap-2 text-[18px] font-bold">
+                                <ion-icon name="location-outline"></ion-icon>
+                                <p>عجمان </p>
+                            </div>
                         </div>
                     </div>
+                    
                 </div>
-                
-            </div>
-            <div class="flex items-center justify-center mt-5">
-                <button class="bg-[#C10D10] text-white font-semibold py-2 px-4 border  rounded-md">
-                    تحميل المزيد
-                </button>
+                <div class="flex items-center justify-center mt-5">
+                    <button class="bg-[#C10D10] text-white font-semibold py-2 px-4 border  rounded-md">
+                        تحميل المزيد
+                    </button>
+                </div>
             </div>
         <!-- End Second Cards -->
-    </div>
 
         <!-- Start Footer --> 
             <footer class="bg-[#C10D10] mt-5">
-            <div class="lg:flex ">
-
-                <div class="p-5">
-                    <h2 class="font-bold text-xl md:text-2xl text-white mb-5">من نحن</h2>
-                    <h6 class="text-white text-[18px] ">التطبيق الاول من نوعه الذي يقدم خدمات متكاملة</h6>
-                    <ul class="rtl-list text-white text-[18px]">
-                        <li>بيع وشراء السيارات</li>
-                        <li>خدمات أخرى متعلقة بالسيارات</li>
-                        <li>تصميم إعلان سيارات باستخدام الذكاء الاصطناعي (منشور/قصة)</li>
-                        <li>استخدام رقم الهيكل VIN لملء بيانات السيارة</li>
-                    </ul>
-                </div>
-
-                <div class="p-5">
-                    <h2 class="font-bold text-xl md:text-2xl text-white mb-5"> تواصل معنا</h2>
-                    <div class="flex flex-col ">
-                        <div class="flex items-center gap-5" >
-                            <div class="font-normal text-white grid gap-4">
-                                <p>فيسبوك</p>
-                                <p> واتساب</p>
-                                <p>تويتر</p>
-                            </div>
-                            <div class="grid gap-6 text-white">
-                                <ion-icon name="logo-facebook"></ion-icon>
-                                <ion-icon name="logo-whatsapp"></ion-icon>
-                                <ion-icon name="logo-twitter"></ion-icon>
+                <div class="container mx-auto">
+                    <div class="lg:flex ">
+                        <div class="p-5">
+                            <h2 class="font-bold text-xl md:text-2xl text-white mb-5">من نحن</h2>
+                            <h6 class="text-white text-[18px] ">التطبيق الاول من نوعه الذي يقدم خدمات متكاملة</h6>
+                            <ul class="text-white text-[18px] text-right ltr:text-left list-disc list-inside mt-5">
+                                <li>بيع وشراء السيارات</li>
+                                <li>خدمات أخرى متعلقة بالسيارات</li>
+                                <li>تصميم إعلان سيارات باستخدام الذكاء الاصطناعي (منشور/قصة)</li>
+                                <li>استخدام رقم الهيكل VIN لملء بيانات السيارة</li>
+                            </ul>
+                        </div>
         
+                        <div class="p-5">
+                            <h2 class="font-bold text-xl md:text-2xl text-white mb-5"> تواصل معنا</h2>
+                            <div class="flex flex-col ">
+                                <div class="flex items-center gap-5" >
+                                    <div class="font-normal text-white grid gap-4">
+                                        <p>فيسبوك</p>
+                                        <p> واتساب</p>
+                                        <p>تويتر</p>
+                                    </div>
+                                    <div class="grid gap-6 text-white">
+                                        <ion-icon name="logo-facebook"></ion-icon>
+                                        <ion-icon name="logo-whatsapp"></ion-icon>
+                                        <ion-icon name="logo-twitter"></ion-icon>
+                
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+        
+                        <div class="p-5">
+                            <h2 class="font-bold text-xl md:text-2xl text-white mb-5">اتصل بنا</h2>
+                            <form class="w-full md:w-auto  ">
+                                <div>
+                                    <div>
+                                        <input type="text" id="first_name" class="bg-white border-gray-300 text-gray-900 text-sm rounded-lg w-full md:w-[300px] mb-5 p-2.5  text-right outline-none" placeholder="الاسم" required />
+                                    </div>
+                                    <div>
+                                        <input type="text" id="last_name" class="bg-white border-gray-300 text-gray-900 text-sm rounded-lg w-full md:w-[300px] mb-5 p-2.5  text-right outline-none" placeholder="الايميل" required />
+                                    </div>
+                                    <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 text-right outline-none" placeholder="اترك تعليقك"></textarea>
+                                </div>
+                            </form>
+                        </div>
+        
+                        <div class="pt-2">
+                            <img src="./images/Group2.png" alt="">
                         </div>
                     </div>
-                </div>
-
-                <div class="p-5">
-                    <h2 class="font-bold text-xl md:text-2xl text-white mb-5">اتصل بنا</h2>
-                    <form class="w-full md:w-auto  ">
-                        <div>
-                            <div>
-                                <input type="text" id="first_name" class="bg-white border-gray-300 text-gray-900 text-sm rounded-lg w-full md:w-[300px] mb-5 p-2.5  text-right outline-none" placeholder="الاسم" required />
-                            </div>
-                            <div>
-                                <input type="text" id="last_name" class="bg-white border-gray-300 text-gray-900 text-sm rounded-lg w-full md:w-[300px] mb-5 p-2.5  text-right outline-none" placeholder="الايميل" required />
-                            </div>
-                            <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 text-right outline-none" placeholder="اترك تعليقك"></textarea>
+                    <hr>
+                    <div class="mt-5 mr-5 md:mr-10 md:flex items-center justify-between" >
+                        <div class="flex items-center justify-between ow mb-5" >
+                            <h2 class="text-white font-normal">طورت بواسطة : </h2>
+                            <img src="./images/Group186.png" alt="Group186">
                         </div>
-                    </form>
+                        <div class="flex justify-between ow font-normal text-white ml-5" >
+                            <p>جميع الحقوق محفوظة</p>
+                            <a href="" style="text-decoration: underline;">2G9 UAE.</a>
+                        </div>
+                    </div> 
                 </div>
-
-                <div class="pt-2">
-                    <img src="./images/Group2.png" alt="">
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="mt-5 mr-5 md:mr-10 md:flex items-center justify-between" >
-                <div class="flex items-center justify-between ow mb-5" >
-                    <h2 class="text-white font-normal">طورت بواسطة : </h2>
-                    <img src="./images/Group186.png" alt="Group186">
-                </div>
-                <div class="flex justify-between ow font-normal text-white ml-5" >
-                    <p>جميع الحقوق محفوظة</p>
-                    <a href="" style="text-decoration: underline;">2G9 UAE.</a>
-                </div>
-            </div> 
-
             </footer>
         <!-- End Footer -->
 </body>

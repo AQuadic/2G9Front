@@ -22,27 +22,6 @@
     body {
             font-family: "Noto Kufi Arabic", sans-serif;
         }
-    .rtl-list {
-    list-style-position: inside;
-    padding-right: 4em;
-}
-
-.rtl-list li {
-    position: relative;
-    padding-right: 1.5em; 
-    direction: rtl; 
-}
-
-.rtl-list li::before {
-    content: '•'; 
-    position: absolute;
-    right: 0;
-    color: white; 
-    font-size: 1.5em; 
-}
-
-
-
 </style>
 <body class="bg-gray-50">
         <!-- Start Navbar -->
@@ -79,38 +58,40 @@
                 </div>
             </nav>
         <!-- End Navbar -->
-        <div class="container mx-auto mt-[-1px]">
+
         <!-- Start Slider -->
-            <swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper"
-            thumbs-swiper=".mySwiper2" space-between="10" navigation="true">
-            <swiper-slide>
-            <img src="./images/header.png" />
-            </swiper-slide>
-            <swiper-slide>
-                <img src="./images/header.png" />
-            </swiper-slide>  <swiper-slide>
-                <img src="./images/header.png" />
-            </swiper-slide>
-
-            </swiper-container>
-        
-            <swiper-container class="mySwiper2 p-10" space-between="10" slides-per-view="4" free-mode="true"
-                watch-slides-progress="true" >
+            <div class="container mx-auto">
+                <swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper"
+                thumbs-swiper=".mySwiper2" space-between="10" navigation="true">
                 <swiper-slide>
                 <img src="./images/header.png" />
                 </swiper-slide>
                 <swiper-slide>
                     <img src="./images/header.png" />
-                </swiper-slide> <swiper-slide>
+                </swiper-slide>  <swiper-slide>
                     <img src="./images/header.png" />
                 </swiper-slide>
 
-        
-            </swiper-container>
+                </swiper-container>
+            
+                <swiper-container class="mySwiper2 p-10" space-between="10" slides-per-view="4" free-mode="true"
+                    watch-slides-progress="true" >
+                    <swiper-slide>
+                    <img src="./images/header.png" />
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img src="./images/header.png" />
+                    </swiper-slide> <swiper-slide>
+                        <img src="./images/header.png" />
+                    </swiper-slide>
+
+            
+                </swiper-container>
+            </div>
         <!-- End Slider -->
 
         <!-- Start Content -->
-            <div >
+            <div class="container mx-auto">
                 <div class="lg:pr-20 lg:flex gap-20">
                     <h2 class="font-bold">تسلا موديل اكس - بحالة جيدة جدا شامل الشاحن الاصلي ومحطة شحن المنزل</h2>
                     <div class="flex gap-10 border border-[#BCBEC0] rounded-md p-1">
@@ -418,74 +399,72 @@
 
             </div>
         <!-- End Content -->
-    </div>
+
         <!-- Start Footer --> 
             <footer class="bg-[#C10D10] mt-5">
-            <div class="lg:flex ">
-
-                <div class="p-5">
-                    <h2 class="font-bold text-xl md:text-2xl text-white mb-5">من نحن</h2>
-                    <h6 class="text-white text-[18px] ">التطبيق الاول من نوعه الذي يقدم خدمات متكاملة</h6>
-                    <ul class="rtl-list text-white text-[18px]">
-                        <li>بيع وشراء السيارات</li>
-                        <li>خدمات أخرى متعلقة بالسيارات</li>
-                        <li>تصميم إعلان سيارات باستخدام الذكاء الاصطناعي (منشور/قصة)</li>
-                        <li>استخدام رقم الهيكل VIN لملء بيانات السيارة</li>
-                    </ul>
-                </div>
-
-                <div class="p-5">
-                    <h2 class="font-bold text-xl md:text-2xl text-white mb-5"> تواصل معنا</h2>
-                    <div class="flex flex-col ">
-                        <div class="flex items-center gap-5" >
-                            <div class="font-normal text-white grid gap-4">
-                                <p>فيسبوك</p>
-                                <p> واتساب</p>
-                                <p>تويتر</p>
-                            </div>
-                            <div class="grid gap-6 text-white">
-                                <ion-icon name="logo-facebook"></ion-icon>
-                                <ion-icon name="logo-whatsapp"></ion-icon>
-                                <ion-icon name="logo-twitter"></ion-icon>
+                <div class="container mx-auto">
+                    <div class="lg:flex ">
+                        <div class="p-5">
+                            <h2 class="font-bold text-xl md:text-2xl text-white mb-5">من نحن</h2>
+                            <h6 class="text-white text-[18px] ">التطبيق الاول من نوعه الذي يقدم خدمات متكاملة</h6>
+                            <ul class="text-white text-[18px] text-right ltr:text-left list-disc list-inside mt-5">
+                                <li>بيع وشراء السيارات</li>
+                                <li>خدمات أخرى متعلقة بالسيارات</li>
+                                <li>تصميم إعلان سيارات باستخدام الذكاء الاصطناعي (منشور/قصة)</li>
+                                <li>استخدام رقم الهيكل VIN لملء بيانات السيارة</li>
+                            </ul>
+                        </div>
         
+                        <div class="p-5">
+                            <h2 class="font-bold text-xl md:text-2xl text-white mb-5"> تواصل معنا</h2>
+                            <div class="flex flex-col ">
+                                <div class="flex items-center gap-5" >
+                                    <div class="font-normal text-white grid gap-4">
+                                        <p>فيسبوك</p>
+                                        <p> واتساب</p>
+                                        <p>تويتر</p>
+                                    </div>
+                                    <div class="grid gap-6 text-white">
+                                        <ion-icon name="logo-facebook"></ion-icon>
+                                        <ion-icon name="logo-whatsapp"></ion-icon>
+                                        <ion-icon name="logo-twitter"></ion-icon>
+                
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+        
+                        <div class="p-5">
+                            <h2 class="font-bold text-xl md:text-2xl text-white mb-5">اتصل بنا</h2>
+                            <form class="w-full md:w-auto  ">
+                                <div>
+                                    <div>
+                                        <input type="text" id="first_name" class="bg-white border-gray-300 text-gray-900 text-sm rounded-lg w-full md:w-[300px] mb-5 p-2.5  text-right outline-none" placeholder="الاسم" required />
+                                    </div>
+                                    <div>
+                                        <input type="text" id="last_name" class="bg-white border-gray-300 text-gray-900 text-sm rounded-lg w-full md:w-[300px] mb-5 p-2.5  text-right outline-none" placeholder="الايميل" required />
+                                    </div>
+                                    <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 text-right outline-none" placeholder="اترك تعليقك"></textarea>
+                                </div>
+                            </form>
+                        </div>
+        
+                        <div class="pt-2">
+                            <img src="./images/Group2.png" alt="">
                         </div>
                     </div>
-                </div>
-
-                <div class="p-5">
-                    <h2 class="font-bold text-xl md:text-2xl text-white mb-5">اتصل بنا</h2>
-                    <form class="w-full md:w-auto  ">
-                        <div>
-                            <div>
-                                <input type="text" id="first_name" class="bg-white border-gray-300 text-gray-900 text-sm rounded-lg w-full md:w-[300px] mb-5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-right" placeholder="الاسم" required />
-                            </div>
-                            <div>
-                                <input type="text" id="last_name" class="bg-white border-gray-300 text-gray-900 text-sm rounded-lg w-full md:w-[300px] mb-5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-right" placeholder="الايميل" required />
-                            </div>
-                            <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-right" placeholder="اترك تعليقك"></textarea>
+                    <hr>
+                    <div class="mt-5 mr-5 md:mr-10 md:flex items-center justify-between" >
+                        <div class="flex items-center justify-between ow mb-5" >
+                            <h2 class="text-white font-normal">طورت بواسطة : </h2>
+                            <img src="./images/Group186.png" alt="Group186">
                         </div>
-                    </form>
+                        <div class="flex justify-between ow font-normal text-white ml-5" >
+                            <p>جميع الحقوق محفوظة</p>
+                            <a href="" style="text-decoration: underline;">2G9 UAE.</a>
+                        </div>
+                    </div> 
                 </div>
-
-                <div class="pt-2">
-                    <img src="./images/Group2.png" alt="">
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="mt-5 mr-5 md:mr-10 md:flex items-center justify-between" >
-                <div class="flex items-center justify-between ow mb-5" >
-                    <h2 class="text-white font-normal">طورت بواسطة : </h2>
-                    <img src="./images/Group186.png" alt="Group186">
-                </div>
-                <div class="flex justify-between ow font-normal text-white ml-5" >
-                    <p>جميع الحقوق محفوظة</p>
-                    <a href="" style="text-decoration: underline;">2G9 UAE.</a>
-                </div>
-            </div> 
-
             </footer>
         <!-- End Footer -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
