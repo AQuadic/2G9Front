@@ -147,7 +147,7 @@
                 <div class="relative p-5">
                     <label for="numberof" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white "  >رقم الشاصي / القاعدة</label>
                     <input type="text" id="numberof" class="bg-white  text-[#929191] text-sm rounded-lg block  p-2.5 shadow-md  transition-all lg:w-1/2 w-3/5 outline-none" placeholder="رقم الشاصي / القاعدة" required />
-                    <p class="absolute  mt-2 mr-5" style="left: 50%;">لن يظهر هذا الرقم في إعلانك</p>
+                    <p class="absolute  mt-2 mr-5 text-[10px]" style="left: 50%;">لن يظهر هذا الرقم في إعلانك</p>
                 </div>
                 <div class="flex justify-center mt-10">
                     <button type="submit" class="text-white bg-[#C10D10]  lg:font-medium rounded-lg text-sm lg:w-1/2 mt-5  px-5 py-2.5 text-center ">الملء التلقائي لتفاصيل سيارتي</button>
@@ -303,23 +303,24 @@
                                     <input type="" id="phone" class="bg-white  text-[#929191] text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all" placeholder="اكتب رقم الهاتف"  required />
                                 </div>
                             </form> 
-                            <form class="max-w-sm ">
-                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"> كيف تفضل التواصل معك ؟</label>
-                               <div class="flex gap-3">
-                                <div class="flex items-center mb-4 bg-white rounded-md p-2 gap-2">
-                                    <input type="checkbox" id="phone" name="phone" class="mr-2">
-                                    <label for="phone" class="text-sm text-gray-700 dark:text-black">الهاتف</label>
+                            <form class="max-w-sm">
+                                <label for="contact" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">كيف تفضل التواصل معك؟</label>
+                                <div class="flex gap-3">
+                                    <div class="flex items-center mb-4 bg-white rounded-md p-2 gap-2">
+                                        <input type="radio" id="phone" name="contact" class="mr-2 text-green-500 focus:ring-green-500">
+                                        <label for="phone" class="text-sm text-gray-700 dark:text-black">الهاتف</label>
+                                    </div>
+                                    <div class="flex items-center mb-4 bg-white rounded-md p-2 gap-2">
+                                        <input type="radio" id="whatsapp" name="contact" class="mr-2 text-green-500 focus:ring-green-500">
+                                        <label for="whatsapp" class="text-sm text-gray-700 dark:text-black">واتساب</label>
+                                    </div>
+                                    <div class="flex items-center mb-4 bg-white rounded-md p-2 gap-2">
+                                        <input type="radio" id="both" name="contact" class="mr-2 text-green-500 focus:ring-green-500">
+                                        <label for="both" class="text-sm text-gray-700 dark:text-black">الاثنين معاً</label>
+                                    </div>
                                 </div>
-                                <div class="flex items-center mb-4 bg-white rounded-md p-2 gap-2">
-                                    <input type="checkbox" id="whatsapp" name="whatsapp" class="mr-2">
-                                    <label for="whatsapp" class="text-sm text-gray-700 dark:text-black">واتساب</label>
-                                </div>
-                                <div class="flex items-center mb-4 bg-white rounded-md p-2 gap-2">
-                                    <input type="checkbox" id="both" name="both" class="mr-2">
-                                    <label for="both" class="text-sm text-gray-700 dark:text-black">الاثنين معاً</label>
-                                </div>
-                               </div>
                             </form>
+                            
                             
                     
                             
