@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
     <title>2G9</title>
+    <link rel="icon" type="image/png" href="./images/logo.png">
     <!-- Icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -20,18 +21,19 @@
     body {
             font-family: "Noto Kufi Arabic", sans-serif;
         }
- 
-
+        .hidden {
+            display: none;
+        }
 </style>
 <body class="bg-gray-100 ">
-    <!-- Start Navbar -->
+        <!-- Start Navbar -->
             <nav class="bg-[#C10D10]  w-full z-20 top-0 start-0 border-b border-gray-200 ">
                 <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
                     <a href="index.html" class="flex items-center space-x-3 md:order-2">
                         <img src="./images/Group.png" class="h-12 w-8" alt="Logo">
                     </a>
                     <div class="flex md:order-1 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                        <button type="button" class="text-[#C10D10] bg-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center">تسجيل الدخول</button>
+                        <button type="button" class="text-[#C10D10] bg-white focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center">تسجيل الدخول</button>
                         <button id="menu-toggle" data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
                             <span class="sr-only">Open main menu</span>
                             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -90,247 +92,169 @@
         <!-- End Header -->
 
         <!-- Start ADS -->
-            <div class="container mx-auto mt-8 px-4 mb-8">
-                <!-- Buttons -->
-                <div class="flex flex-col gap-3 lg:flex-row lg:gap-5 mb-6">
-                    <button class="bg-[#C10D10] font-semibold py-2 px-4 border text-white rounded lg:w-[200px]">
-                        الكل
-                    </button>
-                    <button class="bg-transparent text-black font-semibold py-2 px-4 border border-[#C10D10] rounded lg:w-[200px]">
-                        أبرز الإعلانات التجارية
-                    </button>
-                    <button class="bg-transparent text-black font-semibold py-2 px-4 border border-[#C10D10] rounded lg:w-[200px]">
-                        أبرز الإعلانات الشخصية
-                    </button>
+        <div class="container mx-auto mt-8 px-4 mb-8">
+            <!-- Buttons -->
+            <div class="flex flex-col gap-3 lg:flex-row lg:gap-5 mb-6">
+                <button onclick="filterCards('all')" class="filter-btn bg-[#C10D10] font-semibold py-2 px-4 border text-white rounded lg:w-[200px]">
+                    الكل
+                </button>
+                <button onclick="filterCards('ads')" class="filter-btn bg-transparent text-black font-semibold py-2 px-4 border border-[#C10D10] rounded lg:w-[200px]">
+                    أبرز الإعلانات التجارية
+                </button>
+                <button onclick="filterCards('personal')" class="filter-btn bg-transparent text-black font-semibold py-2 px-4 border border-[#C10D10] rounded lg:w-[200px]">
+                    أبرز الإعلانات الشخصية
+                </button>
+            </div>
+            
+            <!-- All Cards -->
+            <div id="cardContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 relative">
+                <div class="card" data-category="ads">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                        <img class="w-full object-cover p-1" src="./images/Rectangle2.png" alt="Tesla Model X">
+                        <div class="p-4 sm:p-6">
+                            <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
+                                تسلا موديل اكس - بحالة جيدة جدا شامل الشاحن الاصلي ومحطة شحن 
+                            </h2>
+                            <div class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-4">
+                                <p class="font-bold text-xl sm:text-2xl">د.إ 80,000</p>
+                                <a href="details.html">
+                                    <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
+                                        مزيد التفاصيل
+                                    </button>
+                                </a>
+                            </div>
+                            <hr class="my-4">
+                            <div class="flex items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
+                                <ion-icon name="location-outline"></ion-icon>
+                                <p>دبي - القوز</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-category="ads">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                        <img class="w-full object-cover p-1" src="./images/Rectangle2.png" alt="Tesla Model X">
+                        <div class="p-4 sm:p-6">
+                            <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
+                                تسلا موديل اكس - بحالة جيدة جدا شامل الشاحن الاصلي ومحطة شحن 
+                            </h2>
+                            <div class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-4">
+                                <p class="font-bold text-xl sm:text-2xl">د.إ 80,000</p>
+                                <a href="details.html">
+                                    <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
+                                        مزيد التفاصيل
+                                    </button>
+                                </a>
+                            </div>
+                            <hr class="my-4">
+                            <div class="flex items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
+                                <ion-icon name="location-outline"></ion-icon>
+                                <p>دبي - القوز</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-category="ads">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                        <img class="w-full object-cover p-1" src="./images/Rectangle2.png" alt="Tesla Model X">
+                        <div class="p-4 sm:p-6">
+                            <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
+                                تسلا موديل اكس - بحالة جيدة جدا شامل الشاحن الاصلي ومحطة شحن 
+                            </h2>
+                            <div class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-4">
+                                <p class="font-bold text-xl sm:text-2xl">د.إ 80,000</p>
+                                <a href="details.html">
+                                    <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
+                                        مزيد التفاصيل
+                                    </button>
+                                </a>
+                            </div>
+                            <hr class="my-4">
+                            <div class="flex items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
+                                <ion-icon name="location-outline"></ion-icon>
+                                <p>دبي - القوز</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-category="ads">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                        <img class="w-full object-cover p-1" src="./images/Rectangle2.png" alt="Tesla Model X">
+                        <div class="p-4 sm:p-6">
+                            <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
+                                تسلا موديل اكس - بحالة جيدة جدا شامل الشاحن الاصلي ومحطة شحن 
+                            </h2>
+                            <div class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-4">
+                                <p class="font-bold text-xl sm:text-2xl">د.إ 80,000</p>
+                                <a href="details.html">
+                                    <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
+                                        مزيد التفاصيل
+                                    </button>
+                                </a>
+                            </div>
+                            <hr class="my-4">
+                            <div class="flex items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
+                                <ion-icon name="location-outline"></ion-icon>
+                                <p>دبي - القوز</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-category="personal">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                        <img class="w-full object-cover p-1" src="./images/Rectangle2.png" alt="Tesla Model X">
+                        <div class="p-4 sm:p-6">
+                            <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
+                                تسلا موديل اكس - بحالة جيدة جدا شامل الشاحن الاصلي ومحطة شحن (إعلان شخصي)
+                            </h2>
+                            <div class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-4">
+                                <p class="font-bold text-xl sm:text-2xl">د.إ 75,000</p>
+                                <a href="details.html">
+                                    <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
+                                        مزيد التفاصيل
+                                    </button>
+                                </a>
+                            </div>
+                            <hr class="my-4">
+                            <div class="flex items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
+                                <ion-icon name="location-outline"></ion-icon>
+                                <p>دبي - القوز</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>     
+                <div class="card" data-category="personal">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                        <img class="w-full object-cover p-1" src="./images/Rectangle2.png" alt="Tesla Model X">
+                        <div class="p-4 sm:p-6">
+                            <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
+                                تسلا موديل اكس - بحالة جيدة جدا شامل الشاحن الاصلي ومحطة شحن (إعلان شخصي)
+                            </h2>
+                            <div class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-4">
+                                <p class="font-bold text-xl sm:text-2xl">د.إ 75,000</p>
+                                <a href="details.html">
+                                    <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
+                                        مزيد التفاصيل
+                                    </button>
+                                </a>
+                            </div>
+                            <hr class="my-4">
+                            <div class="flex items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
+                                <ion-icon name="location-outline"></ion-icon>
+                                <p>دبي - القوز</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
-            
-                <!-- Cards -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 relative">
-                    <div class="relative">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                            <img class="w-full object-cover p-1" src="./images/Rectangle2.png" alt="Tesla Model X">
-                            <ion-icon name="heart-outline" class="absolute top-[-20px] left-[-20px] m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
-                            <div class="p-4 sm:p-6">
-                                <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
-                                    تسلا موديل اكس - بحالة جيدة جدا شامل الشاحن الاصلي ومحطة شحن
-                                </h2>
-                                <div class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-4">
-                                    <p class="font-bold text-xl sm:text-2xl">د.إ 80,000</p>
-                                    <a href="details.html">
-                                        <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
-                                            مزيد التفاصيل
-                                        </button>
-                                    </a>
-                                </div>
-                                <hr class="my-4">
-                                <div class="flex items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
-                                    <ion-icon name="location-outline"></ion-icon>
-                                    <p>دبي - القوز</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                            <img class="w-full object-cover p-1" src="./images/Rectangle2.png" alt="Tesla Model X">
-                            <ion-icon name="heart-outline" class="absolute top-[-20px] left-[-20px] m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
-                            <div class="p-4 sm:p-6">
-                                <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
-                                    تسلا موديل اكس - بحالة جيدة جدا شامل الشاحن الاصلي ومحطة شحن
-                                </h2>
-                                <div class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-4">
-                                    <p class="font-bold text-xl sm:text-2xl">د.إ 80,000</p>
-                                    <a href="details.html">
-                                        <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
-                                            مزيد التفاصيل
-                                        </button>
-                                    </a>
-                                </div>
-                                <hr class="my-4">
-                                <div class="flex items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
-                                    <ion-icon name="location-outline"></ion-icon>
-                                    <p>دبي - القوز</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                            <img class="w-full object-cover p-1" src="./images/Rectangle2.png" alt="Tesla Model X">
-                            <ion-icon name="heart-outline" class="absolute top-[-20px] left-[-20px] m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
-                            <div class="p-4 sm:p-6">
-                                <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
-                                    تسلا موديل اكس - بحالة جيدة جدا شامل الشاحن الاصلي ومحطة شحن
-                                </h2>
-                                <div class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-4">
-                                    <p class="font-bold text-xl sm:text-2xl">د.إ 80,000</p>
-                                    <a href="details.html">
-                                        <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
-                                            مزيد التفاصيل
-                                        </button>
-                                    </a>
-                                </div>
-                                <hr class="my-4">
-                                <div class="flex items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
-                                    <ion-icon name="location-outline"></ion-icon>
-                                    <p>دبي - القوز</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                            <img class="w-full object-cover p-1" src="./images/Rectangle2.png" alt="Tesla Model X">
-                            <ion-icon name="heart-outline" class="absolute top-[-20px] left-[-20px] m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
-                            <div class="p-4 sm:p-6">
-                                <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
-                                    تسلا موديل اكس - بحالة جيدة جدا شامل الشاحن الاصلي ومحطة شحن
-                                </h2>
-                                <div class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-4">
-                                    <p class="font-bold text-xl sm:text-2xl">د.إ 80,000</p>
-                                    <a href="details.html">
-                                        <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
-                                            مزيد التفاصيل
-                                        </button>
-                                    </a>
-                                </div>
-                                <hr class="my-4">
-                                <div class="flex items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
-                                    <ion-icon name="location-outline"></ion-icon>
-                                    <p>دبي - القوز</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                            <img class="w-full object-cover p-1" src="./images/Rectangle2.png" alt="Tesla Model X">
-                            <ion-icon name="heart-outline" class="absolute top-[-20px] left-[-20px] m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
-                            <div class="p-4 sm:p-6">
-                                <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
-                                    تسلا موديل اكس - بحالة جيدة جدا شامل الشاحن الاصلي ومحطة شحن
-                                </h2>
-                                <div class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-4">
-                                    <p class="font-bold text-xl sm:text-2xl">د.إ 80,000</p>
-                                    <a href="details.html">
-                                        <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
-                                            مزيد التفاصيل
-                                        </button>
-                                    </a>
-                                </div>
-                                <hr class="my-4">
-                                <div class="flex items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
-                                    <ion-icon name="location-outline"></ion-icon>
-                                    <p>دبي - القوز</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                            <img class="w-full object-cover p-1" src="./images/Rectangle2.png" alt="Tesla Model X">
-                            <ion-icon name="heart-outline" class="absolute top-[-20px] left-[-20px] m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
-                            <div class="p-4 sm:p-6">
-                                <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
-                                    تسلا موديل اكس - بحالة جيدة جدا شامل الشاحن الاصلي ومحطة شحن
-                                </h2>
-                                <div class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-4">
-                                    <p class="font-bold text-xl sm:text-2xl">د.إ 80,000</p>
-                                    <a href="details.html">
-                                        <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
-                                            مزيد التفاصيل
-                                        </button>
-                                    </a>
-                                </div>
-                                <hr class="my-4">
-                                <div class="flex items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
-                                    <ion-icon name="location-outline"></ion-icon>
-                                    <p>دبي - القوز</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                            <img class="w-full object-cover p-1" src="./images/Rectangle2.png" alt="Tesla Model X">
-                            <ion-icon name="heart-outline" class="absolute top-[-20px] left-[-20px] m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
-                            <div class="p-4 sm:p-6">
-                                <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
-                                    تسلا موديل اكس - بحالة جيدة جدا شامل الشاحن الاصلي ومحطة شحن
-                                </h2>
-                                <div class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-4">
-                                    <p class="font-bold text-xl sm:text-2xl">د.إ 80,000</p>
-                                    <a href="details.html">
-                                        <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
-                                            مزيد التفاصيل
-                                        </button>
-                                    </a>
-                                </div>
-                                <hr class="my-4">
-                                <div class="flex items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
-                                    <ion-icon name="location-outline"></ion-icon>
-                                    <p>دبي - القوز</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                            <img class="w-full object-cover p-1" src="./images/Rectangle2.png" alt="Tesla Model X">
-                            <ion-icon name="heart-outline" class="absolute top-[-20px] left-[-20px] m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
-                            <div class="p-4 sm:p-6">
-                                <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
-                                    تسلا موديل اكس - بحالة جيدة جدا شامل الشاحن الاصلي ومحطة شحن
-                                </h2>
-                                <div class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-4">
-                                    <p class="font-bold text-xl sm:text-2xl">د.إ 80,000</p>
-                                    <a href="details.html">
-                                        <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
-                                            مزيد التفاصيل
-                                        </button>
-                                    </a>
-                                </div>
-                                <hr class="my-4">
-                                <div class="flex items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
-                                    <ion-icon name="location-outline"></ion-icon>
-                                    <p>دبي - القوز</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                            <img class="w-full object-cover p-1" src="./images/Rectangle2.png" alt="Tesla Model X">
-                            <ion-icon name="heart-outline" class="absolute top-[-20px] left-[-20px] m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
-                            <div class="p-4 sm:p-6">
-                                <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
-                                    تسلا موديل اكس - بحالة جيدة جدا شامل الشاحن الاصلي ومحطة شحن
-                                </h2>
-                                <div class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-4">
-                                    <p class="font-bold text-xl sm:text-2xl">د.إ 80,000</p>
-                                    <a href="details.html">
-                                        <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
-                                            مزيد التفاصيل
-                                        </button>
-                                    </a>
-                                </div>
-                                <hr class="my-4">
-                                <div class="flex items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
-                                    <ion-icon name="location-outline"></ion-icon>
-                                    <p>دبي - القوز</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-                    <div class="flex items-center justify-center mt-5">
-                        <button class="bg-[#C10D10] text-white font-semibold py-2 px-4 border  rounded-md">
-                            تحميل المزيد
-                        </button>
-                    </div>
             </div>
+    
+            <div class="flex items-center justify-center mt-5">
+                <button class="bg-[#C10D10] text-white font-semibold py-2 px-4 border rounded-md">
+                    تحميل المزيد
+                </button>
+            </div>
+        </div>
         <!-- End ADS -->
         
         <!-- Start Footer --> 
@@ -339,7 +263,7 @@
                     <div class="lg:flex ">
                         <div class="grid grid-cols-[auto,1fr] md:grid-cols-[auto,1fr,1fr] lg:grid-cols-[auto,1fr,1fr,1fr] gap-6">
                             <div class="p-5">
-                                <h2 class="font-bold text-xl md:text-2xl text-white mb-5">من نحن</h2>
+                                <h2 class="font-bold text-xl md:text-2xl text-white mb-10">من نحن</h2>
                                 <h6 class="text-white text-[18px]">التطبيق الاول من نوعه الذي يقدم خدمات متكاملة</h6>
                                 <ul class="text-white text-[18px] text-right ltr:text-left list-disc list-inside mt-5">
                                     <li>بيع وشراء السيارات</li>
@@ -350,15 +274,15 @@
                             </div>
                         
                             <div class="p-5">
-                                <h2 class="font-bold text-xl md:text-2xl text-white mb-5">تواصل معنا</h2>
+                                <h2 class="font-bold text-xl md:text-2xl text-white mb-10">تواصل معنا</h2>
                                 <div class="flex flex-col">
-                                    <div class="flex items-center gap-5">
-                                        <div class="font-normal text-white grid gap-7">
+                                    <div class="flex items-center gap-10">
+                                        <div class="font-normal text-white grid gap-4">
                                             <p>فيسبوك</p>
                                             <p>واتساب</p>
                                             <p>تويتر</p>
                                         </div>
-                                        <div class="grid gap-7 text-white">
+                                        <div class="grid gap-4 text-white">
                                             <ion-icon name="logo-facebook" class="text-2xl md:text-2xl"></ion-icon>
                                             <ion-icon name="logo-whatsapp" class="text-2xl md:text-2xl"></ion-icon>
                                             <ion-icon name="logo-twitter" class="text-2xl md:text-2xl"></ion-icon>
@@ -369,7 +293,7 @@
                             
                         
                             <div class="p-5">
-                                <h2 class="font-bold text-xl md:text-2xl text-white mb-5">اتصل بنا</h2>
+                                <h2 class="font-bold text-xl md:text-2xl text-white mb-10">اتصل بنا</h2>
                                 <form class="w-full md:w-auto">
                                     <div>
                                         <div>

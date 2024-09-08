@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
     <title>Design Your Ads</title>
+    <link rel="icon" type="image/png" href="./images/logo.png">
     <!-- Icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -188,31 +189,32 @@
                         <option value="DE">Germany</option>
                         </select>
                     </form> 
-                    <form class="max-w-sm ">
-                        <div>
-                            <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">رقم التواصل</label>
-                            <input type="" id="phone" class="bg-white  text-[#929191] text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" placeholder=" رقم الهاتف" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required />
-                        </div>
-                    </form> 
-                    <form class="max-w-sm ">
-                        <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> كيف تفضل التواصل معك ؟</label>
-                        <div class="flex gap-3 text-[#929191]">
-                            <div class="flex items-center mb-4 bg-white rounded-md p-1 gap-2">
-                                <input type="checkbox" id="phone" name="phone" class="mr-2">
-                                <label for="phone" class="text-sm  dark:text-white">الهاتف</label>
-                            </div>
-                            <div class="flex items-center mb-4 bg-white rounded-md p-1 gap-2">
-                                <input type="checkbox" id="whatsapp" name="whatsapp" class="mr-2">
-                                <label for="whatsapp" class="text-sm  dark:text-white">واتساب</label>
-                            </div>
-                            <div class="flex items-center mb-4 bg-white rounded-md p-1 gap-2">
-                                <input type="checkbox" id="both" name="both" class="mr-2">
-                                <label for="both" class="text-sm  dark:text-white">الاثنين معاً</label>
+                    <form class="max-w-sm">
+                        <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 ">رقم التواصل</label>
+                        <div class="flex items-center space-x-2">
+                            <div class="relative flex-grow">
+                                <input type="text" placeholder="رقم الهاتف" class="py-2 px-3 text-right bg-white rounded-lg shadow-md placeholder-gray-400 text-black">
+                                <img src="./images/Flag-United-Arab-Emirates.webp" alt="UAE Flag" class="absolute right-72 top-1/2 transform -translate-y-1/2 h-6">
                             </div>
                         </div>
                     </form>
-                    
-            
+                    <form class="max-w-sm">
+                        <label for="contact" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">كيف تفضل التواصل معك؟</label>
+                        <div class="flex gap-3">
+                            <div class="flex items-center mb-4 bg-white rounded-md p-2 gap-2">
+                                <input type="radio" id="phone" name="contact" class="mr-2 text-green-500 focus:ring-green-500">
+                                <label for="phone" class="text-sm text-gray-700 dark:text-black">الهاتف</label>
+                            </div>
+                            <div class="flex items-center mb-4 bg-white rounded-md p-2 gap-2">
+                                <input type="radio" id="whatsapp" name="contact" class="mr-2 text-green-500 focus:ring-green-500">
+                                <label for="whatsapp" class="text-sm text-gray-700 dark:text-black">واتساب</label>
+                            </div>
+                            <div class="flex items-center mb-4 bg-white rounded-md p-2 gap-2">
+                                <input type="radio" id="both" name="contact" class="mr-2 text-green-500 focus:ring-green-500">
+                                <label for="both" class="text-sm text-gray-700 dark:text-black">الاثنين معاً</label>
+                            </div>
+                        </div>
+                    </form>            
                     
                 </div>
                 <div class="flex justify-center">
@@ -227,7 +229,7 @@
                     <div class="lg:flex ">
                         <div class="grid grid-cols-[auto,1fr] md:grid-cols-[auto,1fr,1fr] lg:grid-cols-[auto,1fr,1fr,1fr] gap-6">
                             <div class="p-5">
-                                <h2 class="font-bold text-xl md:text-2xl text-white mb-5">من نحن</h2>
+                                <h2 class="font-bold text-xl md:text-2xl text-white mb-10">من نحن</h2>
                                 <h6 class="text-white text-[18px]">التطبيق الاول من نوعه الذي يقدم خدمات متكاملة</h6>
                                 <ul class="text-white text-[18px] text-right ltr:text-left list-disc list-inside mt-5">
                                     <li>بيع وشراء السيارات</li>
@@ -238,15 +240,15 @@
                             </div>
                         
                             <div class="p-5">
-                                <h2 class="font-bold text-xl md:text-2xl text-white mb-5">تواصل معنا</h2>
+                                <h2 class="font-bold text-xl md:text-2xl text-white mb-10">تواصل معنا</h2>
                                 <div class="flex flex-col">
-                                    <div class="flex items-center gap-5">
-                                        <div class="font-normal text-white grid gap-7">
+                                    <div class="flex items-center gap-10">
+                                        <div class="font-normal text-white grid gap-4">
                                             <p>فيسبوك</p>
                                             <p>واتساب</p>
                                             <p>تويتر</p>
                                         </div>
-                                        <div class="grid gap-7 text-white">
+                                        <div class="grid gap-4 text-white">
                                             <ion-icon name="logo-facebook" class="text-2xl md:text-2xl"></ion-icon>
                                             <ion-icon name="logo-whatsapp" class="text-2xl md:text-2xl"></ion-icon>
                                             <ion-icon name="logo-twitter" class="text-2xl md:text-2xl"></ion-icon>
@@ -257,7 +259,7 @@
                             
                         
                             <div class="p-5">
-                                <h2 class="font-bold text-xl md:text-2xl text-white mb-5">اتصل بنا</h2>
+                                <h2 class="font-bold text-xl md:text-2xl text-white mb-10">اتصل بنا</h2>
                                 <form class="w-full md:w-auto">
                                     <div>
                                         <div>
