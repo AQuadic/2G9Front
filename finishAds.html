@@ -314,8 +314,14 @@
                 </div>
                 <div class="mt-10 p-10">
                     <div>
-                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">قياس التصميم </label>
-                        <input type="text" id="name" class="bg-white  text-[#929191] text-sm rounded-lg block  shadow-md  transition-all outline-none p-2.5 w-3/5 lg:w-1/2" placeholder="اختار قياس التصميم" required />
+                        <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">قياس التصميم </label>
+                        <select id="countries"  class="bg-white  text-[#929191] text-sm rounded-lg block  shadow-md  transition-all outline-none p-2.5 w-3/5 lg:w-1/2">
+                        <option selected>اختار قياس التصميم</option>
+                        <option value="US">United States</option>
+                        <option value="CA">Canada</option>
+                        <option value="FR">France</option>
+                        <option value="DE">Germany</option>
+                        </select>
                     </div>
                 </div>
                 <div class="flex justify-center mt-10">
@@ -345,19 +351,20 @@
                                 <h2 class="font-bold text-xl md:text-2xl text-white mb-5">تواصل معنا</h2>
                                 <div class="flex flex-col">
                                     <div class="flex items-center gap-5">
-                                        <div class="font-normal text-white grid gap-4">
+                                        <div class="font-normal text-white grid gap-7">
                                             <p>فيسبوك</p>
                                             <p>واتساب</p>
                                             <p>تويتر</p>
                                         </div>
-                                        <div class="grid gap-6 text-white">
-                                            <ion-icon name="logo-facebook"></ion-icon>
-                                            <ion-icon name="logo-whatsapp"></ion-icon>
-                                            <ion-icon name="logo-twitter"></ion-icon>
+                                        <div class="grid gap-7 text-white">
+                                            <ion-icon name="logo-facebook" class="text-2xl md:text-2xl"></ion-icon>
+                                            <ion-icon name="logo-whatsapp" class="text-2xl md:text-2xl"></ion-icon>
+                                            <ion-icon name="logo-twitter" class="text-2xl md:text-2xl"></ion-icon>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            
                         
                             <div class="p-5">
                                 <h2 class="font-bold text-xl md:text-2xl text-white mb-5">اتصل بنا</h2>

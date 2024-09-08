@@ -14,8 +14,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
-
     <script src="./js/script.js"></script>
 </head>
 <style>
@@ -60,21 +61,21 @@
         <!-- End Navbar -->
 
         <!-- Start Slider -->
-            <div class="container mx-auto">
+            <div class="container mx-auto mt-[-1px]">
                 <swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper"
                 thumbs-swiper=".mySwiper2" space-between="10" navigation="true">
                 <swiper-slide>
-                <img src="./images/header.png" />
+                <img src="./images/header.png" class="w-full" />
                 </swiper-slide>
                 <swiper-slide>
-                    <img src="./images/header.png" />
+                    <img src="./images/header.png" class="w-full"/>
                 </swiper-slide>  <swiper-slide>
-                    <img src="./images/header.png" />
+                    <img src="./images/header.png" class="w-full"/>
                 </swiper-slide>
 
                 </swiper-container>
             
-                <swiper-container class="mySwiper2 p-10" space-between="10" slides-per-view="4" free-mode="true"
+                <swiper-container class="mySwiper2 p-10 mx-auto" space-between="10" slides-per-view="4" free-mode="true"
                     watch-slides-progress="true" >
                     <swiper-slide>
                     <img src="./images/header.png" />
@@ -92,22 +93,23 @@
 
         <!-- Start Content -->
             <div class="container mx-auto">
-                <div class="lg:pr-20 lg:flex gap-20">
+                <div class="lg:pr-20 lg:flex items-center gap-52">
                     <h2 class="font-bold">تسلا موديل اكس - بحالة جيدة جدا شامل الشاحن الاصلي ومحطة شحن المنزل</h2>
-                    <div class="flex gap-10 border border-[#BCBEC0] rounded-md p-1">
-                        <p class="flex items-center gap-3 text-[#6D6E70] lg:font-bold text-[11px] lg:text-xl">
+                    <div class="flex gap-10 border border-[#BCBEC0] rounded-md p-1 flex-grow-1">
+                        <p class="flex items-center gap-3 text-[#6D6E70] lg:font-bold text-[11px] lg:text-sm">
                             خليجي
                             <ion-icon name="globe-outline"></ion-icon>
                         </p>
-                        <p class="flex items-center gap-3 text-[#6D6E70] lg:font-bold text-[11px] lg:text-xl">
+                        <p class="flex items-center gap-3 text-[#6D6E70] lg:font-bold text-[11px] lg:text-sm">
                             85,000 KM
                             <ion-icon name="time-outline"></ion-icon>
                         </p>
-                        <p class="flex items-center gap-3 text-[#6D6E70] lg:font-bold text-[11px] lg:text-xl">
+                        <p class="flex items-center gap-3 text-[#6D6E70] lg:font-bold text-[11px] lg:text-sm">
                             2024
                             <ion-icon name="calendar-clear-outline"></ion-icon>
                         </p>
                     </div>
+                    
                 </div>
                 <div class="lg:pr-20 flex gap-2">
                     <p class="text-[#C10D10] font-bold">80,000 </p>
@@ -221,11 +223,11 @@
                                         </div>
                                     </div>
                                     <div class="flex mt-5 gap-3">
-                                            <button type="submit" class="text-white bg-[#C10D10] flex items-center justify-center gap-2 font-medium rounded-lg text-sm w-1/2  px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"> 
+                                            <button type="submit" class="text-white bg-[#C10D10] flex items-center justify-center gap-2 font-medium rounded-lg text-sm w-1/2  px-5 py-2.5 text-center "> 
                                                 <ion-icon name="link-outline"></ion-icon>
                                                 نشر الإعلان
                                             </button>
-                                            <button type="submit" class="text-[#C10D10] bg-white border border-[#C10D10] flex items-center justify-center gap-2 font-medium rounded-lg text-sm w-1/2  px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                            <button type="submit" class="text-[#C10D10] bg-white border border-[#C10D10] flex items-center justify-center gap-2 font-medium rounded-lg text-sm w-1/2  px-5 py-2.5 text-center ">
                                                 <ion-icon name="warning-outline"></ion-icon>
                                                 الابلاغ عن الاعلان
                                             </button>
@@ -314,40 +316,40 @@
                                 <td class="px-6 py-4 text-black">
                                     <div class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 gap-4">
                                         <div class="flex items-center gap-2">
-                                            <input type="checkbox" id="checkbox1" class="h-5 w-5 appearance-none rounded-sm border-2 border-gray-300 checked:bg-green-500 checked:border-green-500 focus:ring-0 " checked>
+                                            <i class="fa-solid fa-check text-white bg-green-500 p-1"></i>
                                             <label for="checkbox1">مكيف هوائي</label>
                                         </div>
                                         <div class="flex items-center gap-2">
-                                            <input type="checkbox" id="checkbox2" class="h-5 w-5 appearance-none rounded-sm border-2 border-gray-300 checked:bg-green-500 checked:border-green-500 focus:ring-0 " checked>
+                                            <i class="fa-solid fa-check text-white bg-green-500 p-1"></i>
                                             <label for="checkbox2">مشغل موسيقى</label>
                                         </div>
                                         <div class="flex items-center gap-2">
-                                            <input type="checkbox" id="checkbox3" class="h-5 w-5 appearance-none rounded-sm border-2 border-gray-300 checked:bg-green-500 checked:border-green-500 focus:ring-0 " checked>
+                                            <i class="fa-solid fa-check text-white bg-green-500 p-1"></i>
                                             <label for="checkbox3">تبريد مقاعد</label>
                                         </div>
                                         <div class="flex items-center gap-2">
-                                            <input type="checkbox" id="checkbox4" class="h-5 w-5 appearance-none rounded-sm border-2 border-gray-300 checked:bg-green-500 checked:border-green-500 focus:ring-0 " checked>
+                                            <i class="fa-solid fa-check text-white bg-green-500 p-1"></i>
                                             <label for="checkbox4">دفع خلفي</label>
                                         </div>
                                         <div class="flex items-center gap-2">
-                                            <input type="checkbox" id="checkbox5" class="h-5 w-5 appearance-none rounded-sm border-2 border-gray-300 checked:bg-green-500 checked:border-green-500 focus:ring-0  " checked>
+                                            <i class="fa-solid fa-check text-white bg-green-500 p-1"></i>
                                             <label for="checkbox5">كراسي جلد</label>
                                         </div>
                                         
                                         <div class="flex items-center gap-2">
-                                            <input type="checkbox" id="checkbox6" class="h-5 w-5 appearance-none rounded-sm border-2 border-gray-300 checked:bg-green-500 checked:border-green-500 focus:ring-0 " checked>
+                                            <i class="fa-solid fa-check text-white bg-green-500 p-1"></i>
                                             <label for="checkbox6">كاميرا خلفية</label>
                                         </div>
                                         <div class="flex items-center gap-2">
-                                            <input type="checkbox" id="checkbox7" class="h-5 w-5 appearance-none rounded-sm border-2 border-gray-300 checked:bg-green-500 checked:border-green-500 focus:ring-0 " checked>
+                                            <i class="fa-solid fa-check text-white bg-green-500 p-1"></i>
                                             <label for="checkbox7">نظام ملاحة GPS</label>
                                         </div>
                                         <div class="flex items-center gap-2">
-                                            <input type="checkbox" id="checkbox8" class="h-5 w-5 appearance-none rounded-sm border-2 border-gray-300 checked:bg-green-500 checked:border-green-500 focus:ring-0 " checked>
+                                            <i class="fa-solid fa-check text-white bg-green-500 p-1"></i>
                                             <label for="checkbox8">مساعد الاصطفاف</label>
                                         </div>
                                         <div class="flex items-center gap-2">
-                                            <input type="checkbox" id="checkbox9" class="h-5 w-5 appearance-none rounded-sm border-2 border-gray-300 checked:bg-green-500 checked:border-green-500 focus:ring-0 " checked>
+                                            <i class="fa-solid fa-check text-white bg-green-500 p-1"></i>
                                             <label for="checkbox9">نظام صوتي</label>
                                         </div>
                                     </div>
@@ -358,7 +360,7 @@
                                 <th scope="row" class="px-6 py-4  whitespace-nowrap dark:text-white">
                                 <h1 class="text-[#C10D10] mb-5 font-bold">تواصل مع البائع</h1>
                                     <div class="flex items-center gap-2">
-                                        <img src="./images/Ellipse1830.png" alt="Ellipse1830">
+                                        <img src="./images/Ellipse1830.png" class="w-14 h-14 rounded-full" alt="Ellipse1830">
                                         <div class="">
                                             <h2>سلطان</h2>
                                             <p class="font-normal text-[7px]">حساب موثق</p>
@@ -381,11 +383,11 @@
                                         </div>
                                     </div>
                                     <div class="flex mt-5 gap-3">
-                                            <button type="submit" class="text-white bg-[#C10D10] flex items-center justify-center gap-2 font-medium rounded-lg text-sm w-1/2  px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"> 
+                                            <button type="submit" class="text-white bg-[#C10D10] flex items-center justify-center gap-2 font-medium rounded-lg text-sm w-1/2  px-5 py-2.5 text-center "> 
                                                 <ion-icon name="link-outline"></ion-icon>
                                                 نشر الإعلان
                                             </button>
-                                            <button type="submit" class="text-[#C10D10] bg-white border border-[#C10D10] flex items-center justify-center gap-2 font-medium rounded-lg text-sm w-1/2  px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                            <button type="submit" class="text-[#C10D10] bg-white border border-[#C10D10] flex items-center justify-center gap-2 font-medium rounded-lg text-sm w-1/2  px-5 py-2.5 text-center ">
                                                 <ion-icon name="warning-outline"></ion-icon>
                                                 الابلاغ عن الاعلان
                                             </button>
@@ -420,19 +422,20 @@
                                 <h2 class="font-bold text-xl md:text-2xl text-white mb-5">تواصل معنا</h2>
                                 <div class="flex flex-col">
                                     <div class="flex items-center gap-5">
-                                        <div class="font-normal text-white grid gap-4">
+                                        <div class="font-normal text-white grid gap-7">
                                             <p>فيسبوك</p>
                                             <p>واتساب</p>
                                             <p>تويتر</p>
                                         </div>
-                                        <div class="grid gap-6 text-white">
-                                            <ion-icon name="logo-facebook"></ion-icon>
-                                            <ion-icon name="logo-whatsapp"></ion-icon>
-                                            <ion-icon name="logo-twitter"></ion-icon>
+                                        <div class="grid gap-7 text-white">
+                                            <ion-icon name="logo-facebook" class="text-2xl md:text-2xl"></ion-icon>
+                                            <ion-icon name="logo-whatsapp" class="text-2xl md:text-2xl"></ion-icon>
+                                            <ion-icon name="logo-twitter" class="text-2xl md:text-2xl"></ion-icon>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            
                         
                             <div class="p-5">
                                 <h2 class="font-bold text-xl md:text-2xl text-white mb-5">اتصل بنا</h2>

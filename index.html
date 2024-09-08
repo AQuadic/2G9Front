@@ -64,7 +64,18 @@
             
                 <div class="relative bg-gray-200 overflow-hidden shadow-md">
                     <img src="./images/header.png" alt="Header Image" class="w-full object-cover object-center " />
-                    <div class="absolute inset-0 flex flex-col justify-center text-center text-white bg-black bg-opacity-50 p-4 md:p-8">
+                    <div class="absolute inset-0 flex flex-col justify-center text-center text-white bg-black bg-opacity-50 p-4 md:p-8">         
+                        <form class="max-w-md mx-auto lg:mt-[-100px] lg:mb-16">   
+                            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                                    </svg>
+                                </div>
+                                <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 outline-none " placeholder="ابحث عن سيارتك المفضلة" required />
+                            </div>
+                        </form>
                     <h2 class="lg:text-lg text-[10px] md:text-2xl font-bold lg:mb-4 md:mb-6 px-2 md:px-0 text-right xl:text-3xl xl:mb-10 ltr:text-left">بع و إشتري سيارتك بكل سهولة و أفضل أسعار</h2>
                     <ul class="lg:text-sm md:text-lg text-[10px] list-disc list-inside lg:px-2 md:px-0 text-right xl:text-2xl ltr:text-left">
                         <li>بيع وشراء السيارات</li>
@@ -342,19 +353,20 @@
                                 <h2 class="font-bold text-xl md:text-2xl text-white mb-5">تواصل معنا</h2>
                                 <div class="flex flex-col">
                                     <div class="flex items-center gap-5">
-                                        <div class="font-normal text-white grid gap-4">
+                                        <div class="font-normal text-white grid gap-7">
                                             <p>فيسبوك</p>
                                             <p>واتساب</p>
                                             <p>تويتر</p>
                                         </div>
-                                        <div class="grid gap-6 text-white">
-                                            <ion-icon name="logo-facebook"></ion-icon>
-                                            <ion-icon name="logo-whatsapp"></ion-icon>
-                                            <ion-icon name="logo-twitter"></ion-icon>
+                                        <div class="grid gap-7 text-white">
+                                            <ion-icon name="logo-facebook" class="text-2xl md:text-2xl"></ion-icon>
+                                            <ion-icon name="logo-whatsapp" class="text-2xl md:text-2xl"></ion-icon>
+                                            <ion-icon name="logo-twitter" class="text-2xl md:text-2xl"></ion-icon>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            
                         
                             <div class="p-5">
                                 <h2 class="font-bold text-xl md:text-2xl text-white mb-5">اتصل بنا</h2>
