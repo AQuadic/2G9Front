@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
-    <title>Contact Us</title>
+    <title>Otp</title>
     <link rel="icon" type="image/png" href="./images/logo.png">
     <!-- Icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -21,90 +21,68 @@
     body {
             font-family: "Noto Kufi Arabic", sans-serif;
         }
-
 </style>
-<body class="bg-gray-50">
+<body >
         <!-- Start Navbar -->
-            <nav class="bg-[#C10D10] w-full z-20 top-0 start-0 border-b border-gray-200">
+            <nav class="bg-[#C10D10]  w-full z-20 top-0 start-0 border-b border-gray-200 ">
                 <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
-                    <div class="flex items-center space-x-3 md:order-2 gap-2 cursor-pointer">
-                        <img src="./images/clarity_language-line.svg" alt="">
-                        <p class="text-white text-2xl">En</p>
-                    </div>
-                    <a href="index.html" class="flex items-center space-x-3 md:order-1">
+                    <a href="index.html" class="flex items-center space-x-3 md:order-2">
                         <img src="./images/Group.png" class="h-12 w-8" alt="Logo">
                     </a>
-                    <div class="flex items-center gap-2 md:order-4 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                        <a href="./login.html" class="text-white text-xl cursor-pointer hidden md:flex">سجل الدخول أو انضم الينا</a>
-                        <button type="button" class="text-[#C10D10] bg-white font-medium rounded-lg text-sm px-4 py-2 hidden md:flex">أضف اعلان</button>
-                        <button id="menu-toggle" data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+                    <div class="flex md:order-1 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                        <button type="button" class="text-[#C10D10] bg-white font-medium rounded-lg text-sm px-4 py-2 text-center">تسجيل الدخول</button>
+                        <button id="menu-toggle" data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 " aria-controls="navbar-sticky" aria-expanded="false">
                             <span class="sr-only">Open main menu</span>
                             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
                             </svg>
                         </button>                    
                     </div>
-                    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-3" id="navbar-sticky">
-                        <ul class="flex flex-col p-4 md:p-0 mt-4 font-normal border border-gray-100 rounded-lg md:space-x-4 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
-                            <li class="flex items-center">
-                                <img src="./images/Frame 1000006909.svg" alt="services">
-                                <a href="index.html" class="block py-2 px-3 text-white rounded">الخدمات </a>
+                    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-4 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+                            <li>
+                                <a href="index.html" class="block py-2 px-3 text-white rounded">الإعلانات </a>
                             </li>
-                            <li class="flex items-center">
-                                <img src="./images/heartIcon.svg" alt="heartIcon">
-                                <a href="addAds.html" class="block py-2 px-3 text-white rounded">مفضلتي</a>
+                            <li>
+                                <a href="addAds.html" class="block py-2 px-3 text-white rounded">اضف إعلان</a>
                             </li>
-                            <li class="flex items-center">
-                                <img src="./images/mingcute_horn-line.svg" alt="ads">
-                                <a href="services.html" class="block py-2 px-3 text-white rounded">اعلاناتي </a>
+                            <li>
+                                <a href="services.html" class="block py-2 px-3 text-white rounded">الخدمات </a>
                             </li>
-                            <li class="flex items-center md:hidden">
-                                <a href="./login.html" class="block py-2 px-3 text-white rounded">سجل الدخول أو انضم الينا</a>
-                            </li>
-                            <li class="flex items-center md:hidden">
-                                <button type="button" class="text-[#C10D10] bg-white font-medium rounded-lg text-sm px-4 py-2 text-center">أضف اعلان</button>
+                            <li>
+                                <a href="contactUs.html" class="block py-2 px-3 text-white rounded">تواصل معنا</a>
                             </li>
                         </ul>
                     </div>
                 </div>
-            </nav> 
+            </nav>
         <!-- End Navbar -->
-        
-        <!-- Start Header -->
-            <div class="container mx-auto mt-5 p-10">
-                <h2 class="text-[#C10D10] font-bold text-4xl mb-10">تواصل معنا</h2>
-                <form>
-                    <div class="grid gap-6 mb-6 md:grid-cols-2">
-                        <div>
-                            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">الاسم</label>
-                            <input type="text" id="first_name"  class="bg-white  text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all outline-none" placeholder="اكتب اسمك" required />
-                        </div>
-                        
-                        <div>
-                            <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">الايميل</label>
-                            <input type="text" id="last_name"  class="bg-white  text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all outline-none" placeholder="اكتب الايميل" required />
-                        </div>
 
-                        <div>
-                            <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">رقم الهاتف</label>
-                            <input type="" id="phone"  class="bg-white  text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all outline-none" placeholder="اكتب رقم الهاتف" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required />
-                        </div>
-
-                        <div>
-                            <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">تعليقك</label>
-                            <textarea id="message" rows="4"  class="bg-white  text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all outline-none" placeholder="اترك تعليقك"></textarea>
-                        </div>
+        <!-- Start Section -->
+            <div class="container mx-auto flex flex-col justify-center items-center p-4 md:p-20 gap-5">
+                <div class="mb-5 text-center">
+                    <h2 class="text-[#2B2F4E] font-bold text-xl md:text-[40px] mb-4">🔍 التحقق السريع</h2>
+                    <p class="text-[#878787] font-bold text-xs md:text-sm">سنقوم بتحويلك لتطبيق الواتس اب, لترسل رسالة التحقق لنا</p>
+                    <div class="flex justify-start gap-16 mt-5">
                     </div>
-                    <div class="flex justify-center">
-                        <button type="submit" class="text-white bg-[#C10D10]  font-medium rounded-lg text-sm w-1/2  px-5 py-2.5 text-center border border-[#C10D10] hover:bg-white hover:text-[#C10D10] hover:border-[#C10D10] hover:border">إرسال</button>
-                    </div>
-                </form>
-                <div class="flex justify-center mt-10">
-                    <img src="./images/cuate.png" alt="cuate">
                 </div>
+                <img src="./images/Verif.svg" alt="Verification" class="w-[280px] h-[280px]">
+                <div class="flex flex-col justify-center items-center gap-3" style="font-family:dongle;">
+                    <h1 class="font-normal text-[16px]">تأكد من ارسال الرسالة من خلال رقم</h1>
+                    <p class="font-bold text-2xl">+201092760002</p>
+                    <p class="font-normal text-[14px] text-[#C10D10] cursor-pointer">تعديل الرقم</p>
+                </div>
+                <div class="flex flex-col justify-center items-center gap-3" style="font-family:DM Sans;">
+                    <h1 class="font-bold text-2xl text-[#C10D10]">OTP:54:797214</h1>
+                    <p class="font-normal text-[16px] text-[#5B5B5B]">سنقوم بتجهيز الرسالة لك لا حاجة لتعديلها.</p>
+                </div>
+                <div class="flex flex-col gap-4 md:gap-7 w-full items-center">
+                    <button type="submit" class="text-white bg-[#C10D10] font-medium rounded-lg text-xs md:text-sm px-5 py-2.5 text-center border border-[#C10D10] hover:bg-white hover:text-[#C10D10] hover:border-[#C10D10] md:w-96 w-full h-12 md:h-16">افتح الواتس اب</button>
+                </div>
+                <p class="font-bold text-[16px] text-[#C10D10] cursor-pointer" style="font-family: Almarai;">الحصول علي كود جديد</p>
             </div>
-        <!-- End Header -->
-
+        <!-- End Section -->
+        
         <!-- Start Footer --> 
             <footer class="bg-[#C10D10] mt-5">
                 <div class="container mx-auto">
@@ -142,7 +120,7 @@
                         
                             <div class="p-5">
                                 <h2 class="font-bold text-xl md:text-2xl text-white mb-10">اتصل بنا</h2>
-                                <form class="w-full md:w-auto mb-5">
+                                <form class="w-full md:w-auto">
                                     <div>
                                         <div>
                                             <input type="text" id="first_name" class="bg-white border-gray-300 text-gray-900 text-sm rounded-lg w-full md:w-[300px] mb-5 p-2.5 text-right outline-none ltr:text-left" placeholder="الاسم" required />
@@ -153,9 +131,6 @@
                                         <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 text-right outline-none ltr:text-left" placeholder="اترك تعليقك"></textarea>
                                     </div>
                                 </form>
-                                <a href="#" class="text-white border rounded-[10px] p-2 w-[84px] h-[42px]">
-                                    إرسال
-                            </a>
                             </div>
                         </div>
                         
@@ -178,6 +153,5 @@
                 </div>
             </footer>
         <!-- End Footer -->
-
 </body>
 </html>

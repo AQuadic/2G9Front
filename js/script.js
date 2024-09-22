@@ -50,17 +50,21 @@ var swiper = new Swiper(".mySwiper", {
     centeredSlides: true,
     loop:true,
     slidesPerView: "auto",
+    initialSlide: 2,
     coverflowEffect: {
     rotate: 0,
     stretch: 0,
     depth: 150,
     modifier: 2.5,
     slideShadows: true,
+    autoplay: false,
+    breakpoints: {
+        640: {
+            slidesPerView: 1, 
+        },
+        641: {
+            slidesPerView: 3,
+        },
+    },
 },
-autoplay:{
-
-    delay:3000,
-    disableOnInteraction:false,
-}
-
 });
