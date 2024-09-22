@@ -24,38 +24,7 @@
 </style>
 <body class="bg-gray-50">
         <!-- Start Navbar -->
-            <nav class="bg-[#C10D10]  w-full z-20 top-0 start-0 border-b border-gray-200 ">
-                <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
-                    <a href="index.html" class="flex items-center space-x-3 md:order-2">
-                        <img src="./images/Group.png" class="h-12 w-8" alt="Logo">
-                    </a>
-                    <div class="flex md:order-1 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                        <button type="button" class="text-[#C10D10] bg-white font-medium rounded-lg text-sm px-4 py-2 text-center">تسجيل الدخول</button>
-                        <button id="menu-toggle" data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-                            <span class="sr-only">Open main menu</span>
-                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                            </svg>
-                        </button>                    
-                    </div>
-                    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-                        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-4 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
-                            <li>
-                                <a href="index.html" class="block py-2 px-3 text-white rounded">الإعلانات </a>
-                            </li>
-                            <li>
-                                <a href="addAds.html" class="block py-2 px-3 text-white rounded">اضف إعلان</a>
-                            </li>
-                            <li class="font-bold">
-                                <a href="services.html" class="block py-2 px-3 text-white rounded">الخدمات </a>
-                            </li>
-                            <li>
-                                <a href="contactUs.html" class="block py-2 px-3 text-white rounded">تواصل معنا</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+            <div id="navbar"></div>
         <!-- End Navbar -->
         
         <!-- Start Header -->
@@ -316,74 +285,7 @@
         <!-- End Second Cards -->
 
         <!-- Start Footer --> 
-            <footer class="bg-[#C10D10] mt-5">
-                <div class="container mx-auto">
-                    <div class="lg:flex ">
-                        <div class="grid grid-cols-[auto] md:grid-cols-[auto,1fr,1fr] lg:grid-cols-[auto,auto,1fr,1fr] gap-6">
-                            <div class="p-5">
-                                <h2 class="font-bold text-xl md:text-2xl text-white mb-10">من نحن</h2>
-                                <h6 class="text-white text-[18px]">التطبيق الاول من نوعه الذي يقدم خدمات متكاملة</h6>
-                                <ul class="text-white text-[18px] text-right ltr:text-left list-disc list-inside mt-5">
-                                    <li>بيع وشراء السيارات</li>
-                                    <li>خدمات أخرى متعلقة بالسيارات</li>
-                                    <li>تصميم إعلان سيارات باستخدام الذكاء الاصطناعي (منشور/قصة)</li>
-                                    <li>استخدام رقم الهيكل VIN لملء بيانات السيارة</li>
-                                </ul>
-                            </div>
-                        
-                            <div class="p-5">
-                                <h2 class="font-bold text-xl md:text-2xl text-white mb-10">تواصل معنا</h2>
-                                <div class="flex flex-col">
-                                    <div class="flex items-center gap-10">
-                                        <div class="font-normal text-white grid gap-4">
-                                            <p>فيسبوك</p>
-                                            <p>واتساب</p>
-                                            <p>تويتر</p>
-                                        </div>
-                                        <div class="grid gap-4 text-white">
-                                            <ion-icon name="logo-facebook" class="text-2xl md:text-2xl"></ion-icon>
-                                            <ion-icon name="logo-whatsapp" class="text-2xl md:text-2xl"></ion-icon>
-                                            <ion-icon name="logo-twitter" class="text-2xl md:text-2xl"></ion-icon>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        
-                            <div class="p-5">
-                                <h2 class="font-bold text-xl md:text-2xl text-white mb-10">اتصل بنا</h2>
-                                <form class="w-full md:w-auto">
-                                    <div>
-                                        <div>
-                                            <input type="text" id="first_name" class="bg-white border-gray-300 text-gray-900 text-sm rounded-lg w-full md:w-[300px] mb-5 p-2.5 text-right outline-none ltr:text-left" placeholder="الاسم" required />
-                                        </div>
-                                        <div>
-                                            <input type="text" id="last_name" class="bg-white border-gray-300 text-gray-900 text-sm rounded-lg w-full md:w-[300px] mb-5 p-2.5 text-right outline-none ltr:text-left" placeholder="الايميل" required />
-                                        </div>
-                                        <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 text-right outline-none ltr:text-left" placeholder="اترك تعليقك"></textarea>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        
-        
-                        <div class="p-5 lg:pt-2">
-                            <img src="./images/Group2.png" alt="">
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="mt-5 mr-5 md:mr-10 md:flex items-center justify-between" >
-                        <div class="flex items-center justify-between mb-5 ml-5" >
-                            <h2 class="text-white font-normal">طورت بواسطة : </h2>
-                            <img src="./images/Group186.png" alt="Group186">
-                        </div>
-                        <div class="flex justify-between  font-normal text-white ml-5" >
-                            <p>جميع الحقوق محفوظة</p>
-                            <a href="" style="text-decoration: underline;">2G9 UAE.</a>
-                        </div>
-                    </div> 
-                </div>
-            </footer>
+            <div id="footer"></div>
         <!-- End Footer -->
 </body>
 </html>

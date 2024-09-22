@@ -1,3 +1,45 @@
+// Load Navbar 
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        })
+        .catch(error => console.log('Error loading the navbar:', error));
+});
+
+// Load Footer
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        })
+        .catch(error => console.log('Error loading the footer:', error));
+});
+
+// Favorite Icon in Details
+const favoriteButton = document.getElementById('favoriteButton');
+const favoriteIcon = document.getElementById('favoriteIcon');
+const favoriteText = document.getElementById('favoriteText');
+
+favoriteButton.addEventListener('click', function() {
+    if (favoriteText.textContent === "أضف إلي المفضلة") {
+        favoriteIcon.src = "./images/heartIcon.svg";
+        favoriteText.textContent = "حذف من المفضلة";
+        favoriteButton.classList.add('bg-[#C10D10]');
+        favoriteButton.classList.remove('border-[#C10D10]');
+        favoriteText.classList.replace('text-[#C10D10]', 'text-white');
+    } else {
+        favoriteIcon.src = "./images/Frame 1000006919.svg";
+        favoriteText.textContent = "أضف إلي المفضلة";
+        favoriteButton.classList.remove('bg-[#C10D10]');
+        favoriteButton.classList.add('border-[#C10D10]');
+        favoriteText.classList.replace('text-white', 'text-[#C10D10]');
+    }
+});
+
+
 // Toggle 
 document.addEventListener('DOMContentLoaded', () => {
     const toggleButton = document.getElementById('menu-toggle');
