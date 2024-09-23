@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="2G9">
     <link href="./output.css" rel="stylesheet">
-    <title>Finish Your Ad</title>
+    <title>Design Your Ad</title>
     <link rel="icon" type="image/png" href="./images/logo.png">
     <!-- Icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -33,7 +33,7 @@
             <div class="container mx-auto">
                 <div class="p-3 mt-10">
                     <h2 class="text-[#C10D10] font-medium lg:text-4xl mb-5">إضافة إعلان جديد</h2>
-                    <p class="font-medium lg:text-2xl text-[#7E7E7E]">خطوة  <span class="text-black">3</span> من 4 </p>
+                    <p class="font-medium lg:text-2xl text-[#7E7E7E]">خطوة  <span class="text-black">3</span> من 3 </p>
                 </div>
                 <div class="p-3">
                     <h2 class="text-[#C10D10] font-medium lg:text-2xl mb-5">أضف بيانات الاعلان</h2>
@@ -389,11 +389,57 @@
                         
                     </div>        
                 </div>
-
-                <div class="flex justify-center mt-10">
-                    <button type="submit" class="text-white bg-[#C10D10] border hover:border-[#C10D10] hover:bg-white  hover:text-[#C10D10] font-medium rounded-lg text-sm w-3/5  px-5 py-2.5 text-center">التقديم للمراجعة و النشر</button>
+                <div class="flex items-center justify-center">
+                    <div class="relative">
+                        <label for="numberof" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">قياس التصميم</label>
+                        <div class="relative">
+                            <select id="numberof" class="bg-white text-[#929191] text-sm rounded-lg block p-2.5 shadow-md transition-all outline-none appearance-none w-[500px] pr-10">
+                                <option value="" disabled selected>اختر قياس التصميم</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                            <div class="absolute left-3 top-3 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                    <div class="flex items-center justify-center gap-3">
+                        <div class="flex justify-center mt-10">
+                            <button type="submit" class="text-white bg-[#C10D10] border hover:border-[#C10D10] hover:bg-white  hover:text-[#C10D10] font-medium rounded-lg text-sm   px-5 py-2.5 text-center">تحميل الاعلان باللغة العربية</button>
+                        </div>
+                        <div class="flex justify-center mt-10">
+                            <button id="submitButton" type="submit" class="text-white bg-[#C10D10] border hover:border-[#C10D10] hover:bg-white  hover:text-[#C10D10] font-medium rounded-lg text-sm   px-5 py-2.5 text-center">تحميل الاعلان باللغة الانجليزية</button>
+                        </div>
                 </div>
 
+                <!-- POP UP -->
+                <div id="popup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden ">
+                    <div class="bg-white rounded-lg shadow-lg p-6 max-w-[30%] w-full relative">
+                        <img id="closePopup" src="./images/Close Square.svg" class="cursor-pointer absolute top-2 right-2" alt="close">
+                        <div class="flex flex-col items-center">
+                            <div class="relative">
+                                <div class="relative bg-green-500 rounded-full p-3">
+                                    <img src="./images/Alert - Danger.svg" alt="check" class="w-[223px] h-[223px]">
+                                </div>
+                            </div>
+                            <h2 class="mt-4 text-2xl font-medium text-[#2B2F4E]">تم تحميل الإعلان على جهازك</h2>
+                            <p class="mt-2 font-normal text-[18px] text-[#2B2F4E] text-center">هل تريد نشر الإعلان علي التطبيق</p>
+                        </div>
+                        <div class="flex flex-col items-center justify-center">
+                            <div class="flex justify-center mt-5">
+                                <button type="submit" class="text-white bg-[#C10D10] border  font-medium rounded-lg text-sm   px-5 py-2.5 text-center">نعم ، انشر الإعلان في الموقع</button>
+                            </div>
+                            <div class="flex justify-center mt-5">
+                                <button id="submitButton" type="submit" class="text-black bg-[#CFCFCF] border  font-medium rounded-lg text-sm   px-5 py-2.5 text-center">لا ، سأكتفي بالتصميم فقط</button>
+                            </div>
+                    </div>
+                    </div>
+                </div>
             </div>
         <!-- End Section -->
     
@@ -401,49 +447,75 @@
             <div id="footer"></div>
         <!-- End Footer -->
 
-        <script>
-            function handleFileSelect(event, previewId) {
-                const files = Array.from(event.target.files);
-                const previewContainer = document.getElementById(previewId);
-                previewContainer.innerHTML = ''; 
-        
-                files.forEach((file) => {
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                        const imgContainer = document.createElement('div');
-                        imgContainer.classList.add('relative', 'inline-block');
-        
-                        const imgElement = document.createElement('img');
-                        imgElement.src = e.target.result;
-                        imgElement.classList.add('mt-2', 'rounded-md');
-                        imgElement.style.width = '171px';
-                        imgElement.style.height = '148px';
-        
-                        const closeButton = document.createElement('button');
-                        closeButton.innerHTML = '&times;';
-                        closeButton.classList.add('absolute', 'top-0', 'right-0', 'bg-red-500', 'text-white', 'rounded-full', 'p-1', 'cursor-pointer', 'flex', 'items-center', 'justify-center');
-                        closeButton.style.width = '24px';
-                        closeButton.style.height = '24px';
-        
-                        closeButton.addEventListener('click', function() {
-                            imgContainer.remove();
-                        });
-        
-                        imgContainer.appendChild(imgElement);
-                        imgContainer.appendChild(closeButton);
-                        previewContainer.appendChild(imgContainer);
-                    };
-                    reader.readAsDataURL(file);
+        <!-- Upload Image -->
+            <script>
+                function handleFileSelect(event, previewId) {
+                    const files = Array.from(event.target.files);
+                    const previewContainer = document.getElementById(previewId);
+                    previewContainer.innerHTML = ''; 
+            
+                    files.forEach((file) => {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            const imgContainer = document.createElement('div');
+                            imgContainer.classList.add('relative', 'inline-block');
+            
+                            const imgElement = document.createElement('img');
+                            imgElement.src = e.target.result;
+                            imgElement.classList.add('mt-2', 'rounded-md');
+                            imgElement.style.width = '171px';
+                            imgElement.style.height = '148px';
+            
+                            const closeButton = document.createElement('button');
+                            closeButton.innerHTML = '&times;';
+                            closeButton.classList.add('absolute', 'top-0', 'right-0', 'bg-red-500', 'text-white', 'rounded-full', 'p-1', 'cursor-pointer', 'flex', 'items-center', 'justify-center');
+                            closeButton.style.width = '24px';
+                            closeButton.style.height = '24px';
+            
+                            closeButton.addEventListener('click', function() {
+                                imgContainer.remove();
+                            });
+            
+                            imgContainer.appendChild(imgElement);
+                            imgContainer.appendChild(closeButton);
+                            previewContainer.appendChild(imgContainer);
+                        };
+                        reader.readAsDataURL(file);
+                    });
+                }
+            
+                document.getElementById('imageUpload').addEventListener('change', function(event) {
+                    handleFileSelect(event, 'imagePreview1');
                 });
-            }
-        
-            document.getElementById('imageUpload').addEventListener('change', function(event) {
-                handleFileSelect(event, 'imagePreview1');
+            
+                document.getElementById('imageUpload2').addEventListener('change', function(event) {
+                    handleFileSelect(event, 'imagePreview2');
+                });
+            </script>
+        <!-- Pop Up -->
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                const popup = document.getElementById('popup');
+                const closePopup = document.getElementById('closePopup');
+                const submitButton = document.getElementById('submitButton');
+
+                if (popup && closePopup && submitButton) {
+                    submitButton.addEventListener('click', function (e) {
+                        e.preventDefault(); 
+                        popup.classList.remove('hidden');
+                    });
+
+                    closePopup.addEventListener('click', function () {
+                        popup.classList.add('hidden');
+                    });
+
+                    popup.addEventListener('click', function (e) {
+                        if (e.target === popup) {
+                            popup.classList.add('hidden');
+                        }
+                    });
+                }
             });
-        
-            document.getElementById('imageUpload2').addEventListener('change', function(event) {
-                handleFileSelect(event, 'imagePreview2');
-            });
-        </script>
+            </script>
 </body>
 </html>

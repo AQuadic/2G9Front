@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="2G9">
     <link href="./output.css" rel="stylesheet">
     <title>Login Form</title>
     <link rel="icon" type="image/png" href="./images/logo.png">
@@ -41,11 +42,11 @@
                         </svg>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg" alt="UAE Flag" class="w-6 h-6 ml-2">
                     </div>
-                
-                    <div class="flex items-center rounded-2xl bg-[#FAFAFA] ">
+
+                    <div class="flex items-center rounded-2xl bg-[#FAFAFA]">
                         <ion-icon name="lock-closed" class="w-4 h-4 md:w-5 md:h-5 text-[#9E9E9E] ml-2 mr-2"></ion-icon>
-                        <input type="password" placeholder="ادخل كلمة المرور" class="flex-grow text-xs md:text-sm text-[#6C6C6C] outline-none bg-transparent h-12 md:h-16">
-                        <ion-icon name="eye-off" class="w-4 h-4 md:w-5 md:h-5 text-[#9E9E9E] ml-2 mr-2"></ion-icon>
+                        <input type="password" id="new-password" placeholder="ادخل كلمة المرور" class="flex-grow w-full md:w-96 text-xs md:text-sm text-[#6C6C6C] outline-none bg-transparent h-12 md:h-16">
+                        <ion-icon id="toggle-new-password" name="eye-off" class="w-4 h-4 md:w-5 md:h-5 text-[#9E9E9E] ml-2 mr-2 cursor-pointer" onclick="togglePassword('new-password', 'toggle-new-password')"></ion-icon>
                     </div>
                     
                     <div class="text-right">
@@ -54,9 +55,15 @@
                 </div>
                 <div class="flex flex-col gap-4 md:gap-7 w-full items-center">
                     <button type="submit" class="text-white bg-[#C10D10] font-medium rounded-lg text-xs md:text-sm px-5 py-2.5 text-center border border-[#C10D10] hover:bg-white hover:text-[#C10D10] hover:border-[#C10D10] md:w-96 w-full h-12 md:h-16">التالي</button>
-                    <a href="./signUp.html" type="submit" class="border border-[#E9E9E9] font-medium rounded-lg text-xs md:text-sm px-5 py-2.5 text-center  md:w-96 w-full h-12 md:h-16">إنشاء حساب</a>
+                    <a href="/signUp.html">
+                        <button type="button" class="border border-[#E9E9E9] font-medium rounded-lg text-xs md:text-sm px-5 py-2.5 text-center md:w-96 w-full h-12 md:h-16">
+                            إنشاء حساب
+                        </button>
+                    </a>
                     <p class="flex justify-center text-[#C10D10] font-medium text-xs md:text-sm">أو</p>
-                    <a type="submit" class="border border-[#E9E9E9] font-medium rounded-lg text-xs md:text-sm px-5 py-2.5 text-center  md:w-96 w-full h-12 md:h-16">متابعة كزائر</a>
+                    <a href="#">
+                        <button type="submit" class="border border-[#E9E9E9] font-medium rounded-lg text-xs md:text-sm px-5 py-2.5 text-center  md:w-96 w-full h-12 md:h-16">متابعة كزائر</button>
+                    </a>
                 </div>
             </div>
         <!-- End Section -->
@@ -64,5 +71,19 @@
         <!-- Start Footer --> 
             <div id="footer"></div>
         <!-- End Footer -->
+        <script>
+            function togglePassword(inputId, iconId) {
+                const passwordInput = document.getElementById(inputId);
+                const toggleIcon = document.getElementById(iconId);
+            
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    toggleIcon.setAttribute('name', 'eye-outline');
+                } else {
+                    passwordInput.type = 'password';
+                    toggleIcon.setAttribute('name', 'eye-off');
+                }
+            }
+        </script>
 </body>
 </html>

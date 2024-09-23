@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="2G9">
     <link href="./output.css" rel="stylesheet">
     <title>Add Ads</title>
     <link rel="icon" type="image/png" href="./images/logo.png">
@@ -32,261 +33,65 @@
         <!-- End Navbar -->
         
         <!-- Start Header -->
-        <div class="container mx-auto">
-            <section >
-                <div class="p-10">
-                    <h2 class="text-[#C10D10] font-bold lg:text-4xl mb-5">أختار باقتك الإعلانية</h2>
-                    <p class="font-bold lg:text-2xl">انت الان مشترك في باقة : </p>
-                </div>
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="content swiper-slide bg-white border-[0.2rem] border-opacity-10 border-white rounded-lg border-b-[0.4rem] border-t-[0.4rem] overflow-hidden h-[28rem] w-[25rem]">
-                            <div class="text-content flex flex-col justify-center items-center">
-                                <h3 class="text-[1.7rem] text-white bg-[#39CE8A] w-full flex justify-center p-5 font-medium">الباقة الذهبية</h3>
-                                <p class="max-w-[22rem] text-[0.8rem] font-bold text-center p-5  mt-10">هذة باقة العميل الذهبية</p>
-                                <p class="max-w-[22rem] text-[0.8rem] font-bold text-center p-3">200 درهم</p>
-                                <button class="btn bg-[#39CE8A] py-[0.5rem] border-2 border-[#39CE8A] outline-none text-[0.8rem] rounded-lg mt-10 text-white w-3/5  cursor-pointer">استخدم هذه الباقة</button>
-                            </div>
-                        </div>
-
-                        <div class="content swiper-slide bg-white border-[0.2rem] border-opacity-10 border-white rounded-lg border-b-[0.4rem] border-t-[0.4rem] overflow-hidden h-[28rem] w-[25rem]">
-                            <div class="text-content flex flex-col justify-center items-center">
-                                <h3 class="text-[1.7rem] text-white bg-[#39CE8A] w-full flex justify-center p-5 font-medium">الباقة الترحيبية</h3>
-                                <p class="max-w-[22rem] text-[0.8rem] font-bold text-center p-5">هذة باقة العميل المجانية</p>
-                                <p class="max-w-[22rem] text-[0.8rem] font-bold text-center p-3">مجاناً</p>
-                                <div class="flex gap-10">
-                                    <div class="flex flex-col items-center justify-center text-white rounded-md gap-5 bg-[#C10D10] w-40 h-36">
-                                        <p>تم استخدام</p>
-                                        <p class="font-bold">0</p>
-                                        <p>ads</p>
-                                    </div>
-                                    <div class="flex flex-col items-center justify-center text-white rounded-md gap-5 bg-[#39CE8A] w-40 h-36">
-                                        <p>متبقي</p>
-                                        <p class="font-bold">30</p>
-                                        <p>ads</p>
-                                    </div>
-                                </div>
-                                <button class="btn bg-[#39CE8A] py-[0.5rem] border-2 border-[#39CE8A] outline-none text-[0.8rem] rounded-lg mt-10 text-white w-3/5  cursor-pointer">استخدم هذه الباقة</button>
-                            </div>
-                        </div>
-
-                        <div class="content swiper-slide bg-white border-[0.2rem] border-opacity-10 border-white rounded-lg border-b-[0.4rem] border-t-[0.4rem] overflow-hidden h-[28rem] w-[25rem]">
-                            <div class="text-content flex flex-col justify-center items-center">
-                                <h3 class="text-[1.7rem] text-white bg-[#39CE8A] w-full flex justify-center p-5 font-medium ">الباقة الفضية</h3>
-                                <p class="max-w-[22rem] text-[0.8rem] font-bold text-center p-5  mt-10">هذة باقة العميل الفضية</p>
-                                <p class="max-w-[22rem] text-[0.8rem] font-bold text-center p-3">مجاناً</p>
-                                <button class="btn bg-[#39CE8A] py-[0.5rem] border-2 border-[#39CE8A] outline-none text-[0.8rem] rounded-lg mt-10 text-white w-3/5  cursor-pointer">استخدم هذه الباقة</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <!-- End Header -->
-
-        <!-- Start Second Part -->
             <div class="container mx-auto">
-                <div class="p-10">
-                    <h2 class="text-[#C10D10] font-bold lg:text-4xl mb-5">إضافة إعلان</h2>
-                    <p class="font-bold lg:text-2xl">املأ تفاصيل سيارتك تلقائياً عن طريق إدخال رقم الهيكل / رقم VIN</p>
-                </div>
-                <div class="flex justify-center">
-                    <img src="./images/Carfinance-pana1.png" alt="Carfinance-pana1">
-                </div>
-                <div class="relative p-5">
-                    <label for="numberof" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white "  >رقم الشاصي / القاعدة</label>
-                    <input type="text" id="numberof" class="bg-white  text-[#929191] text-sm rounded-lg block  p-2.5 shadow-md  transition-all lg:w-1/2 w-3/5 outline-none" placeholder="رقم الشاصي / القاعدة" required />
-                    <p class="absolute  mt-2 mr-5 text-[10px]" style="left: 50%;">لن يظهر هذا الرقم في إعلانك</p>
-                </div>
-                <div class="flex justify-center mt-10">
-                    <button type="submit" class="text-white bg-[#C10D10] border lg:font-medium rounded-lg text-sm lg:w-1/2 mt-5  px-5 py-2.5 text-center hover:bg-white hover:text-[#C10D10] hover:border hover:border-[#C10D10]">الملء التلقائي لتفاصيل سيارتي</button>
-                </div>
-                <div class="lg:pr-10 pr-5">
-                    <h2 class="text-[#C10D10] font-bold lg:text-4xl mb-5 mt-5">ملء التفاصيل يدوياً</h2>
-                    <p class="lg:font-bold lg:text-2xl">عرفنا أكثر على سيارتك !</p>
-                    <div class="lg:p-10">
-                        <div class="grid gap-6 mb-6 md:grid-cols-2 pl-2">
-                            
-                            <form class="max-w-sm pl-5 pr-5">
-                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">الامارة</label>
-                                <select id="countries" class="bg-white  text-[#929191] text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all">
-                                <option selected>اختار الامارة</option>
-                                <option value="US">United States</option>
-                                <option value="CA">Canada</option>
-                                <option value="FR">France</option>
-                                <option value="DE">Germany</option>
-                                </select>
-                            </form>
-        
-                            <form class="max-w-sm pl-5 pr-5">
-                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">المنطقة</label>
-                                <select id="countries"  class="bg-white  text-[#929191] text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all">
-                                <option selected>اختار المنطقة</option>
-                                <option value="US">United States</option>
-                                <option value="CA">Canada</option>
-                                <option value="FR">France</option>
-                                <option value="DE">Germany</option>
-                                </select>
-                            </form>
-                            <form class="max-w-sm pl-5 pr-5 ">
-                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"> الشركة المصنعة</label>
-                                <select id="countries" class="bg-white  text-[#929191] text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all">
-                                <option selected>اختار الشركة المصنعة</option>
-                                <option value="US">United States</option>
-                                <option value="CA">Canada</option>
-                                <option value="FR">France</option>
-                                <option value="DE">Germany</option>
-                                </select>
-                            </form>
-        
-                            <form class="max-w-sm  pl-5 pr-5">
-                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">الموديل</label>
-                                <select id="countries" class="bg-white  text-[#929191] text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all">
-                                <option selected>اختار الموديل</option>
-                                <option value="US">United States</option>
-                                <option value="CA">Canada</option>
-                                <option value="FR">France</option>
-                                <option value="DE">Germany</option>
-                                </select>
-                            </form>
-                            <form class="max-w-sm  pl-5 pr-5">
-                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">الفئة</label>
-                                <select id="countries" class="bg-white  text-[#929191] text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all">
-                                <option selected>اختار الفئة</option>
-                                <option value="US">United States</option>
-                                <option value="CA">Canada</option>
-                                <option value="FR">France</option>
-                                <option value="DE">Germany</option>
-                                </select>
-                            </form>
-        
-                            <form class="max-w-sm pl-5 pr-5 ">
-                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">المواصفات الإقليمية</label>
-                                <select id="countries" class="bg-white  text-[#929191] text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all">
-                                <option selected>اختار المواصفات الإقليمية</option>
-                                <option value="US">United States</option>
-                                <option value="CA">Canada</option>
-                                <option value="FR">France</option>
-                                <option value="DE">Germany</option>
-                                </select>
-                            </form>
-                            <form class="max-w-sm pl-5 pr-5 ">
-                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"> نوع الجسم</label>
-                                <select id="countries" class="bg-white  text-[#929191] text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all">
-                                <option selected>اختار نوع الجسم</option>
-                                <option value="US">United States</option>
-                                <option value="CA">Canada</option>
-                                <option value="FR">France</option>
-                                <option value="DE">Germany</option>
-                                </select>
-                            </form>
-                            <form class="max-w-sm pl-5 pr-5 ">
-                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">جهة القيادة</label>
-                                <select id="countries" class="bg-white  text-[#929191] text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all">
-                                <option selected>اختار جهة القيادة</option>
-                                <option value="US">United States</option>
-                                <option value="CA">Canada</option>
-                                <option value="FR">France</option>
-                                <option value="DE">Germany</option>
-                                </select>
-                            </form>    <form class="max-w-sm pl-5 pr-5 ">
-                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">عدد الابواب</label>
-                                <select id="countries" class="bg-white  text-[#929191] text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all">
-                                <option selected>اختار عدد الابواب</option>
-                                <option value="US">United States</option>
-                                <option value="CA">Canada</option>
-                                <option value="FR">France</option>
-                                <option value="DE">Germany</option>
-                                </select>
-                            </form>    <form class="max-w-sm  pl-5 pr-5">
-                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">عدد المقاعد</label>
-                                <select id="countries" class="bg-white  text-[#929191] text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all">
-                                <option selected>اختار عدد المقاعد</option>
-                                <option value="US">United States</option>
-                                <option value="CA">Canada</option>
-                                <option value="FR">France</option>
-                                <option value="DE">Germany</option>
-                                </select>
-                            </form>    <form class="max-w-sm pl-5 pr-5 ">
-                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">السنة</label>
-                                <select id="countries" class="bg-white  text-[#929191] text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all">
-                                <option selected>اختار السنة</option>
-                                <option value="US">United States</option>
-                                <option value="CA">Canada</option>
-                                <option value="FR">France</option>
-                                <option value="DE">Germany</option>
-                                </select>
-                            </form>    <form class="max-w-sm pl-5 pr-5 ">
-                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">الكيلو مترات</label>
-                                <select id="countries" class="bg-white  text-[#929191] text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all">
-                                <option selected>اكتب الكيلو مترات</option>
-                                <option value="US">United States</option>
-                                <option value="CA">Canada</option>
-                                <option value="FR">France</option>
-                                <option value="DE">Germany</option>
-                                </select>
-                            </form> 
-                            </form>    <form class="max-w-sm pl-5 pr-5 ">
-                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">السعر</label>
-                                <select id="countries" class="bg-white  text-[#929191] text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all">
-                                <option selected>اكتب السعر</option>
-                                <option value="US">United States</option>
-                                <option value="CA">Canada</option>
-                                <option value="FR">France</option>
-                                <option value="DE">Germany</option>
-                                </select>
-                            </form>
-                            <form class="max-w-sm  pl-5 pr-5">
-                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">نوع البائع</label>
-                                <select id="countries" class="bg-white  text-[#929191] text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all">
-                                <option selected>اختار نوع البائع</option>
-                                <option value="US">United States</option>
-                                <option value="CA">Canada</option>
-                                <option value="FR">France</option>
-                                <option value="DE">Germany</option>
-                                </select>
-                            </form> 
-                            <form class="max-w-sm pl-5 pr-5">
-                                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 ">رقم التواصل</label>
-                                <div class="flex items-center space-x-2">
-                                    <div class="relative flex-grow">
-                                        <input type="text" placeholder="رقم الهاتف" class="py-2 px-3 text-right bg-white border border-gray-200 rounded-lg  placeholder-gray-400 text-black w-full">
-                                        <img src="./images/Flag-United-Arab-Emirates.webp" alt="UAE Flag" class="absolute right-60 lg:right-72 top-1/2 transform -translate-y-1/2 h-6">
-                                    </div>
-                                </div>
-                            </form>
-                            
-                            <form class="max-w-sm">
-                                <label for="contact" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">كيف تفضل التواصل معك؟</label>
-                                <div class="flex gap-3">
-                                    <div class="flex items-center mb-4 bg-white rounded-md p-2 gap-2">
-                                        <input type="radio" id="phone" name="contact" class="mr-2 text-green-500 focus:ring-green-500">
-                                        <label for="phone" class="text-sm text-gray-700 dark:text-black">الهاتف</label>
-                                    </div>
-                                    <div class="flex items-center mb-4 bg-white rounded-md p-2 gap-2">
-                                        <input type="radio" id="whatsapp" name="contact" class="mr-2 text-green-500 focus:ring-green-500">
-                                        <label for="whatsapp" class="text-sm text-gray-700 dark:text-black">واتساب</label>
-                                    </div>
-                                    <div class="flex items-center mb-4 bg-white rounded-md p-2 gap-2">
-                                        <input type="radio" id="both" name="contact" class="mr-2 text-green-500 focus:ring-green-500">
-                                        <label for="both" class="text-sm text-gray-700 dark:text-black">الاثنين معاً</label>
-                                    </div>
-                                </div>
-                            </form>
-                            
-                        </div>
-                        <div class="flex justify-center">
-                            <a href="./finishing.html"class="text-white bg-[#C10D10] border font-medium rounded-lg text-sm w-1/2 px-5 py-2.5 text-center hover:bg-white hover:text-[#C10D10] hover:border hover:border-[#C10D10]">
-                                <button type="submit" >
-                                    التالي
-                                </button>
-                            </a>
-                        </div>
-                        
+                <section >
+                    <div class="p-5 mt-10">
+                        <h2 class="text-[#C10D10] font-medium lg:text-4xl mb-5">إضافة إعلان جديد</h2>
+                        <p class="font-medium lg:text-2xl text-[#7E7E7E]">خطوة  <span class="text-black">1</span> من 4 </p>
                     </div>
-                </div>
+                    <div class="p-5">
+                        <h2 class="text-[#C10D10] font-medium lg:text-2xl mb-5">أختار باقتك الإعلانية</h2>
+                        <p class="font-medium lg:text-[18px]">انت الان مشترك في باقة : </p>
+                    </div>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="content swiper-slide bg-white border-[0.2rem] border-opacity-10 border-white rounded-lg border-b-[0.4rem] border-t-[0.4rem] overflow-hidden h-[28rem] w-[25rem]">
+                                <div class="text-content flex flex-col justify-center items-center">
+                                    <h3 class="text-[1.7rem] text-white bg-[#39CE8A] w-full flex justify-center p-5 font-medium">الباقة الذهبية</h3>
+                                    <p class="max-w-[22rem] text-[0.8rem] font-bold text-center p-5  mt-10">هذة باقة العميل الذهبية</p>
+                                    <p class="max-w-[22rem] text-[0.8rem] font-bold text-center p-3">200 درهم</p>
+                                    <a href="./adddetails.html" class="btn bg-[#39CE8A] py-[0.5rem] border-2 border-[#39CE8A] outline-none text-[0.8rem] rounded-lg mt-10 text-white w-3/5  cursor-pointer flex justify-center">
+                                        <button >استخدم هذه الباقة</button>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="content swiper-slide bg-white border-[0.2rem] border-opacity-10 border-white rounded-lg border-b-[0.4rem] border-t-[0.4rem] overflow-hidden h-[28rem] w-[25rem]">
+                                <div class="text-content flex flex-col justify-center items-center">
+                                    <h3 class="text-[1.7rem] text-white bg-[#39CE8A] w-full flex justify-center p-5 font-medium">الباقة الترحيبية</h3>
+                                    <p class="max-w-[22rem] text-[0.8rem] font-bold text-center p-5">هذة باقة العميل المجانية</p>
+                                    <p class="max-w-[22rem] text-[0.8rem] font-bold text-center p-3">مجاناً</p>
+                                    <div class="flex gap-10">
+                                        <div class="flex flex-col items-center justify-center text-white rounded-md gap-5 bg-[#C10D10] w-40 h-36">
+                                            <p>تم استخدام</p>
+                                            <p class="font-bold">0</p>
+                                            <p>ads</p>
+                                        </div>
+                                        <div class="flex flex-col items-center justify-center text-white rounded-md gap-5 bg-[#39CE8A] w-40 h-36">
+                                            <p>متبقي</p>
+                                            <p class="font-bold">30</p>
+                                            <p>ads</p>
+                                        </div>
+                                    </div>
+                                    <a href="./adddetails.html" class="btn bg-[#39CE8A] py-[0.5rem] border-2 border-[#39CE8A] outline-none text-[0.8rem] rounded-lg mt-10 text-white w-3/5  cursor-pointer flex justify-center">
+                                        <button >استخدم هذه الباقة</button>
+                                    </a>                                </div>
+                            </div>
+
+                            <div class="content swiper-slide bg-white border-[0.2rem] border-opacity-10 border-white rounded-lg border-b-[0.4rem] border-t-[0.4rem] overflow-hidden h-[28rem] w-[25rem]">
+                                <div class="text-content flex flex-col justify-center items-center">
+                                    <h3 class="text-[1.7rem] text-white bg-[#39CE8A] w-full flex justify-center p-5 font-medium ">الباقة الفضية</h3>
+                                    <p class="max-w-[22rem] text-[0.8rem] font-bold text-center p-5  mt-10">هذة باقة العميل الفضية</p>
+                                    <p class="max-w-[22rem] text-[0.8rem] font-bold text-center p-3">مجاناً</p>
+                                    <a href="./adddetails.html" class="btn bg-[#39CE8A] py-[0.5rem] border-2 border-[#39CE8A] outline-none text-[0.8rem] rounded-lg mt-10 text-white w-3/5  cursor-pointer flex justify-center">
+                                        <button >استخدم هذه الباقة</button>
+                                    </a>                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
-        <!-- End Second Part -->
+        <!-- End Header -->
 
         <!-- Start Footer --> 
             <div id="footer"></div>
@@ -295,6 +100,32 @@
         <!-- Swiper JS -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="./js/script.js"></script>
-
+        <script>
+            // Swiper
+var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    loop:true,
+    slidesPerView: "auto",
+    initialSlide: 2,
+    coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 150,
+    modifier: 2.5,
+    slideShadows: true,
+    autoplay: false,
+    breakpoints: {
+        640: {
+            slidesPerView: 1, 
+        },
+        641: {
+            slidesPerView: 3,
+        },
+    },
+},
+});
+        </script>
 </body>
 </html>

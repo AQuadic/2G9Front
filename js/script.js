@@ -18,38 +18,17 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(error => console.log('Error loading the footer:', error));
 });
 
-// Favorite Icon in Details
-const favoriteButton = document.getElementById('favoriteButton');
-const favoriteIcon = document.getElementById('favoriteIcon');
-const favoriteText = document.getElementById('favoriteText');
 
-favoriteButton.addEventListener('click', function() {
-    if (favoriteText.textContent === "أضف إلي المفضلة") {
-        favoriteIcon.src = "./images/heartIcon.svg";
-        favoriteText.textContent = "حذف من المفضلة";
-        favoriteButton.classList.add('bg-[#C10D10]');
-        favoriteButton.classList.remove('border-[#C10D10]');
-        favoriteText.classList.replace('text-[#C10D10]', 'text-white');
-    } else {
-        favoriteIcon.src = "./images/Frame 1000006919.svg";
-        favoriteText.textContent = "أضف إلي المفضلة";
-        favoriteButton.classList.remove('bg-[#C10D10]');
-        favoriteButton.classList.add('border-[#C10D10]');
-        favoriteText.classList.replace('text-white', 'text-[#C10D10]');
-    }
-});
-
-
-// Toggle 
-document.addEventListener('DOMContentLoaded', () => {
-    const toggleButton = document.getElementById('menu-toggle');
-    const menu = document.getElementById('navbar-sticky');
-    toggleButton.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-        const isExpanded = menu.classList.contains('hidden');
-        toggleButton.setAttribute('aria-expanded', !isExpanded);
-    });
-});
+// // Toggle 
+// document.addEventListener('DOMContentLoaded', () => {
+//     const toggleButton = document.getElementById('menu-toggle');
+//     const menu = document.getElementById('navbar-sticky');
+//     toggleButton.addEventListener('click', () => {
+//         menu.classList.toggle('hidden');
+//         const isExpanded = menu.classList.contains('hidden');
+//         toggleButton.setAttribute('aria-expanded', !isExpanded);
+//     });
+// });
 
 
 // Swap Buttons in Index
@@ -85,28 +64,3 @@ switch(category) {
 }
 }
 
-// Swiper
-var swiper = new Swiper(".mySwiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    loop:true,
-    slidesPerView: "auto",
-    initialSlide: 2,
-    coverflowEffect: {
-    rotate: 0,
-    stretch: 0,
-    depth: 150,
-    modifier: 2.5,
-    slideShadows: true,
-    autoplay: false,
-    breakpoints: {
-        640: {
-            slidesPerView: 1, 
-        },
-        641: {
-            slidesPerView: 3,
-        },
-    },
-},
-});

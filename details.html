@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="2G9">
     <link href="./output.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"  rel="stylesheet" />
 
@@ -248,5 +249,27 @@
         
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
         <script src="./js/script.js"></script>
+        <script>
+            // Favorite Icon in Details
+            const favoriteButton = document.getElementById('favoriteButton');
+            const favoriteIcon = document.getElementById('favoriteIcon');
+            const favoriteText = document.getElementById('favoriteText');
+
+            favoriteButton.addEventListener('click', function() {
+                if (favoriteText.textContent === "أضف إلي المفضلة") {
+                    favoriteIcon.src = "./images/heartIcon.svg";
+                    favoriteText.textContent = "حذف من المفضلة";
+                    favoriteButton.classList.add('bg-[#C10D10]');
+                    favoriteButton.classList.remove('border-[#C10D10]');
+                    favoriteText.classList.replace('text-[#C10D10]', 'text-white');
+                } else {
+                    favoriteIcon.src = "./images/Frame 1000006919.svg";
+                    favoriteText.textContent = "أضف إلي المفضلة";
+                    favoriteButton.classList.remove('bg-[#C10D10]');
+                    favoriteButton.classList.add('border-[#C10D10]');
+                    favoriteText.classList.replace('text-white', 'text-[#C10D10]');
+                }
+            });
+        </script>
 </body>
 </html>

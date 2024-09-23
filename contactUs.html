@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="2G9">
     <link href="./output.css" rel="stylesheet">
     <title>Contact Us</title>
     <link rel="icon" type="image/png" href="./images/logo.png">
@@ -54,8 +55,27 @@
                         </div>
                     </div>
                     <div class="flex justify-center">
-                        <button type="submit" class="text-white bg-[#C10D10]  font-medium rounded-lg text-sm w-1/2  px-5 py-2.5 text-center border border-[#C10D10] hover:bg-white hover:text-[#C10D10] hover:border-[#C10D10] hover:border">إرسال</button>
+                        <button id="submitButton" type="submit" class="text-white bg-[#C10D10] font-medium rounded-lg text-sm w-1/2 px-5 py-2.5 text-center border border-[#C10D10] hover:bg-white hover:text-[#C10D10] hover:border-[#C10D10] hover:border">
+                            إرسال
+                        </button>
                     </div>
+                    
+                    <!-- POP UP -->
+                    <div id="popup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden ">
+                        <div class="bg-white rounded-lg shadow-lg p-6 max-w-[40%] w-full relative">
+                            <img id="closePopup" src="./images/Close Square.svg" class="cursor-pointer absolute top-2 right-2" alt="close">
+                            <div class="flex flex-col items-center">
+                                <div class="relative">
+                                    <div class="relative bg-green-500 rounded-full p-3">
+                                        <img src="./images/Alert - Danger.svg" alt="check" class="w-[223px] h-[223px]">
+                                    </div>
+                                </div>
+                                <h2 class="mt-4 text-3xl font-medium">تم إرسال طلبك بنجاح</h2>
+                                <p class="mt-2 font-medium text-2xl text-gray-600 text-center">سيقوم احد مسؤولي خدمة العملاء بالتواصل معكم</p>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </form>
                 <div class="flex justify-center mt-10">
                     <img src="./images/cuate.png" alt="cuate">
@@ -66,5 +86,30 @@
         <!-- Start Footer --> 
             <div id="footer"></div>
         <!-- End Footer -->
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            const popup = document.getElementById('popup');
+            const closePopup = document.getElementById('closePopup');
+            const submitButton = document.getElementById('submitButton');
+
+            if (popup && closePopup && submitButton) {
+                submitButton.addEventListener('click', function (e) {
+                    e.preventDefault(); 
+                    popup.classList.remove('hidden');
+                });
+
+                closePopup.addEventListener('click', function () {
+                    popup.classList.add('hidden');
+                });
+
+                popup.addEventListener('click', function (e) {
+                    if (e.target === popup) {
+                        popup.classList.add('hidden');
+                    }
+                });
+            }
+        });
+        </script>
 </body>
 </html>

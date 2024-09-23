@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="2G9">
+    <link href="./output.css" rel="stylesheet">
+    <title>Add Ads</title>
+    <link rel="icon" type="image/png" href="./images/logo.png">
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<style>
+    body {
+            font-family: "Noto Kufi Arabic", sans-serif;
+        }
+
+</style>
+</head>
+<body class="bg-gray-50">
+        <!-- Start Navbar -->
+            <div id="navbar"></div>
+        <!-- End Navbar -->
+        
+        <!-- Start Header -->
+            <div class="container mx-auto">
+                <section >
+                    <div class="p-5 mt-10">
+                        <h2 class="text-[#C10D10] font-medium lg:text-4xl mb-5">إضافة إعلان جديد</h2>
+                        <p class="font-medium lg:text-2xl text-[#7E7E7E]">خطوة  <span class="text-black">2</span> من 4 </p>
+                    </div>
+                    <div class="p-5">
+                        <h2 class="text-[#C10D10] font-medium lg:text-2xl mb-5">أضف بيانات الاعلان</h2>
+                        <p class="font-bold lg:text-2xl">املأ تفاصيل سيارتك تلقائياً عن طريق إدخال رقم الهيكل / رقم VIN</p>
+                    </div>
+            
+                </section>
+            </div>
+        <!-- End Header -->
+
+        <!-- Start Second Part -->
+            <div class="container mx-auto">
+                <div class="flex justify-center">
+                    <img src="./images/Car finance-pana 1 1.webp" alt="Carfinance-pana1">
+                </div>
+                <div class=" flex items-center justify-center">
+                    <div class="relative p-5">
+                        <label for="numberof" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white "  >رقم الشاصي / القاعدة</label>
+                        <input type="text" id="numberof" class="bg-white  text-[#929191] text-sm rounded-lg block  p-2.5 shadow-md  transition-all  outline-none" placeholder="رقم الشاصي / القاعدة" required />
+                        <p class="absolute  mt-2  text-[10px] top-[80%]">لن يظهر هذا الرقم في إعلانك</p> </div>
+                </div>
+                
+                <div class="flex justify-center mt-10">
+                    <button type="submit" class="text-white bg-[#C10D10] border lg:font-medium rounded-lg text-sm lg:w-1/2 mt-5  px-5 py-2.5 text-center hover:bg-white hover:text-[#C10D10] hover:border hover:border-[#C10D10]">الملء التلقائي لتفاصيل سيارتي</button>
+                </div>
+                <div class="flex justify-center">
+                    <a href="./adddetailsM.html"  class=" text-[#C10D10] border border-[#C10D10] lg:font-medium rounded-lg text-sm lg:w-1/2 mt-5  px-5 py-2.5 text-center ">
+                        <button type="submit">لا شكراً سأملأ التفاصيل يدوياً </button>
+                    </a>
+                </div>
+
+            </div>
+        <!-- End Second Part -->
+
+        <!-- Start Footer --> 
+            <div id="footer"></div>
+        <!-- End Footer -->
+        <script src="./js/script.js"></script>
+</body>
+</html>
