@@ -1,11 +1,17 @@
 // Load Navbar 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
     fetch('navbar.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('navbar').innerHTML = data;
+            const menuToggle = document.getElementById('menu-toggle');
+            const menuItems = document.getElementById('navbar-sticky');
+            menuToggle.addEventListener('click', function() {
+                menuItems.classList.toggle('hidden');
+                menuItems.setAttribute('aria-expanded', menuItems.classList.contains('hidden') ? 'false' : 'true');
+            });
         })
-        .catch(error => console.log('Error loading the navbar:', error));
+        .catch(error => console.error('Error loading navbar:', error));
 });
 
 // Load Footer
@@ -17,18 +23,6 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .catch(error => console.log('Error loading the footer:', error));
 });
-
-
-// // Toggle 
-// document.addEventListener('DOMContentLoaded', () => {
-//     const toggleButton = document.getElementById('menu-toggle');
-//     const menu = document.getElementById('navbar-sticky');
-//     toggleButton.addEventListener('click', () => {
-//         menu.classList.toggle('hidden');
-//         const isExpanded = menu.classList.contains('hidden');
-//         toggleButton.setAttribute('aria-expanded', !isExpanded);
-//     });
-// });
 
 
 // Swap Buttons in Index

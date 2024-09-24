@@ -35,13 +35,16 @@
                     <p class="text-[#878787] font-bold text-xs md:text-sm">حياك الله نحن فى انتظار خدمتك طوال الوقت!</p>
                 </div>
                 <div class="w-full max-w-xs md:max-w-md space-y-4">
-                    <div class="flex items-center rounded-2xl bg-[#FAFAFA] ">
-                        <input type="text" placeholder="رقم الهاتف" class="flex-grow text-xs md:text-sm text-[#6C6C6C] outline-none bg-transparent ml-2 text-end h-12 md:h-16 w-full">
-                        <svg class="w-4 h-4 md:w-6 md:h-6 text-gray-500 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
+                    <div class="flex items-center rounded-2xl bg-[#FAFAFA]">
+                        <select class="flex-grow text-xs md:text-sm text-[#6C6C6C] outline-none bg-transparent mr-5 h-12 md:h-16 w-full text-end">
+                            <option value="" disabled selected>رقم الهاتف</option>
+                            <option value="971">Egyp</option>
+                            <option value="1">1</option>
+                            <option value="44">44</option>
+                        </select>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg" alt="UAE Flag" class="w-6 h-6 ml-2">
                     </div>
+                    
 
                     <div class="flex items-center rounded-2xl bg-[#FAFAFA]">
                         <ion-icon name="lock-closed" class="w-4 h-4 md:w-5 md:h-5 text-[#9E9E9E] ml-2 mr-2"></ion-icon>
@@ -54,15 +57,15 @@
                     </div>
                 </div>
                 <div class="flex flex-col gap-4 md:gap-7 w-full items-center">
-                    <button type="submit" class="text-white bg-[#C10D10] font-medium rounded-lg text-xs md:text-sm px-5 py-2.5 text-center border border-[#C10D10] hover:bg-white hover:text-[#C10D10] hover:border-[#C10D10] md:w-96 w-full h-12 md:h-16">التالي</button>
-                    <a href="/signUp.html">
-                        <button type="button" class="border border-[#E9E9E9] font-medium rounded-lg text-xs md:text-sm px-5 py-2.5 text-center md:w-96 w-full h-12 md:h-16">
+                    <button type="submit" class="text-white bg-[#C10D10] font-medium rounded-lg text-xs md:text-sm px-5 py-2.5 text-center border border-[#C10D10] hover:bg-white hover:text-[#C10D10] hover:border-[#C10D10] sm:w-96 w-full h-12 md:h-16">التالي</button>
+                    <a href="/signUp.html"  class="border border-[#E9E9E9] font-medium rounded-lg text-xs md:text-sm px-5 py-2.5 text-center sm:w-96 w-full h-12 md:h-16">
+                        <button type="button">
                             إنشاء حساب
                         </button>
                     </a>
                     <p class="flex justify-center text-[#C10D10] font-medium text-xs md:text-sm">أو</p>
-                    <a href="#">
-                        <button type="submit" class="border border-[#E9E9E9] font-medium rounded-lg text-xs md:text-sm px-5 py-2.5 text-center  md:w-96 w-full h-12 md:h-16">متابعة كزائر</button>
+                    <a href="#" class="border border-[#E9E9E9] font-medium rounded-lg text-xs md:text-sm px-5 py-2.5 text-center  sm:w-96 w-full h-12 md:h-16">
+                        <button type="submit" >متابعة كزائر</button>
                     </a>
                 </div>
             </div>
@@ -85,5 +88,7 @@
                 }
             }
         </script>
+
+        
 </body>
 </html>
