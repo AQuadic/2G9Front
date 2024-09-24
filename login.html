@@ -35,14 +35,21 @@
                     <p class="text-[#878787] font-bold text-xs md:text-sm">حياك الله نحن فى انتظار خدمتك طوال الوقت!</p>
                 </div>
                 <div class="w-full max-w-xs md:max-w-md space-y-4">
-                    <div class="flex items-center rounded-2xl bg-[#FAFAFA]">
-                        <select class="flex-grow text-xs md:text-sm text-[#6C6C6C] outline-none bg-transparent mr-5 h-12 md:h-16 w-full rtl:text-end pr-3 pl-3">
-                            <option value="" disabled selected>رقم الهاتف</option>
-                            <option value="971">Egyp</option>
-                            <option value="1">1</option>
-                            <option value="44">44</option>
-                        </select>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg" alt="UAE Flag" class="w-6 h-6 rtl:ml-2 ltr:mr-2 ">
+                    <div class="w-full max-w-md mx-auto">
+                        <div class="relative bg-[#FAFAFA]  rounded-lg p-4 flex items-center">
+                            <select class="appearance-none bg-transparent text-lg pr-8 outline-none focus:ring-0">
+                                <option value="AE" selected>+20</option>
+                                <option value="US">+20</option>
+                                <option value="UK">+20</option>
+                                <option value="SA">+20</option>
+                            </select>
+                            <span class="absolute right-0 inset-y-0 flex items-center pr-2 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </span>
+                            <input type="tel" placeholder="رقم الهاتف" class=" w-full md:w-96 text-xs md:text-sm text-[#6C6C6C] outline-none bg-transparent ">
+                        </div>
                     </div>
                     
 
