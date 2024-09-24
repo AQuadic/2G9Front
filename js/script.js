@@ -6,9 +6,17 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('navbar').innerHTML = data;
             const menuToggle = document.getElementById('menu-toggle');
             const menuItems = document.getElementById('navbar-sticky');
+            const sidebar = document.getElementById('sidebar');
+            const closeSidebar = document.getElementById('close-sidebar');
+
             menuToggle.addEventListener('click', function() {
-                menuItems.classList.toggle('hidden');
-                menuItems.setAttribute('aria-expanded', menuItems.classList.contains('hidden') ? 'false' : 'true');
+                sidebar.classList.toggle('hidden');
+                sidebar.setAttribute('aria-expanded', sidebar.classList.contains('hidden') ? 'false' : 'true');
+            });
+
+            closeSidebar.addEventListener('click', function() {
+                sidebar.classList.add('hidden');
+                sidebar.setAttribute('aria-expanded', 'false');
             });
         })
         .catch(error => console.error('Error loading navbar:', error));
