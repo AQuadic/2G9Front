@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="2G9">
+    <link href="./output.css" rel="stylesheet">
+    <title>Your Profile</title>
+    <link rel="icon" type="image/png" href="./images/logo.png">
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="./js/script.js"></script>
+</head>
+<style>
+    body {
+            font-family: "Noto Kufi Arabic", sans-serif;
+        }
+</style>
+<body >
+        <!-- Start Navbar -->
+            <div id="navbar"></div>
+        <!-- End Navbar -->
+
+        <!-- Start Section -->
+            <div class="container mx-auto">
+                <div class="flex items-center gap-10 mt-10 mr-20 ">
+                    <!-- Sidebar -->
+                    <div class="left-0 top-0 h-full">
+                        <div class="flex gap-5">
+                            <div class="relative">
+                                <img src="./images/Shape.webp" class="w-[61.7px] h-[61.7px] border-2 border-[#C10D10] p-1 rounded-full" alt="profile">
+                                <img src="./images/check.svg" class="absolute left-0 top-[55%]" alt="check">    
+                            </div>
+                            <div>
+                                <h2 class="font-medium text-2xl text-[#2B2F4E]">أسماء مصطفي</h2>
+                                <p class="font-medium text-[16px] text-[#858585]">+966 54 131 0701</p>
+                                <p class="font-normal text-[14px] text-[#C10D10]">توثيق الحساب</p>
+                                <p class="hidden font-normal text-[14px] text-[#48D556]">حساب موثق</p>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="./editProfile.html" class="flex gap-2 items-center p-3">
+                                <img src="./images/setting.svg" alt="Setting">
+                                <p class="font-medium text-[16px] text-[#C10D10]">تعديل حسابي</p>
+                            </a>
+                            <hr class="border-[#C10D10] mr-3">
+                            <a href="" class="flex gap-2 items-center p-3">
+                                <img src="./images/IconAdd.svg" alt="Adds">
+                                <p class="font-medium text-[16px] text-[#2B2F4E] ">باقة إعلاناتك</p>
+                            </a>
+                            <hr class="mr-3">
+                            <a href="" class="flex gap-2 items-center p-3">
+                                <img src="./images/phone.svg" alt="Phone">
+                                <p class="font-medium text-[16px] text-[#2B2F4E] ">تواصل معنا</p>
+                            </a>
+                            <hr class="mr-3">
+                            <a href="" class="flex gap-2 items-center p-3">
+                                <img src="./images/block.svg" alt="block">
+                                <p class="font-medium text-[16px] text-[#2B2F4E] ">المحظورين</p>
+                            </a>
+                            <hr class="mr-3">
+                            <a href="" class="flex gap-2 items-center p-3">
+                                <img src="./images/logOut.svg" alt="log out">
+                                <p class="font-medium text-[16px] text-[#2B2F4E] ">تسجيل الخروج</p>
+                            </a>
+                            <hr class="mr-3">
+                            <a href="" class="flex gap-2 items-center p-3">
+                                <img src="./images/deleteAcc.svg" alt="delete account">
+                                <p class="font-medium text-[16px] text-[#2B2F4E] "> حذف الحساب <span class="text-[#C10D10]">( تفقد كل بياناتك! )</span></p>
+                            </a>
+                        </div>
+                    </div>
+            
+                    <!-- Main Content -->
+                    <div class=" flex flex-col gap-5 mt-[-70px]">
+                            <h1 class="text-2xl font-bold">⚙️ تعديل حسابي</h1>
+                            <div class="flex items-center rounded-2xl bg-[#FAFAFA]">
+                                <ion-icon name="person-outline" class="w-4 h-4 md:w-5 md:h-5 text-[#9E9E9E] ml-2 mr-2"></ion-icon>
+                                <input type="text" placeholder="اسم المستخدم" class="flex-grow w-full md:w-96 text-xs md:text-sm text-[#6C6C6C] outline-none bg-transparent h-12 md:h-16">
+                                <span class="w-4 h-4 md:w-5 md:h-5 ml-2 mr-2"></span>
+                            </div>
+                            <div class="w-full max-w-md mx-auto">
+                                <div class="relative bg-[#FAFAFA]  rounded-lg p-4 flex items-center">
+                                    <select class="appearance-none bg-transparent text-lg pr-8 outline-none focus:ring-0">
+                                        <option value="AE" selected>+20</option>
+                                        <option value="US">+20</option>
+                                        <option value="UK">+20</option>
+                                        <option value="SA">+20</option>
+                                    </select>
+                                    <span class="absolute right-0 inset-y-0 flex items-center pr-2 pointer-events-none">
+                                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </span>
+                                    <input type="tel" placeholder="رقم الهاتف" class=" w-full md:w-96 text-xs md:text-sm text-[#6C6C6C] outline-none bg-transparent ">
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center">
+                                <a href="#" class="flex justify-center items-center text-white bg-[#C10D10] w-[294px] rounded-[10px] h-12">
+                                    <button>حفظ</button>
+                                </a>
+                            </div>
+                            
+                        </div>
+                </div>
+            </div>
+        <!-- End Section -->
+        
+        <!-- Start Footer --> 
+            <div id="footer"></div>
+        <!-- End Footer -->
+</body>
+</html>
