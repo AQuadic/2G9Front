@@ -24,6 +24,17 @@
     body {
             font-family: "Noto Kufi Arabic", sans-serif;
         }
+    .mySwiper {
+        --swiper-navigation-size: 48px;
+        --swiper-navigation-color: #C10D10;
+    }
+
+    @media (max-width: 640px) {
+        .mySwiper {
+        --swiper-navigation-size: 30px;
+        }
+    }
+</style>
 </style>
 <body>
         <!-- Start Navbar -->
@@ -32,16 +43,16 @@
 
         <!-- Start Slider -->
             <div class="container mx-auto mt-5">
-                <swiper-container style="--swiper-navigation-color: #C10D10; --swiper-pagination-color: #fff" class="mySwiper"
+                <swiper-container  class="mySwiper"
                     thumbs-swiper=".mySwiper2" space-between="10" navigation="true">
-                    <swiper-slide class="flex justify-center">
-                        <img src="./images/photo.png" class="w-[828px] h-[620px] rounded-[10px]" />
+                    <swiper-slide class="flex justify-center pr-12 pl-12">
+                        <img src="./images/photo.png" class="w-[828px] sm:h-[620px] h-[200px] rounded-[10px]" />
                     </swiper-slide>
-                    <swiper-slide class="flex justify-center">
-                        <img src="./images/photo.png" class="w-[828px] h-[620px] rounded-[10px]" />
+                    <swiper-slide class="flex justify-center pr-12 pl-12">
+                        <img src="./images/photo.png" class="w-[828px] sm:h-[620px] h-[200px] rounded-[10px]" />
                     </swiper-slide>
-                    <swiper-slide class="flex justify-center">
-                        <img src="./images/photo.png" class="w-[828px] h-[620px] rounded-[10px]" />
+                    <swiper-slide class="flex justify-center pr-12 pl-12">
+                        <img src="./images/photo.png" class="w-[828px] sm:h-[620px] h-[200px] rounded-[10px]" />
                     </swiper-slide>
                 </swiper-container>
             
