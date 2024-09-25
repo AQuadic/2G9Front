@@ -32,6 +32,16 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(error => console.log('Error loading the footer:', error));
 });
 
+// Load Icons Page
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('icons.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('icons').innerHTML = data;
+        })
+        .catch(error => console.log('Error loading the icons:', error));
+});
+
 
 // Swap Buttons in Index
 function filterCards(category) {

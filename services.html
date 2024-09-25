@@ -15,7 +15,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-
     <script src="./js/script.js"></script>
 </head>
 <style>
@@ -30,180 +29,188 @@
         
         <!-- Start Header -->
             <header class="container mx-auto">
-                <div class="p-10">
-                    <h2 class="text-[#C10D10] font-bold lg:text-4xl mb-5">خدمات غسيل السيارات</h2>
-                    <p class="font-bold lg:text-2xl">خدمة غسيل السيارات توفر لك فرصة للحفاظ على مظهر سيارتك بشكل رائع و نظيف .<br>
+                <div class="mt-5 mr-3">
+                    <h2 class="text-[#C10D10] font-bold sm:text-4xl text-[50px]  mb-5">خدمات غسيل السيارات</h2>
+                    <p class="font-bold sm:text-[16px] text-2xl">خدمة غسيل السيارات توفر لك فرصة للحفاظ على مظهر سيارتك بشكل رائع و نظيف .<br>
                         سيارتك تتألق و تشع بالجمال مع خدمة غسيل السيارات المميزة التي تقدمها عملائنا المحترفين .</p>
                 </div>
-                <div class="flex items-center justify-center">
+                <div class="sm:flex items-center justify-center hidden">
                     <img src="./images/amico.webp" alt="amico">
                 </div>
             </header>
         <!-- End Header -->
 
         <!-- Start Cards -->
-        <div class="container mx-auto mt-8 px-4 mb-8">
-            <div  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 relative">
-                <div class="card relative">
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                        <img class="w-full object-cover p-1 h-72" src="./images/image3.webp" alt="Washing">
-                        <ion-icon name="heart-outline" class="heartIcon absolute top-[-15px] left-[-15px] z-10 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
-                        <div class="p-4 sm:p-6">
-                            <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
-                                غسيل السيارات Car Wash
-                            </h2>
-                            <div class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-4">
-                                <p class="font-bold text-xl sm:text-2xl">د.إ 80,000</p>
-                                <a href="./washing.html">
-                                    <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
-                                        مزيد التفاصيل
-                                    </button>
-                                </a>
-                            </div>
-                            <hr class="my-4">
-                            <div class="flex items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
-                                <ion-icon name="location-outline"></ion-icon>
-                                <p>دبي - القوز</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card relative">
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                        <img class="w-full object-cover p-1 h-72" src="./images/image3.webp" alt="Washing">
-                        <ion-icon name="heart-outline" class="heartIcon absolute top-[-15px] left-[-15px] z-10 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
-                        <div class="p-4 sm:p-6">
-                            <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
-                                غسيل السيارات Car Wash
-                            </h2>
-                            <div class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-4">
-                                <p class="font-bold text-xl sm:text-2xl">د.إ 80,000</p>
-                                <a href="./washing.html">
-                                    <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
-                                        مزيد التفاصيل
-                                    </button>
-                                </a>
-                            </div>
-                            <hr class="my-4">
-                            <div class="flex items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
-                                <ion-icon name="location-outline"></ion-icon>
-                                <p>دبي - القوز</p>
+            <div class="container mx-auto mt-8 px-4 mb-8">
+                <div  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 relative">
+                    <div class="card relative">
+                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                            <img class="w-full object-cover p-1 sm:h-72 h-[174px] rounded-[20px]" src="./images/image3.webp" alt="Washing">
+                            <ion-icon name="heart-outline" class="heartIcon sm:flex hidden absolute top-[-15px] left-[-15px] z-10 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
+                            <div class="p-4 sm:p-6">
+                                <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
+                                    غسيل السيارات Car Wash
+                                </h2>
+                                <div class="sm:flex flex-col sm:flex-row justify-between items-center mt-4 mb-4 hidden">
+                                    <p class="font-bold text-xl sm:text-2xl">د.إ 80,000</p>
+                                    <a href="./washing.html">
+                                        <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
+                                            مزيد التفاصيل
+                                        </button>
+                                    </a>
+                                </div>
+                                <hr class="my-4 sm:flex hidden">
+                                <div class="flex items-center text-[#837F7F] gap-1 text-[12px] sm:text-base sm:font-bold font-normal">
+                                    <ion-icon name="location-outline"></ion-icon>
+                                    <p>دبي - القوز</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card relative" >
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                        <img class="w-full object-cover p-1 h-72" src="./images/image3.webp" alt="Washing">
-                        <ion-icon name="heart-outline" class="heartIcon absolute top-[-15px] left-[-15px] z-10 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
-                        <div class="p-4 sm:p-6">
-                            <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
-                                غسيل السيارات Car Wash
-                            </h2>
-                            <div class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-4">
-                                <p class="font-bold text-xl sm:text-2xl">د.إ 80,000</p>
-                                <a href="./washing.html">
-                                    <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
-                                        مزيد التفاصيل
-                                    </button>
-                                </a>
-                            </div>
-                            <hr class="my-4">
-                            <div class="flex items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
-                                <ion-icon name="location-outline"></ion-icon>
-                                <p>دبي - القوز</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card relative" >
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                        <img class="w-full object-cover p-1 h-72" src="./images/image3.webp" alt="Washing">
-                        <ion-icon name="heart-outline" class="heartIcon absolute top-[-15px] left-[-15px] z-10 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
-                        <div class="p-4 sm:p-6">
-                            <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
-                                غسيل السيارات Car Wash
-                            </h2>
-                            <div class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-4">
-                                <p class="font-bold text-xl sm:text-2xl">د.إ 80,000</p>
-                                <a href="./washing.html">
-                                    <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
-                                        مزيد التفاصيل
-                                    </button>
-                                </a>
-                            </div>
-                            <hr class="my-4">
-                            <div class="flex items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
-                                <ion-icon name="location-outline"></ion-icon>
-                                <p>دبي - القوز</p>
+                    
+                    <div class="card relative">
+                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                            <img class="w-full object-cover p-1 sm:h-72 h-[174px] rounded-[20px]" src="./images/image3.webp" alt="Washing">
+                            <ion-icon name="heart-outline" class="heartIcon sm:flex hidden absolute top-[-15px] left-[-15px] z-10 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
+                            <div class="p-4 sm:p-6">
+                                <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
+                                    غسيل السيارات Car Wash
+                                </h2>
+                                <div class="sm:flex flex-col sm:flex-row justify-between items-center mt-4 mb-4 hidden">
+                                    <p class="font-bold text-xl sm:text-2xl">د.إ 80,000</p>
+                                    <a href="./washing.html">
+                                        <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
+                                            مزيد التفاصيل
+                                        </button>
+                                    </a>
+                                </div>
+                                <hr class="my-4 sm:flex hidden">
+                                <div class="flex items-center text-[#837F7F] gap-1 text-[12px] sm:text-base sm:font-bold font-normal">
+                                    <ion-icon name="location-outline"></ion-icon>
+                                    <p>دبي - القوز</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card relative">
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                        <img class="w-full object-cover p-1 h-72" src="./images/image3.webp" alt="Washing">
-                        <ion-icon name="heart-outline" class="heartIcon absolute top-[-15px] left-[-15px] z-10 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
-                        <div class="p-4 sm:p-6">
-                            <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
-                                غسيل السيارات Car Wash
-                            </h2>
-                            <div class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-4">
-                                <p class="font-bold text-xl sm:text-2xl">د.إ 80,000</p>
-                                <a href="./washing.html">
-                                    <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
-                                        مزيد التفاصيل
-                                    </button>
-                                </a>
-                            </div>
-                            <hr class="my-4">
-                            <div class="flex items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
-                                <ion-icon name="location-outline"></ion-icon>
-                                <p>دبي - القوز</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card relative">
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                        <img class="w-full object-cover p-1 h-72" src="./images/image3.webp" alt="Washing">
-                        <ion-icon name="heart-outline" class="heartIcon absolute top-[-15px] left-[-15px] z-10 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
-                        <div class="p-4 sm:p-6">
-                            <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
-                                غسيل السيارات Car Wash
-                            </h2>
-                            <div class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-4">
-                                <p class="font-bold text-xl sm:text-2xl">د.إ 80,000</p>
-                                <a href="./washing.html">
-                                    <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
-                                        مزيد التفاصيل
-                                    </button>
-                                </a>
-                            </div>
-                            <hr class="my-4">
-                            <div class="flex items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
-                                <ion-icon name="location-outline"></ion-icon>
-                                <p>دبي - القوز</p>
+
+                    <div class="card relative">
+                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                            <img class="w-full object-cover p-1 sm:h-72 h-[174px] rounded-[20px]" src="./images/image3.webp" alt="Washing">
+                            <ion-icon name="heart-outline" class="heartIcon sm:flex hidden absolute top-[-15px] left-[-15px] z-10 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
+                            <div class="p-4 sm:p-6">
+                                <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
+                                    غسيل السيارات Car Wash
+                                </h2>
+                                <div class="sm:flex flex-col sm:flex-row justify-between items-center mt-4 mb-4 hidden">
+                                    <p class="font-bold text-xl sm:text-2xl">د.إ 80,000</p>
+                                    <a href="./washing.html">
+                                        <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
+                                            مزيد التفاصيل
+                                        </button>
+                                    </a>
+                                </div>
+                                <hr class="my-4 sm:flex hidden">
+                                <div class="flex items-center text-[#837F7F] gap-1 text-[12px] sm:text-base sm:font-bold font-normal">
+                                    <ion-icon name="location-outline"></ion-icon>
+                                    <p>دبي - القوز</p>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="card relative">
+                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                            <img class="w-full object-cover p-1 sm:h-72 h-[174px] rounded-[20px]" src="./images/image3.webp" alt="Washing">
+                            <ion-icon name="heart-outline" class="heartIcon sm:flex hidden absolute top-[-15px] left-[-15px] z-10 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
+                            <div class="p-4 sm:p-6">
+                                <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
+                                    غسيل السيارات Car Wash
+                                </h2>
+                                <div class="sm:flex flex-col sm:flex-row justify-between items-center mt-4 mb-4 hidden">
+                                    <p class="font-bold text-xl sm:text-2xl">د.إ 80,000</p>
+                                    <a href="./washing.html">
+                                        <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
+                                            مزيد التفاصيل
+                                        </button>
+                                    </a>
+                                </div>
+                                <hr class="my-4 sm:flex hidden">
+                                <div class="flex items-center text-[#837F7F] gap-1 text-[12px] sm:text-base sm:font-bold font-normal">
+                                    <ion-icon name="location-outline"></ion-icon>
+                                    <p>دبي - القوز</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card relative">
+                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                            <img class="w-full object-cover p-1 sm:h-72 h-[174px] rounded-[20px]" src="./images/image3.webp" alt="Washing">
+                            <ion-icon name="heart-outline" class="heartIcon sm:flex hidden absolute top-[-15px] left-[-15px] z-10 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
+                            <div class="p-4 sm:p-6">
+                                <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
+                                    غسيل السيارات Car Wash
+                                </h2>
+                                <div class="sm:flex flex-col sm:flex-row justify-between items-center mt-4 mb-4 hidden">
+                                    <p class="font-bold text-xl sm:text-2xl">د.إ 80,000</p>
+                                    <a href="./washing.html">
+                                        <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
+                                            مزيد التفاصيل
+                                        </button>
+                                    </a>
+                                </div>
+                                <hr class="my-4 sm:flex hidden">
+                                <div class="flex items-center text-[#837F7F] gap-1 text-[12px] sm:text-base sm:font-bold font-normal">
+                                    <ion-icon name="location-outline"></ion-icon>
+                                    <p>دبي - القوز</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card relative">
+                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                            <img class="w-full object-cover p-1 sm:h-72 h-[174px] rounded-[20px]" src="./images/image3.webp" alt="Washing">
+                            <ion-icon name="heart-outline" class="heartIcon sm:flex hidden absolute top-[-15px] left-[-15px] z-10 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
+                            <div class="p-4 sm:p-6">
+                                <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
+                                    غسيل السيارات Car Wash
+                                </h2>
+                                <div class="sm:flex flex-col sm:flex-row justify-between items-center mt-4 mb-4 hidden">
+                                    <p class="font-bold text-xl sm:text-2xl">د.إ 80,000</p>
+                                    <a href="./washing.html">
+                                        <button class="bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
+                                            مزيد التفاصيل
+                                        </button>
+                                    </a>
+                                </div>
+                                <hr class="my-4 sm:flex hidden">
+                                <div class="flex items-center text-[#837F7F] gap-1 text-[12px] sm:text-base sm:font-bold font-normal">
+                                    <ion-icon name="location-outline"></ion-icon>
+                                    <p>دبي - القوز</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
                 
-            </div>
-            
-    
-            <div class="flex items-center justify-center mt-5">
-                <button class="flex items-center gap-3 bg-[#C10D10] text-white font-semibold py-2 px-4 border rounded-md">
-                    تحميل المزيد
-                    <ion-icon name="reload-outline" class="animate-spin"></ion-icon>
-                </button>
-            </div>
-        </div> 
+        
+                <div class="flex items-center justify-center mt-5">
+                    <button class="flex items-center gap-3 bg-[#C10D10] text-white font-semibold py-2 px-4 border rounded-md">
+                        تحميل المزيد
+                        <ion-icon name="reload-outline" class="animate-spin"></ion-icon>
+                    </button>
+                </div>
+            </div> 
         <!-- End Cards -->
 
+        <!-- Start Icons --> 
+            <div id="icons"></div>
+        <!-- End Icons -->
 
         <!-- Start Footer --> 
-            <div id="footer"></div>
+            <div id="footer" class="md:block hidden"></div>
         <!-- End Footer -->
 
         <script>

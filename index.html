@@ -26,7 +26,7 @@
             font-family: "Noto Kufi Arabic", sans-serif;
         }
 </style>
-<body class="bg-gray-100 ">
+<body>
 
         <!-- Start Navbar -->
             <div id="navbar"></div>
@@ -66,7 +66,7 @@
         <!-- End Header -->
 
         <!-- Start ADS -->
-            <div class="container mx-auto mt-8 px-4 mb-8">
+            <div class="container mx-auto mt-4 px-4 mb-8">
                 <form class="sm:hidden flex items-center justify-center  max-w-md mx-auto lg:mt-[-100px] lg:mb-16 h-16">   
                     <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
                     <div class="relative lg:mr-16">
@@ -75,38 +75,48 @@
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
                             </svg>
                         </div>
-                        <input type="search" id="default-search" class="block lg:w-[400px] w-[220px] p-3  ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 outline-none " placeholder="ابحث عن سيارتك المفضلة" required />
+                        <input type="search" id="default-search" class="block lg:w-[400px] w-[296px] p-3 ps-10 text-sm text-gray-900 rounded-lg bg-[#F2F2F2] outline-none placeholder-[#A5A3A3]" placeholder="ابحث عن سيارتك المفضلة" required />
                     </div>
                 </form>
                 <!-- Buttons -->
-                <div class="flex flex-col gap-3 lg:flex-row lg:gap-5 mb-6">
-                    <button onclick="filterCards('all')" class="filter-btn bg-[#C10D10] font-semibold py-2 px-4 border text-white rounded lg:w-[200px]">
+                <div class="flex gap-3 flex-row lg:gap-5 mb-6">
+                    <button onclick="filterCards('all')" class="filter-btn bg-[#C10D10] font-semibold py-2 px-4 border text-white rounded w-full text-[7px] md:text-base sm:text-[15px] lg:w-[200px]">
                         الكل
                     </button>
-                    <button onclick="filterCards('ads')" class="filter-btn bg-transparent text-black font-semibold py-2 px-4 border border-[#C10D10] rounded lg:w-[200px]">
+                    <button onclick="filterCards('ads')" class="filter-btn bg-transparent text-black font-semibold py-2 px-4 border border-[#C10D10] rounded w-full text-[7px] md:text-base sm:text-[15px] lg:w-[200px]">
                         أبرز الإعلانات التجارية
                     </button>
-                    <button onclick="filterCards('personal')" class="filter-btn bg-transparent text-black font-semibold py-2 px-4 border border-[#C10D10] rounded lg:w-[200px]">
+                    <button onclick="filterCards('personal')" class="filter-btn bg-transparent text-black font-semibold py-2 px-4 border border-[#C10D10] rounded w-full text-[7px] md:text-base sm:text-[15px] lg:w-[200px]">
                         أبرز الإعلانات الشخصية
                     </button>
                 </div>
+                
+                
                 
                 <!-- All Cards -->
                 <div id="cardContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 relative">
                     <div class="card relative" data-category="ads">
                         <div class="bg-white rounded-lg overflow-hidden shadow-md">
                             <img class="w-full object-cover p-1 sm:h-72 h-[180px]" src="./images/Rectangle10.webp" alt="Tesla Model X">
-                            <ion-icon name="heart-outline" class="heartIcon absolute top-[-15px] left-[-15px] z-10 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
+                            <ion-icon name="heart-outline" class="heartIcon sm:flex hidden absolute top-[-15px] left-[-15px] z-10 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
                             <div class="p-4 sm:p-6">
                                 <h2 class="sm:font-bold font-medium sm:text-2xl text-[18px] mb-2 text-right ltr:text-left">
                                     تسلا موديل اكس - بحالة جيدة جدا 
                                 </h2>
-                                <div class="flex sm:hidden items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
-                                    <ion-icon name="location-outline"></ion-icon>
-                                    <p>دبي - القوز</p>
+                                <div class="flex justify-between sm:hidden items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
+                                    <div class="flex items-center justify-center">
+                                        <ion-icon name="location-outline"></ion-icon>
+                                        <p class="text-[14px]">دبي - القوز</p>    
+                                    </div>
+                                    <div class="favoriteButtonContainer">
+                                        <button class="favoriteButton flex items-center justify-center gap-3 border border-[#C10D10] rounded-[4px] p-1">
+                                            <img class="favoriteIcon" src="./images/Frame 1000006919.svg" alt="heart">
+                                            <p class="favoriteText text-[#C10D10] text-[12px] font-normal">أضف إلي المفضلة</p>
+                                        </button>
+                                    </div>                                    
                                 </div>
                                 <div class="flex flex-col sm:flex-row justify-between sm:items-center sm:mt-4 mt-2 mr-2 ml-2 sm:mb-4">
-                                    <p class="sm:font-bold font-normal text-[16px] sm:text-2xl">د.إ 80,000</p>
+                                    <p class="font-bold text-[24px] sm:text-2xl">د.إ 80,000</p>
                                     <a href="#" id="popupToggle">
                                         <button class="sm:flex hidden bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
                                             مزيد التفاصيل
@@ -124,17 +134,61 @@
                     <div class="card relative" data-category="ads">
                         <div class="bg-white rounded-lg overflow-hidden shadow-md">
                             <img class="w-full object-cover p-1 sm:h-72 h-[180px]" src="./images/Rectangle10.webp" alt="Tesla Model X">
-                            <ion-icon name="heart-outline" class="heartIcon absolute top-[-15px] left-[-15px] z-10 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
+                            <ion-icon name="heart-outline" class="heartIcon sm:flex hidden absolute top-[-15px] left-[-15px] z-10 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
                             <div class="p-4 sm:p-6">
                                 <h2 class="sm:font-bold font-medium sm:text-2xl text-[18px] mb-2 text-right ltr:text-left">
                                     تسلا موديل اكس - بحالة جيدة جدا 
                                 </h2>
-                                <div class="flex sm:hidden items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
+                                <div class="flex justify-between sm:hidden items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
+                                    <div class="flex items-center justify-center">
+                                        <ion-icon name="location-outline"></ion-icon>
+                                        <p class="text-[14px]">دبي - القوز</p>    
+                                    </div>
+                                    <div class="favoriteButtonContainer">
+                                        <button class="favoriteButton flex items-center justify-center gap-3 border border-[#C10D10] rounded-[4px] p-1">
+                                            <img class="favoriteIcon" src="./images/Frame 1000006919.svg" alt="heart">
+                                            <p class="favoriteText text-[#C10D10] text-[12px] font-normal">أضف إلي المفضلة</p>
+                                        </button>
+                                    </div>                                    
+                                </div>
+                                <div class="flex flex-col sm:flex-row justify-between sm:items-center sm:mt-4 mt-2 mr-2 ml-2 sm:mb-4">
+                                    <p class="font-bold text-[24px] sm:text-2xl">د.إ 80,000</p>
+                                    <a href="#" id="popupToggle">
+                                        <button class="sm:flex hidden bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
+                                            مزيد التفاصيل
+                                        </button>
+                                    </a>
+                                </div>
+                                <hr class="my-4 sm:flex hidden">
+                                <div class="sm:flex hidden items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
                                     <ion-icon name="location-outline"></ion-icon>
                                     <p>دبي - القوز</p>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card relative" data-category="personal">
+                       <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                            <img class="w-full object-cover p-1 sm:h-72 h-[180px]" src="./images/Rectangle10.webp" alt="Tesla Model X">
+                            <ion-icon name="heart-outline" class="heartIcon sm:flex hidden absolute top-[-15px] left-[-15px] z-10 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
+                            <div class="p-4 sm:p-6">
+                                <h2 class="sm:font-bold font-medium sm:text-2xl text-[18px] mb-2 text-right ltr:text-left">
+                                    تسلا موديل اكس - بحالة جيدة جدا 
+                                </h2>
+                                <div class="flex justify-between sm:hidden items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
+                                    <div class="flex items-center justify-center">
+                                        <ion-icon name="location-outline"></ion-icon>
+                                        <p class="text-[14px]">دبي - القوز</p>    
+                                    </div>
+                                    <div class="favoriteButtonContainer">
+                                        <button class="favoriteButton flex items-center justify-center gap-3 border border-[#C10D10] rounded-[4px] p-1">
+                                            <img class="favoriteIcon" src="./images/Frame 1000006919.svg" alt="heart">
+                                            <p class="favoriteText text-[#C10D10] text-[12px] font-normal">أضف إلي المفضلة</p>
+                                        </button>
+                                    </div>                                    
+                                </div>
                                 <div class="flex flex-col sm:flex-row justify-between sm:items-center sm:mt-4 mt-2 mr-2 ml-2 sm:mb-4">
-                                    <p class="sm:font-bold font-normal text-[16px] sm:text-2xl">د.إ 80,000</p>
+                                    <p class="font-bold text-[24px] sm:text-2xl">د.إ 80,000</p>
                                     <a href="#" id="popupToggle">
                                         <button class="sm:flex hidden bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
                                             مزيد التفاصيل
@@ -152,45 +206,25 @@
                     <div class="card relative" data-category="personal">
                         <div class="bg-white rounded-lg overflow-hidden shadow-md">
                             <img class="w-full object-cover p-1 sm:h-72 h-[180px]" src="./images/Rectangle10.webp" alt="Tesla Model X">
-                            <ion-icon name="heart-outline" class="heartIcon absolute top-[-15px] left-[-15px] z-10 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
+                            <ion-icon name="heart-outline" class="heartIcon sm:flex hidden absolute top-[-15px] left-[-15px] z-10 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
                             <div class="p-4 sm:p-6">
                                 <h2 class="sm:font-bold font-medium sm:text-2xl text-[18px] mb-2 text-right ltr:text-left">
                                     تسلا موديل اكس - بحالة جيدة جدا 
                                 </h2>
-                                <div class="flex sm:hidden items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
-                                    <ion-icon name="location-outline"></ion-icon>
-                                    <p>دبي - القوز</p>
-                                </div>
-                                <div class="flex flex-col sm:flex-row justify-between sm:items-center sm:mt-4 mt-2 mr-2 ml-2 sm:mb-4">
-                                    <p class="sm:font-bold font-normal text-[16px] sm:text-2xl">د.إ 80,000</p>
-                                    <a href="#" id="popupToggle">
-                                        <button class="sm:flex hidden bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
-                                            مزيد التفاصيل
+                                <div class="flex justify-between sm:hidden items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
+                                    <div class="flex items-center justify-center">
+                                        <ion-icon name="location-outline"></ion-icon>
+                                        <p class="text-[14px]">دبي - القوز</p>    
+                                    </div>
+                                    <div class="favoriteButtonContainer">
+                                        <button class="favoriteButton flex items-center justify-center gap-3 border border-[#C10D10] rounded-[4px] p-1">
+                                            <img class="favoriteIcon" src="./images/Frame 1000006919.svg" alt="heart">
+                                            <p class="favoriteText text-[#C10D10] text-[12px] font-normal">أضف إلي المفضلة</p>
                                         </button>
-                                    </a>
-                                </div>
-                                <hr class="my-4 sm:flex hidden">
-                                <div class="sm:flex hidden items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
-                                    <ion-icon name="location-outline"></ion-icon>
-                                    <p>دبي - القوز</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card relative" data-category="personal">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                            <img class="w-full object-cover p-1 sm:h-72 h-[180px]" src="./images/Rectangle10.webp" alt="Tesla Model X">
-                            <ion-icon name="heart-outline" class="heartIcon absolute top-[-15px] left-[-15px] z-10 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
-                            <div class="p-4 sm:p-6">
-                                <h2 class="sm:font-bold font-medium sm:text-2xl text-[18px] mb-2 text-right ltr:text-left">
-                                    تسلا موديل اكس - بحالة جيدة جدا 
-                                </h2>
-                                <div class="flex sm:hidden items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
-                                    <ion-icon name="location-outline"></ion-icon>
-                                    <p>دبي - القوز</p>
+                                    </div>                                    
                                 </div>
                                 <div class="flex flex-col sm:flex-row justify-between sm:items-center sm:mt-4 mt-2 mr-2 ml-2 sm:mb-4">
-                                    <p class="sm:font-bold font-normal text-[16px] sm:text-2xl">د.إ 80,000</p>
+                                    <p class="font-bold text-[24px] sm:text-2xl">د.إ 80,000</p>
                                     <a href="#" id="popupToggle">
                                         <button class="sm:flex hidden bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
                                             مزيد التفاصيل
@@ -206,19 +240,27 @@
                         </div>
                     </div>
                     <div class="card relative" data-category="ads">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                       <div class="bg-white rounded-lg overflow-hidden shadow-md">
                             <img class="w-full object-cover p-1 sm:h-72 h-[180px]" src="./images/Rectangle10.webp" alt="Tesla Model X">
-                            <ion-icon name="heart-outline" class="heartIcon absolute top-[-15px] left-[-15px] z-10 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
+                            <ion-icon name="heart-outline" class="heartIcon sm:flex hidden absolute top-[-15px] left-[-15px] z-10 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
                             <div class="p-4 sm:p-6">
                                 <h2 class="sm:font-bold font-medium sm:text-2xl text-[18px] mb-2 text-right ltr:text-left">
                                     تسلا موديل اكس - بحالة جيدة جدا 
                                 </h2>
-                                <div class="flex sm:hidden items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
-                                    <ion-icon name="location-outline"></ion-icon>
-                                    <p>دبي - القوز</p>
+                                <div class="flex justify-between sm:hidden items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
+                                    <div class="flex items-center justify-center">
+                                        <ion-icon name="location-outline"></ion-icon>
+                                        <p class="text-[14px]">دبي - القوز</p>    
+                                    </div>
+                                    <div class="favoriteButtonContainer">
+                                        <button class="favoriteButton flex items-center justify-center gap-3 border border-[#C10D10] rounded-[4px] p-1">
+                                            <img class="favoriteIcon" src="./images/Frame 1000006919.svg" alt="heart">
+                                            <p class="favoriteText text-[#C10D10] text-[12px] font-normal">أضف إلي المفضلة</p>
+                                        </button>
+                                    </div>                                    
                                 </div>
                                 <div class="flex flex-col sm:flex-row justify-between sm:items-center sm:mt-4 mt-2 mr-2 ml-2 sm:mb-4">
-                                    <p class="sm:font-bold font-normal text-[16px] sm:text-2xl">د.إ 80,000</p>
+                                    <p class="font-bold text-[24px] sm:text-2xl">د.إ 80,000</p>
                                     <a href="#" id="popupToggle">
                                         <button class="sm:flex hidden bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
                                             مزيد التفاصيل
@@ -234,19 +276,27 @@
                         </div>
                     </div>
                     <div class="card relative" data-category="ads">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                       <div class="bg-white rounded-lg overflow-hidden shadow-md">
                             <img class="w-full object-cover p-1 sm:h-72 h-[180px]" src="./images/Rectangle10.webp" alt="Tesla Model X">
-                            <ion-icon name="heart-outline" class="heartIcon absolute top-[-15px] left-[-15px] z-10 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
+                            <ion-icon name="heart-outline" class="heartIcon sm:flex hidden absolute top-[-15px] left-[-15px] z-10 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
                             <div class="p-4 sm:p-6">
                                 <h2 class="sm:font-bold font-medium sm:text-2xl text-[18px] mb-2 text-right ltr:text-left">
                                     تسلا موديل اكس - بحالة جيدة جدا 
                                 </h2>
-                                <div class="flex sm:hidden items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
-                                    <ion-icon name="location-outline"></ion-icon>
-                                    <p>دبي - القوز</p>
+                                <div class="flex justify-between sm:hidden items-center text-[#837F7F] gap-1 text-sm sm:text-base font-bold">
+                                    <div class="flex items-center justify-center">
+                                        <ion-icon name="location-outline"></ion-icon>
+                                        <p class="text-[14px]">دبي - القوز</p>    
+                                    </div>
+                                    <div class="favoriteButtonContainer">
+                                        <button class="favoriteButton flex items-center justify-center gap-3 border border-[#C10D10] rounded-[4px] p-1">
+                                            <img class="favoriteIcon" src="./images/Frame 1000006919.svg" alt="heart">
+                                            <p class="favoriteText text-[#C10D10] text-[12px] font-normal">أضف إلي المفضلة</p>
+                                        </button>
+                                    </div>                                    
                                 </div>
                                 <div class="flex flex-col sm:flex-row justify-between sm:items-center sm:mt-4 mt-2 mr-2 ml-2 sm:mb-4">
-                                    <p class="sm:font-bold font-normal text-[16px] sm:text-2xl">د.إ 80,000</p>
+                                    <p class="font-bold text-[24px] sm:text-2xl">د.إ 80,000</p>
                                     <a href="#" id="popupToggle">
                                         <button class="sm:flex hidden bg-transparent text-[#C10D10] font-semibold py-2 px-4 border border-[#C10D10] rounded-md mt-2 sm:mt-0">
                                             مزيد التفاصيل
@@ -343,6 +393,32 @@
                 });
             </script>
 
+        <!-- Favorite Icon Button  -->
+            <script>
+                    const favoriteButtons = document.querySelectorAll('.favoriteButton');
+
+                    favoriteButtons.forEach(favoriteButton => {
+                        const favoriteIcon = favoriteButton.querySelector('.favoriteIcon');
+                        const favoriteText = favoriteButton.querySelector('.favoriteText');
+
+                        favoriteButton.addEventListener('click', function() {
+                            if (favoriteText.textContent === "أضف إلي المفضلة") {
+                                favoriteIcon.src = "./images/heartIcon.svg";
+                                favoriteText.textContent = "حذف من المفضلة";
+                                favoriteButton.classList.add('bg-[#C10D10]');
+                                favoriteButton.classList.remove('border-[#C10D10]');
+                                favoriteText.classList.replace('text-[#C10D10]', 'text-white');
+                            } else {
+                                favoriteIcon.src = "./images/Frame 1000006919.svg";
+                                favoriteText.textContent = "أضف إلي المفضلة";
+                                favoriteButton.classList.remove('bg-[#C10D10]');
+                                favoriteButton.classList.add('border-[#C10D10]')
+                                favoriteText.classList.replace('text-white', 'text-[#C10D10]');
+                            }
+                        });
+                    });
+
+            </script>
 
 </body>
 </html>
