@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="2G9">
+    <link href="./output.css" rel="stylesheet">
+    <title>Verification</title>
+    <link rel="icon" type="image/png" href="./images/logo.png">
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="./js/script.js"></script>
+</head>
+<style>
+    body {
+            font-family: "Noto Kufi Arabic", sans-serif;
+        }
+</style>
+<body >
+        <!-- Start Navbar -->
+            <div id="navbar"></div>
+        <!-- End Navbar -->
+
+        <!-- Start Section -->
+                <div class="container mx-auto flex flex-col justify-center items-center p-4 md:p-20 gap-5">
+                    <div class="mb-5 text-center">
+                        <h2 class="text-[#2B2F4E] font-bold text-xl md:text-[40px] mb-4">🖐️ توثيق الحساب</h2>
+                        <div class="flex flex-col items-center justify-center gap-3 mt-10">
+                            <h2 class="text-[#2B2F4E] font-medium text-2xl">نوع الحساب</h2>
+                            <p class="font-normal text-[14px] text-[#878787]">اضف بياناتك الرسمية</p>
+                            <div class="relative">
+                                <div class="w-32 h-32 border-4 border-[#C10D10] rounded-full flex items-center justify-center">
+                                    <span class="text-[#C10D10]">أضف شعارك</span>
+                                </div>
+                                <div class="absolute top-[70%] w-[42px] h-[42px] text-white rounded-full flex items-center justify-center cursor-pointer">
+                                    <input type="file" id="upload" style="display: none;" accept="image/*">
+                                    <label for="upload">
+                                        <img src="./images/ChangePicture.svg" class="cursor-pointer w-[42px] h-[42px]" alt="Change Picture">
+                                    </label>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center gap-5">
+                        <div class="flex items-center rounded-2xl bg-[#FAFAFA]">
+                            <ion-icon name="person-outline" class="w-4 h-4 md:w-5 md:h-5 text-[#9E9E9E] ml-2 mr-2"></ion-icon>
+                            <input type="text" placeholder="فيوتشر للسيارات" class="flex-grow w-full md:w-96 text-xs md:text-sm text-[#6C6C6C] outline-none bg-transparent h-12 md:h-16 placeholder:text-[16px]">
+                            <span class="w-4 h-4 md:w-5 md:h-5 ml-2 mr-2"></span>
+                        </div>
+                        <p>أوراق الشركة</p>
+                        <div class="flex flex-col gap-4 md:gap-7 w-full items-center">
+                            <button type="submit" class="text-[#C10D10] bg-white font-medium rounded-[16px] text-xs md:text-sm px-5 py-2.5 text-center border border-[#C10D10]  md:w-96 w-full h-12 md:h-16">ارفق الاوراق</button>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-4 md:gap-7 w-full items-center mt-10">
+                        <button type="submit" class="text-white bg-[#C10D10] font-medium rounded-[16px] text-xs md:text-sm px-5 py-2.5 text-center border border-[#C10D10] hover:bg-white hover:text-[#C10D10] hover:border-[#C10D10] md:w-96 w-full h-12 md:h-16">التالي</button>
+                    </div>
+                </div>
+            <!-- End Section -->
+
+        
+        <!-- Start Footer --> 
+            <div id="footer" ></div>
+        <!-- End Footer -->
+
+        <script>
+        document.getElementById('upload').addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            const imageUrl = event.target.result;
+            const circleImage = document.querySelector('.w-32.h-32 > img');
+            if (circleImage) {
+                circleImage.src = imageUrl;
+            } else {
+                const imgElement = document.createElement('img');
+                imgElement.src = imageUrl;
+                imgElement.alt = 'Uploaded Image';
+                imgElement.classList.add('rounded-full');
+                imgElement.style.width = '100%';
+                imgElement.style.height = '100%';
+                const circleDiv = document.querySelector('.w-32.h-32');
+                circleDiv.innerHTML = '';
+                circleDiv.appendChild(imgElement);
+            }
+        };
+        reader.readAsDataURL(file);
+    });
+
+        </script>
+</body>
+</html>
