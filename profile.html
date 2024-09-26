@@ -30,7 +30,7 @@
 
         <!-- Start Section -->
             <div class="container mx-auto">
-                <div class="flex items-center gap-10 mt-10 mr-20 ">
+                <div class="flex items-center gap-10 mt-10 sm:mr-20 mr-5 ">
                     <!-- Sidebar -->
                     <div class="left-0 top-0 h-full">
                         <div class="flex gap-5">
@@ -48,9 +48,9 @@
                         <div>
                             <a href="./editProfile.html" class="flex gap-2 items-center p-3">
                                 <img src="./images/setting.svg" alt="Setting">
-                                <p class="font-medium text-[16px] text-[#C10D10]">تعديل حسابي</p>
+                                <p class="font-medium text-[16px] text-[#2B2F4E]">تعديل حسابي</p>
                             </a>
-                            <hr class="border-[#C10D10] mr-3">
+                            <hr class="mr-3">
                             <a href="" class="flex gap-2 items-center p-3">
                                 <img src="./images/IconAdd.svg" alt="Adds">
                                 <p class="font-medium text-[16px] text-[#2B2F4E] ">باقة إعلاناتك</p>
@@ -77,44 +77,16 @@
                             </a>
                         </div>
                     </div>
-            
-                    <!-- Main Content -->
-                    <div class=" flex flex-col gap-5 mt-[-70px]">
-                            <h1 class="text-2xl font-bold">⚙️ تعديل حسابي</h1>
-                            <div class="flex items-center rounded-2xl bg-[#FAFAFA]">
-                                <ion-icon name="person-outline" class="w-4 h-4 md:w-5 md:h-5 text-[#9E9E9E] ml-2 mr-2"></ion-icon>
-                                <input type="text" placeholder="اسم المستخدم" class="flex-grow w-full md:w-96 text-xs md:text-sm text-[#6C6C6C] outline-none bg-transparent h-12 md:h-16">
-                                <span class="w-4 h-4 md:w-5 md:h-5 ml-2 mr-2"></span>
-                            </div>
-                            <div class="w-full max-w-md mx-auto">
-                                <div class="relative bg-[#FAFAFA]  rounded-lg p-4 flex items-center">
-                                    <select class="appearance-none bg-transparent text-lg pr-8 outline-none focus:ring-0">
-                                        <option value="AE" selected>+20</option>
-                                        <option value="US">+20</option>
-                                        <option value="UK">+20</option>
-                                        <option value="SA">+20</option>
-                                    </select>
-                                    <span class="absolute right-0 inset-y-0 flex items-center pr-2 pointer-events-none">
-                                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                        </svg>
-                                    </span>
-                                    <input type="tel" placeholder="رقم الهاتف" class=" w-full md:w-96 text-xs md:text-sm text-[#6C6C6C] outline-none bg-transparent ">
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-center">
-                                <a href="#" class="flex justify-center items-center text-white bg-[#C10D10] w-[294px] rounded-[10px] h-12">
-                                    <button>حفظ</button>
-                                </a>
-                            </div>
-                            
-                        </div>
                 </div>
             </div>
         <!-- End Section -->
+
+        <!-- Start Icon -->
+            <div id="icons"></div>
+        <!-- End Icon -->
         
         <!-- Start Footer --> 
-            <div id="footer"></div>
+            <div id="footer" class="md:block hidden"></div>
         <!-- End Footer -->
 </body>
 </html>

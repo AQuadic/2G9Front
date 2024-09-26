@@ -29,10 +29,10 @@
         <!-- End Navbar -->
 
         <!-- Start Section -->
-            <div class="container mx-auto">
-                <div class="flex items-center gap-10 mt-10 mr-20 ">
+            <div class="container mx-auto flex items-center justify-center">
+                <div class="flex items-center gap-10 mt-10  ">
                     <!-- Sidebar -->
-                    <div class="left-0 top-0 h-full">
+                    <div class="md:block hidden left-0 top-0 h-full">
                         <div class="flex gap-5">
                             <div class="relative">
                                 <img src="./images/Shape.webp" class="w-[61.7px] h-[61.7px] border-2 border-[#C10D10] p-1 rounded-full" alt="profile">
@@ -79,11 +79,16 @@
                     </div>
             
                     <!-- Main Content -->
-                    <div class=" flex flex-col gap-5 mt-[-70px]">
+                    <div class=" flex flex-col gap-5 justify-center items-center">
                             <h1 class="text-2xl font-bold">⚙️ تعديل حسابي</h1>
+                            <div class="relative md:hidden block">
+                                <img src="./images/Shape.webp" class="w-[128px] h-[128px] border-2 border-[#C10D10] p-0.5 rounded-full" alt="profile" id="profilePic">
+                                <img src="./images/ChangePicture.svg" class="absolute top-[70%] w-[42px] h-[42px] cursor-pointer" alt="Change Picture" id="changePicBtn">
+                                <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                            </div>
                             <div class="flex items-center rounded-2xl bg-[#FAFAFA]">
                                 <ion-icon name="person-outline" class="w-4 h-4 md:w-5 md:h-5 text-[#9E9E9E] ml-2 mr-2"></ion-icon>
-                                <input type="text" placeholder="اسم المستخدم" class="flex-grow w-full md:w-96 text-xs md:text-sm text-[#6C6C6C] outline-none bg-transparent h-12 md:h-16">
+                                <input type="text" placeholder="اسم المستخدم" class="flex-grow w-full md:w-96 text-[16px] md:text-sm text-[#2B2F4E] outline-none bg-transparent h-12 md:h-16">
                                 <span class="w-4 h-4 md:w-5 md:h-5 ml-2 mr-2"></span>
                             </div>
                             <div class="w-full max-w-md mx-auto">
@@ -112,9 +117,32 @@
                 </div>
             </div>
         <!-- End Section -->
+
+        <!-- Start Icons -->
+            <div id="icons"></div>
+        <!-- End Icons -->
         
         <!-- Start Footer --> 
-            <div id="footer"></div>
+            <div id="footer" class="md:block hidden"></div>
         <!-- End Footer -->
+
+        <script>
+            const changePicBtn = document.getElementById('changePicBtn');
+            const fileInput = document.getElementById('fileInput');
+            const profilePic = document.getElementById('profilePic');
+                    changePicBtn.addEventListener('click', function() {
+                fileInput.click();
+            });
+            fileInput.addEventListener('change', function(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        profilePic.src = e.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        </script>
 </body>
 </html>
