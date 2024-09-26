@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="2G9">
+    <link href="./output.css" rel="stylesheet">
+    <title>Ads</title>
+    <link rel="icon" type="image/png" href="./images/logo.png">
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="./js/script.js"></script>
+</head>
+<style>
+    body {
+            font-family: "Noto Kufi Arabic", sans-serif;
+        }
+</style>
+<body >
+        <!-- Start Navbar -->
+            <div id="navbar"></div>
+        <!-- End Navbar -->
+
+        <!-- Start Section -->
+            <div class="container mx-auto flex  gap-10 mt-20 ">
+                <!-- Sidebar -->
+                <div class="md:block hidden w-1/4 h-screen overflow-y-auto">
+                    <div class="md:block hidden left-0 top-0 h-full ">
+                    <div class="flex gap-5">
+                        <div class="relative">
+                            <img src="./images/Shape.webp" class="w-[61.7px] h-[61.7px] border-2 border-[#C10D10] p-1 rounded-full" alt="profile">
+                            <img src="./images/check.svg" class="absolute left-0 top-[55%]" alt="check">    
+                        </div>
+                        <div>
+                            <h2 class="font-medium text-2xl text-[#2B2F4E]">أسماء مصطفي</h2>
+                            <p class="font-medium text-[16px] text-[#858585]">+966 54 131 0701</p>
+                            <p class="font-normal text-[14px] text-[#C10D10]">توثيق الحساب</p>
+                            <p class="hidden font-normal text-[14px] text-[#48D556]">حساب موثق</p>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="./editProfile.html" class="flex gap-2 items-center p-3">
+                            <img src="./images/setting.svg" alt="Setting">
+                            <p class="font-medium text-[16px] text-[#2B2F4E]">تعديل حسابي</p>
+                        </a>
+                        <hr class="mr-3">
+                        <a href="" class="flex gap-2 items-center p-3">
+                            <img src="./images/IconAdd.svg" alt="Adds">
+                            <p class="font-medium text-[16px] text-[#C10D10] ">باقة إعلاناتك</p>
+                        </a>
+                        <hr class="border-[#C10D10] mr-3">
+                        <a href="" class="flex gap-2 items-center p-3">
+                            <img src="./images/phone.svg" alt="Phone">
+                            <p class="font-medium text-[16px] text-[#2B2F4E] ">تواصل معنا</p>
+                        </a>
+                        <hr class="mr-3">
+                        <a href="./blocked.html" class="flex gap-2 items-center p-3">
+                            <img src="./images/block.svg" alt="block">
+                            <p class="font-medium text-[16px] text-[#2B2F4E] ">المحظورين</p>
+                        </a>
+                        <hr class="mr-3">
+                        <a href="" class="flex gap-2 items-center p-3">
+                            <img src="./images/logOut.svg" alt="log out">
+                            <p class="font-medium text-[16px] text-[#2B2F4E] ">تسجيل الخروج</p>
+                        </a>
+                        <hr class="mr-3">
+                        <a href="" class="flex gap-2 items-center p-3">
+                            <img src="./images/deleteAcc.svg" alt="delete account">
+                            <p class="font-medium text-[16px] text-[#2B2F4E] "> حذف الحساب <span class="text-[#C10D10]">( تفقد كل بياناتك! )</span></p>
+                        </a>
+                    </div>
+                    </div>         
+                </div>
+            
+                <!-- Main Content -->
+                <div class="flex flex-wrap items-center gap-4 md:w-3/4">
+                    <div class="bg-white border-opacity-10 border-white overflow-hidden h-[269px] w-[374px] shadow-md">
+                        <div class="text-content flex flex-col justify-center items-center">
+                            <h3 class="text-[16px] text-white bg-[#39A1CE] w-full flex justify-center items-center font-medium h-8 rounded-tl-[20px] rounded-tr-[20px]">الباقة الفضية</h3>
+                            <div class="flex items-center">
+                                <p class="text-[12px] font-normal p-3">هذه باقة مجانيه تحصل عليها لمره واحده</p>
+                                <p class="text-sm font-bold">100 درهم</p>
+                            </div>
+                            <div class="flex gap-10">
+                                <div class="flex flex-col items-center justify-center text-white rounded-[20px] gap-2 bg-[#C10D10] w-[150px] h-[98px]">
+                                    <p>تم استخدام</p>
+                                    <p class="font-bold">0</p>
+                                </div>
+                                <div class="flex flex-col items-center justify-center text-white rounded-[20px] gap-5 bg-[#39CE8A] w-[150px] h-[98px]">
+                                    <p>تم استخدام</p>
+                                    <p class="font-bold">0</p>
+                                </div>
+                            </div>
+                            <a href="./adddetails.html" class="btn bg-[#39CE8A] py-[0.5rem] border-2 border-[#39CE8A] outline-none text-[0.8rem] rounded-lg mt-10 text-white w-3/5 cursor-pointer flex justify-center">
+                                <button>شراء</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border-opacity-10 border-white overflow-hidden h-[269px] w-[374px] shadow-md">
+                        <div class="text-content flex flex-col justify-center items-center">
+                            <h3 class="text-[16px] text-white bg-[#39CE8A] w-full flex justify-center items-center font-medium h-8 rounded-tl-[20px] rounded-tr-[20px]">الباقة الترحيبية</h3>
+                            <div class="flex items-center">
+                                <p class="text-[12px] font-normal p-3">هذه باقة مجانيه تحصل عليها لمره واحده</p>
+                                <p class="text-sm font-bold">100 درهم</p>
+                            </div>
+                            <div class="flex gap-10">
+                                <div class="flex flex-col items-center justify-center text-white rounded-[20px] gap-2 bg-[#C10D10] w-[150px] h-[98px]">
+                                    <p>تم استخدام</p>
+                                    <p class="font-bold">0</p>
+                                </div>
+                                <div class="flex flex-col items-center justify-center text-white rounded-[20px] gap-5 bg-[#39CE8A] w-[150px] h-[98px]">
+                                    <p>تم استخدام</p>
+                                    <p class="font-bold">0</p>
+                                </div>
+                            </div>
+                            <a href="./adddetails.html" class="btn bg-[#39CE8A] py-[0.5rem] border-2 border-[#39CE8A] outline-none text-[0.8rem] rounded-lg mt-10 text-white w-3/5 cursor-pointer flex justify-center">
+                                <button>شراء</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border-opacity-10 border-white overflow-hidden h-[269px] w-[374px] shadow-md">
+                        <div class="text-content flex flex-col justify-center items-center">
+                            <h3 class="text-[16px] text-white bg-[#CE8939] w-full flex justify-center items-center font-medium h-8 rounded-tl-[20px] rounded-tr-[20px]">الباقة الذهبية</h3>
+                            <div class="flex items-center">
+                                <p class="text-[12px] font-normal p-3">هذه باقة مجانيه تحصل عليها لمره واحده</p>
+                                <p class="text-sm font-bold">100 درهم</p>
+                            </div>
+                            <div class="flex gap-10">
+                                <div class="flex flex-col items-center justify-center text-white rounded-[20px] gap-2 bg-[#C10D10] w-[150px] h-[98px]">
+                                    <p>تم استخدام</p>
+                                    <p class="font-bold">0</p>
+                                </div>
+                                <div class="flex flex-col items-center justify-center text-white rounded-[20px] gap-5 bg-[#39CE8A] w-[150px] h-[98px]">
+                                    <p>تم استخدام</p>
+                                    <p class="font-bold">0</p>
+                                </div>
+                            </div>
+                            <a href="./adddetails.html" class="btn bg-[#39CE8A] py-[0.5rem] border-2 border-[#39CE8A] outline-none text-[0.8rem] rounded-lg mt-10 text-white w-3/5 cursor-pointer flex justify-center">
+                                <button>شراء</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Add more cards as needed -->
+                </div>
+
+            </div>
+        <!-- End Section -->
+
+        <!-- Start Icons -->
+            <div id="icons"></div>
+        <!-- End Icons -->
+        
+        <!-- Start Footer --> 
+            <div id="footer" class="md:block hidden"></div>
+        <!-- End Footer -->
+</body>
+</html>

@@ -51,7 +51,7 @@
                                 <p class="font-medium text-[16px] text-[#2B2F4E]">تعديل حسابي</p>
                             </a>
                             <hr class="mr-3">
-                            <a href="" class="flex gap-2 items-center p-3">
+                            <a href="./userAds.html" class="flex gap-2 items-center p-3">
                                 <img src="./images/IconAdd.svg" alt="Adds">
                                 <p class="font-medium text-[16px] text-[#2B2F4E] ">باقة إعلاناتك</p>
                             </a>
@@ -61,7 +61,7 @@
                                 <p class="font-medium text-[16px] text-[#2B2F4E] ">تواصل معنا</p>
                             </a>
                             <hr class="mr-3">
-                            <a href="" class="flex gap-2 items-center p-3">
+                            <a href="./blocked.html" class="flex gap-2 items-center p-3">
                                 <img src="./images/block.svg" alt="block">
                                 <p class="font-medium text-[16px] text-[#C10D10]">المحظورين</p>
                             </a>
@@ -161,24 +161,5 @@
         <!-- Start Footer --> 
             <div id="footer" class="md:block hidden"></div>
         <!-- End Footer -->
-
-        <script>
-            const changePicBtn = document.getElementById('changePicBtn');
-            const fileInput = document.getElementById('fileInput');
-            const profilePic = document.getElementById('profilePic');
-                    changePicBtn.addEventListener('click', function() {
-                fileInput.click();
-            });
-            fileInput.addEventListener('change', function(event) {
-                const file = event.target.files[0];
-                if (file) {
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                        profilePic.src = e.target.result;
-                    };
-                    reader.readAsDataURL(file);
-                }
-            });
-        </script>
 </body>
 </html>
