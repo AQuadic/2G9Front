@@ -90,5 +90,49 @@
         </div>
     </nav>
 
+    <!-- POP UP FOR LOGOUT -->
+    <div id="popup" class="z-50 fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="bg-white rounded-lg shadow-lg p-6 max-w-[90%] sm:max-w-[40%] w-full relative">
+            <img id="closePopup" src="./images/Close Square.svg" class="cursor-pointer absolute top-2 right-2" alt="close">
+            <div class="flex flex-col items-center">
+                <h1 class="mt-4 text-2xl sm:text-3xl font-medium">Logout Confirmation</h1>
+                <h2 class="mt-2 text-lg sm:text-2xl font-medium">Are you sure you want to logout?</h2>
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-5 mt-4">
+                    <a href="" class="bg-[#C10D10] p-2 text-white rounded-md w-full sm:w-auto text-center">
+                        Logout
+                    </a>
+                    <a href="" class="bg-white border-[1px] border-gray-300 rounded-md p-2 w-full sm:w-auto text-center">
+                        Cancel
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const popup = document.getElementById('popup');
+        const closePopup = document.getElementById('closePopup');
+        const submitButton = document.getElementById('submitButton');
+
+        if (popup && closePopup && submitButton) {
+            submitButton.addEventListener('click', function (e) {
+                e.preventDefault(); 
+                popup.classList.remove('hidden');
+            });
+
+            closePopup.addEventListener('click', function () {
+                popup.classList.add('hidden');
+            });
+
+            popup.addEventListener('click', function (e) {
+                if (e.target === popup) {
+                    popup.classList.add('hidden');
+                }
+            });
+        }
+    });
+    </script>
+
 </body>
 </html>
