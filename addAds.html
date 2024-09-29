@@ -24,7 +24,23 @@
     body {
             font-family: "Noto Kufi Arabic", sans-serif;
         }
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: #39CE8A; 
+            --swiper-navigation-size: 24px; 
+            background-color: white;
+            opacity: 90%;
+            border-radius: 50%;
+            padding: 20px;
+        }
 
+        .swiper-button-prev {
+            left: 10px;
+        }
+
+        .swiper-button-next {
+            right: 10px; 
+        }
 </style>
 </head>
 <body class="bg-gray-50">
@@ -89,6 +105,8 @@
                             </div>
                             
                         </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
                 </section>
             </div>
@@ -102,31 +120,34 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="./js/script.js"></script>
         <script>
-            // Swiper
-var swiper = new Swiper(".mySwiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    loop:true,
-    slidesPerView: "auto",
-    initialSlide: 2,
-    coverflowEffect: {
-    rotate: 0,
-    stretch: 0,
-    depth: 150,
-    modifier: 2.5,
-    slideShadows: true,
-    autoplay: false,
-    breakpoints: {
-        640: {
-            slidesPerView: 1, 
-        },
-        641: {
-            slidesPerView: 3,
-        },
-    },
-},
-});
+            var swiper = new Swiper(".mySwiper", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                loop: true,
+                slidesPerView: "auto",
+                initialSlide: 2,
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 150,
+                    modifier: 2.5,
+                    slideShadows: true,
+                },
+                navigation: { 
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 1, 
+                    },
+                    641: {
+                        slidesPerView: 3,
+                    },
+                },
+            });
         </script>
+        
 </body>
 </html>
