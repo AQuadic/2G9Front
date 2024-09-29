@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="2G9">
+    <link href="./output.css" rel="stylesheet">
+    <title>Ads Promotion</title>
+    <link rel="icon" type="image/png" href="./images/logo.png">
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="./js/script.js"></script>
+</head>
+<style>
+    body {
+            font-family: "Noto Kufi Arabic", sans-serif;
+        }
+</style>
+<body >
+        <!-- Start Navbar -->
+            <div id="navbar"></div>
+        <!-- End Navbar -->
+
+        <!-- Start Section -->
+            <div class="container mx-auto flex flex-col justify-center items-center p-4 md:p-20 gap-5">
+                    <div class="bg-white rounded-[20px] shadow-xl p-6 w-[401.42px] ">
+                        <div class="flex items-center justify-center mb-4">
+                            <div >
+                                <img src="./images/Raincloud.webp" class="w-[112px] h-[112px]" alt="Raincloud">
+                            </div>
+                            
+                        </div>
+                        <h2 class="text-2xl font-bold text-center mb-4">الباقات الاعلانية</h2>
+                        <p class="text-[16px] text-[#2B2F4E] font-bold text-center mb-4">اختر المدة المناسبة لتميز اعلانك خلالها</p>
+                        <div class="space-y-3 flex flex-col justify-center items-center">
+                            <div class="card flex items-center justify-between border-[1px] border-[#00000026] rounded-[14.56px] p-3 w-[273.42px] cursor-pointer" 
+                                onclick="handleCardClick(this)">
+                            <div class="flex items-center gap-2">
+                                <img src="./images/bronzeStar.svg" alt="Bronze Star">
+                                <div>
+                                    <p class="font-medium text-[16px] text-[#2B2F4E]">الباقة البرونزية</p>
+                                    <p class="font-medium text-[12px] text-[#2B2F4E] opacity-50">7 أيام</p>
+                                </div>
+                            </div>
+                            <span class="font-medium text-[12px] text-[#2B2F4E] opacity-50">100 درهم</span>
+                            </div>
+                            <div class="card flex items-center justify-between border-[1px] border-[#00000026] rounded-[14.56px] p-3 w-[273.42px] cursor-pointer" 
+                                    onclick="handleCardClick(this)">
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/silverStar.svg" alt="Silver Star">
+                                    <div>
+                                        <p class="font-medium text-[16px] text-[#2B2F4E]">الباقة الفضية</p>
+                                        <p class="font-medium text-[12px] text-[#2B2F4E] opacity-50">7 أيام</p>
+                                    </div>    
+                                </div>
+                                <span class="font-medium text-[12px] text-[#2B2F4E] opacity-50">100 درهم</span>
+                            </div>
+                            <div class="card flex items-center justify-between border-[1px] border-[#00000026] rounded-[14.56px] p-3 w-[273.42px] cursor-pointer" 
+                                    onclick="handleCardClick(this)">
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/goldenStar.svg" alt="Golden Star">
+                                    <div>
+                                        <p class="font-medium text-[16px] text-[#2B2F4E]">الباقة الذهبية</p>
+                                        <p class="font-medium text-[12px] text-[#2B2F4E] opacity-50">7 أيام</p>
+                                    </div>
+                                </div>
+                                <span class="font-medium text-[12px] text-[#2B2F4E] opacity-50">100 درهم</span>
+                            </div>
+                        </div>
+                        <a href="" class="flex items-center justify-center">
+                            <button class="w-[150px] h-[60px] bg-[#09203F] font-medium text-[16px] text-white rounded-lg py-2 mt-4 ">اشتري الان</button>
+                        </a>
+                    </div>
+            </div>
+        <!-- End Section -->
+        
+        <!-- Start Footer --> 
+            <div id="footer"></div>
+        <!-- End Footer -->
+
+        <script>
+            function handleCardClick(clickedCard) {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.style.backgroundColor = ''; 
+                card.style.boxShadow = '';
+            });
+
+            clickedCard.style.backgroundColor = '#F9F0D2';
+            clickedCard.style.boxShadow = '0px 4px 4px 0px #00000040';
+        }
+        </script>
+</body>
+</html>
