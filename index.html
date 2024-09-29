@@ -80,13 +80,13 @@
                 </form>
                 <!-- Buttons -->
                 <div class="flex gap-3 flex-row lg:gap-5 mb-6">
-                    <button onclick="filterCards('all')" class="filter-btn bg-[#C10D10] font-semibold py-2 px-4 border text-white rounded w-full text-[7px] md:text-base sm:text-[15px] lg:w-[200px]">
+                    <button onclick="filterCards('all')" class="filter-btn bg-[#C10D10] font-semibold py-2 px-4 border text-white rounded w-full text-[12px] md:text-base sm:text-[15px] lg:w-[200px]">
                         الكل
                     </button>
-                    <button onclick="filterCards('ads')" class="filter-btn bg-transparent text-black font-semibold py-2 px-4 border border-[#C10D10] rounded w-full text-[7px] md:text-base sm:text-[15px] lg:w-[200px]">
+                    <button onclick="filterCards('ads')" class="filter-btn bg-transparent text-black font-semibold py-2 px-4 border border-[#C10D10] rounded w-full text-[12px] md:text-base sm:text-[15px] lg:w-[200px]">
                         أبرز الإعلانات التجارية
                     </button>
-                    <button onclick="filterCards('personal')" class="filter-btn bg-transparent text-black font-semibold py-2 px-4 border border-[#C10D10] rounded w-full text-[7px] md:text-base sm:text-[15px] lg:w-[200px]">
+                    <button onclick="filterCards('personal')" class="filter-btn bg-transparent text-black font-semibold py-2 px-4 border border-[#C10D10] rounded w-full text-[12px] md:text-base sm:text-[15px] lg:w-[200px]">
                         أبرز الإعلانات الشخصية
                     </button>
                 </div>
@@ -98,6 +98,7 @@
                     <div class="card relative" data-category="ads">
                         <div class="bg-white rounded-lg overflow-hidden shadow-md">
                             <img class="w-full object-cover p-1 sm:h-72 h-[180px] rounded-[20px]" src="./images/Rectangle10.webp" alt="Tesla Model X">
+                            <p class="absolute top-[5%] right-[5%] text-white font-bold text-[12px] w-[55px] h-[26px] bg-[#F0A919] rounded-[10px] flex items-center justify-center">مميز</p>
                             <ion-icon name="heart-outline" class="heartIcon sm:flex hidden absolute top-[-15px] left-[-15px] z-10 m-2 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
                             <div class="p-4 sm:p-6">
                                 <h2 class="sm:font-bold font-medium sm:text-2xl text-[18px] mb-2 text-right ltr:text-left">
@@ -339,12 +340,21 @@
             <div class="flex flex-col justify-center items-center gap-5 bg-white p-10 h-[450px]">
                 <h2 class="font-medium text-[28px] text-[#2E3A4A]">Register Now 🤩</h2>
                 <p class="text-[#2E3A4A] font-medium text-[12px]">verify phone number to complete your profile</p>
-                <div class="flex items-center rounded-2xl bg-[#FAFAFA] ">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg" alt="UAE Flag" class="w-6 h-6 ml-2">
-                    <svg class="w-4 h-4 md:w-6 md:h-6 text-gray-500 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                    <input type="text" placeholder="Enter phone..." class="flex-grow text-xs md:text-sm text-[#6C6C6C] outline-none bg-transparent ml-2  h-9 md:h-16 w-full">
+                <div class="w-full max-w-md mx-auto">
+                    <div class="relative bg-[#FAFAFA]  rounded-lg p-4 flex items-center">
+                        <select class="appearance-none bg-transparent text-lg pr-8 outline-none focus:ring-0">
+                            <option value="AE" selected>+20</option>
+                            <option value="US">+20</option>
+                            <option value="UK">+20</option>
+                            <option value="SA">+20</option>
+                        </select>
+                        <span class="absolute right-0 inset-y-0 flex items-center pr-2 pointer-events-none">
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </span>
+                        <input type="tel" placeholder="رقم الهاتف" class=" w-full md:w-96 text-xs md:text-sm text-[#6C6C6C] outline-none bg-transparent ">
+                    </div>
                 </div>
                 <button type="submit" class="text-white bg-[#C10D10] font-medium rounded-lg text-xs md:text-sm px-5 py-2.5 text-center border border-[#C10D10] hover:bg-white hover:text-[#C10D10] hover:border-[#C10D10] h-9 md:h-16 w-full">Verify Phone</button>
                 <p class="text-[#2E3A4A] text-[12px] font-medium">if you have account</p>
