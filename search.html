@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="2G9">
     <link href="./output.css" rel="stylesheet">
-    <title>Services</title>
+    <title>Search Page</title>
     <link rel="icon" type="image/png" href="./images/logo.png">
     <!-- Icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+
     <script src="./js/script.js"></script>
 </head>
 <style>
@@ -22,23 +23,32 @@
             font-family: "Noto Kufi Arabic", sans-serif;
         }
 </style>
-<body class="bg-gray-50">
+<body >
         <!-- Start Navbar -->
             <div id="navbar"></div>
         <!-- End Navbar -->
-        
-        <!-- Start Header -->
-            <header class="container mx-auto">
-                <div class="mt-5 mr-3">
-                    <h2 class="text-[#C10D10] font-medium text-4xl mb-5">خدمات السيارات</h2>
-                    <p class="font-medium text-[16px]">خدمة غسيل السيارات توفر لك فرصة للحفاظ على مظهر سيارتك بشكل رائع و نظيف .<br>
-                        سيارتك تتألق و تشع بالجمال مع خدمة غسيل السيارات المميزة التي تقدمها عملائنا المحترفين .</p>
+
+        <!-- Start Section -->
+            <div class="container mx-auto p-5">
+                <h2 class="text-[#2B2F4E] font-bold sm:text-[40px] text-2xl mt-5"> البحث</h2>
+                <div class="flex  justify-center items-center gap-3 lg:gap-5 mb-6 mt-6">          
+                    <form class="">   
+                        <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                                </svg>
+                            </div>
+                            <input type="search" id="default-search" class="block w-full p-4 ps-10 font-medium text-sm text-[#2B2F4E] outline-none rounded-lg bg-[#FAFAFA]" placeholder="ابحث عن سيارتك المفضلة" required />
+                        </div>
+                    </form>
+                    <button class="filter-btn bg-transparent text-black font-semibold py-2 px-4 border border-[#C10D10] rounded-[10px] w-[134px] h-[42px]">
+                        بحث
+                    </button>
                 </div>
-                <div class="md:flex items-center justify-center hidden">
-                    <img src="./images/amico.webp" alt="amico">
-                </div>
-            </header>
-        <!-- End Header -->
+            </div>
+        <!-- End Section -->
 
         <!-- Start Cards -->
             <div class="container mx-auto mt-8 px-4 mb-8">
@@ -47,7 +57,7 @@
                         <p class="absolute top-[5%] right-[5%] text-white font-bold text-[12px] w-[55px] h-[26px] bg-[#F0A919] rounded-[10px] flex items-center justify-center">مميز</p>
                         <ion-icon name="heart-outline" class="heartIcon sm:flex hidden absolute top-[-15px] left-[-15px] z-10 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
                         <div class="card rounded-[20px] overflow-hidden bg-white shadow-md">
-                            <img class="object-contain" src="./images/Rectangle8133.webp" alt="Washing">
+                            <img class="object-contain" src="./images/Rectangle2.webp" alt="Washing">
                             <div class="p-4 sm:p-6">
                                 <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
                                     غسيل السيارات Car Wash
@@ -72,7 +82,7 @@
                     <div class="relative max-w-[384px] mx-auto">
                         <ion-icon name="heart-outline" class="heartIcon sm:flex hidden absolute top-[-15px] left-[-15px] z-10 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
                         <div class="card rounded-[20px] overflow-hidden bg-white shadow-md">
-                            <img class="object-contain" src="./images/Rectangle8133.webp" alt="Washing">
+                            <img class="object-contain" src="./images/Rectangle2.webp" alt="Washing">
                             <div class="p-4 sm:p-6">
                                 <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
                                     غسيل السيارات Car Wash
@@ -97,7 +107,7 @@
                     <div class="relative max-w-[384px] mx-auto">
                         <ion-icon name="heart-outline" class="heartIcon sm:flex hidden absolute top-[-15px] left-[-15px] z-10 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
                         <div class="card rounded-[20px] overflow-hidden bg-white shadow-md">
-                            <img class="object-contain" src="./images/Rectangle8133.webp" alt="Washing">
+                            <img class="object-contain" src="./images/Rectangle2.webp" alt="Washing">
                             <div class="p-4 sm:p-6">
                                 <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
                                     غسيل السيارات Car Wash
@@ -122,7 +132,7 @@
                     <div class="relative max-w-[384px] mx-auto">
                         <ion-icon name="heart-outline" class="heartIcon sm:flex hidden absolute top-[-15px] left-[-15px] z-10 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
                         <div class="card rounded-[20px] overflow-hidden bg-white shadow-md">
-                            <img class="object-contain" src="./images/Rectangle8133.webp" alt="Washing">
+                            <img class="object-contain" src="./images/Rectangle2.webp" alt="Washing">
                             <div class="p-4 sm:p-6">
                                 <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
                                     غسيل السيارات Car Wash
@@ -147,7 +157,7 @@
                     <div class="relative max-w-[384px] mx-auto">
                         <ion-icon name="heart-outline" class="heartIcon sm:flex hidden absolute top-[-15px] left-[-15px] z-10 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
                         <div class="card rounded-[20px] overflow-hidden bg-white shadow-md">
-                            <img class="object-contain" src="./images/Rectangle8133.webp" alt="Washing">
+                            <img class="object-contain" src="./images/Rectangle2.webp" alt="Washing">
                             <div class="p-4 sm:p-6">
                                 <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
                                     غسيل السيارات Car Wash
@@ -172,7 +182,7 @@
                     <div class="relative max-w-[384px] mx-auto">
                         <ion-icon name="heart-outline" class="heartIcon sm:flex hidden absolute top-[-15px] left-[-15px] z-10 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
                         <div class="card rounded-[20px] overflow-hidden bg-white shadow-md">
-                            <img class="object-contain" src="./images/Rectangle8133.webp" alt="Washing">
+                            <img class="object-contain" src="./images/Rectangle2.webp" alt="Washing">
                             <div class="p-4 sm:p-6">
                                 <h2 class="font-bold text-lg sm:text-xl mb-2 text-right ltr:text-left">
                                     غسيل السيارات Car Wash
@@ -194,38 +204,12 @@
                         </div>
                     </div>
                     
-                </div>
-                
-        
-                <div class="flex items-center justify-center mt-5">
-                    <button class="flex items-center gap-3 bg-[#C10D10] text-white font-semibold py-2 px-4 border rounded-md">
-                        تحميل المزيد
-                        <ion-icon name="reload-outline" class="animate-spin"></ion-icon>
-                    </button>
                 </div>
             </div> 
         <!-- End Cards -->
-
-        <!-- Start Icons --> 
-            <div id="icons"></div>
-        <!-- End Icons -->
-
-        <!-- Start Footer --> 
-            <div id="footer" class="md:block hidden"></div>
-        <!-- End Footer -->
-
-        <script>
-            const heartIcons = document.querySelectorAll('.heartIcon');
         
-            heartIcons.forEach(icon => {
-                icon.addEventListener('click', function () {
-                    if (icon.getAttribute("name") === "heart-outline") {
-                        icon.setAttribute("name", "heart");
-                    } else {
-                        icon.setAttribute("name", "heart-outline");
-                    }
-                });
-            });
-        </script>
+        <!-- Start Footer --> 
+            <div id="footer"></div>
+        <!-- End Footer -->
 </body>
 </html>
