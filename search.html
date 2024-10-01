@@ -22,6 +22,15 @@
     body {
             font-family: "Noto Kufi Arabic", sans-serif;
         }
+        .gradient-border {
+        border-width: 3px;
+        border-style: solid;
+        border-image: linear-gradient(180deg, #D3A600 0%, #7F6503 100%);
+        border-image-slice: 1;
+        border-radius: 10px;
+    }
+
+
 </style>
 <body >
         <!-- Start Navbar -->
@@ -53,7 +62,7 @@
         <!-- Start Cards -->
             <div class="container mx-auto mt-8 px-4 mb-8">
                 <div  class="grid grid-cols-1  lg:grid-cols-3 gap-6 relative">
-                    <div class="relative max-w-[384px] mx-auto rounded-[20px] p-[3px] bg-gradient-to-b from-[#D3A600] to-[#7F6503]">
+                    <div class="relative max-w-[384px] mx-auto rounded-[20px] p-[3px] gradient-border">
                         <p class="absolute top-[5%] right-[5%] text-white font-bold text-[12px] w-[55px] h-[26px] bg-[#F0A919] rounded-[10px] flex items-center justify-center">مميز</p>
                         <ion-icon name="heart-outline" class="heartIcon sm:flex hidden absolute top-[-15px] left-[-15px] z-10 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
                         <div class="card rounded-[20px] overflow-hidden bg-white shadow-md">
@@ -79,7 +88,7 @@
                         </div>
                     </div>
                     
-                    <div class="relative max-w-[384px] mx-auto">
+                    <div class="relative max-w-[384px] mx-auto ">
                         <ion-icon name="heart-outline" class="heartIcon sm:flex hidden absolute top-[-15px] left-[-15px] z-10 text-[#C10D10] bg-white rounded-full p-1 text-2xl"></ion-icon>
                         <div class="card rounded-[20px] overflow-hidden bg-white shadow-md">
                             <img class="object-contain" src="./images/Rectangle2.webp" alt="Washing">
