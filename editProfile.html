@@ -127,6 +127,41 @@
             <div id="footer" class="md:block hidden"></div>
         <!-- End Footer -->
 
+        <!-- Warning POP UP -->
+        <div id="popup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden ">
+            <div class="bg-white rounded-lg shadow-lg w-[367px] max-w-md h-[700px] p-2">
+            <div class="flex justify-center">
+                <img src="./images/warningImage.svg" alt="Warning" class="w-[140px] h-[140px]">
+            </div>
+            <h2 class="text-center text-[#C10D10] text-[28px] font-medium">انتبه</h2>
+            <p class=" text-[#2B2F4E] font-medium text-[16px] mb-4">هل انت متاكد من حذف حسابك نهائي !!</p>
+            <span class="text-[#FC0000] text-center leading-relaxed">
+                سوف تفقد بياناتك بشكل نهائي من خلال حذف حسابك أن  
+            </span>
+            <span class="text-[14px] font-normal text-[#2B2F4E]">
+                يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى
+            </span>
+            <div class="flex justify-between mt-2">
+                <button class="bg-[#C10D10] text-white px-6 py-2 w-[155px] h-[58px] rounded-2xl">
+                    لا
+                </button>
+                <button class="bg-white text-[#C10D10] border border-[#C10D10] px-6 py-2 w-[155px] h-[58px] rounded-2xl">
+                    حذف الحساب
+                </button>
+            </div>
+            </div>
+        </div>
+        
+        <script>
+            function showPopup() {
+            document.getElementById("popup").classList.remove("hidden");
+            }
+        
+            function hidePopup() {
+            document.getElementById("popup").classList.add("hidden");
+            }
+        </script>
+
         <script>
             const changePicBtn = document.getElementById('changePicBtn');
             const fileInput = document.getElementById('fileInput');
