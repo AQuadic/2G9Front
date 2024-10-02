@@ -179,14 +179,32 @@
                         </div>
                     <div class="grid gap-6 mb-6 md:grid-cols-2">
                         <div>
-                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">اللون الخارجي</label>
-                            <input type="text" id="name" class="bg-white  text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all outline-none" placeholder=" " required />
+                            <label for="color1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">اللون الداخلي </label>
+                            <input type="color" id="colorPicker1" class="hidden" />
+                            <input 
+                                type="text" 
+                                id="color1" 
+                                class="bg-white text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md transition-all outline-none" 
+                                readonly 
+                                onclick="document.getElementById('colorPicker1').click();" 
+                                required 
+                            />
                         </div>
-
+                        
                         <div>
-                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">اللون الداخلي</label>
-                            <input type="text" id="name" class="bg-white  text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md  transition-all outline-none" placeholder=" " required />
+                            <label for="color2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">اللون الخارجي</label>
+                            <input type="color" id="colorPicker2" class="hidden" />
+                            <input 
+                                type="text" 
+                                id="color2" 
+                                class="bg-white text-gray-900 text-sm rounded-lg block w-full p-2.5 shadow-md transition-all outline-none" 
+                                readonly 
+                                onclick="document.getElementById('colorPicker2').click();" 
+                                required 
+                            />
                         </div>
+                        
+                        
                     </div>
                     </form>
                 </div>
@@ -516,6 +534,20 @@
                     });
                 }
             });
+            </script>
+
+            <script>
+                document.getElementById('colorPicker1').addEventListener('input', function() {
+                    const colorValue1 = this.value; 
+                    document.getElementById('color1').value = colorValue1;
+                    document.getElementById('color1').style.backgroundColor = colorValue1;
+                });
+
+                document.getElementById('colorPicker2').addEventListener('input', function() {
+                    const colorValue2 = this.value; 
+                    document.getElementById('color2').value = colorValue2; 
+                    document.getElementById('color2').style.backgroundColor = colorValue2; 
+                });
             </script>
 </body>
 </html>
