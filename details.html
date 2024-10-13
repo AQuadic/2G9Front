@@ -277,25 +277,39 @@
                                             <ion-icon name="warning-outline"></ion-icon>
                                             الابلاغ عن الاعلان
                                         </button>
-                                        
+
                                         <div id="confirmationModal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50">
                                             <div class="bg-white p-6 rounded-lg sm:max-w-md w-[350px]">
-                                                <button id="closeModal" class=" top-2 right-2 text-gray-500 hover:text-gray-700">
+                                                <button id="closeModal" class="top-2 right-2 text-gray-500 hover:text-gray-700">
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                                                     </svg>
                                                 </button>
-                                                <p class="text-sm text-center font-semibold mb-4">Take action with the ad or advertiser</p>
+                                                <p class="text-[14px] text-center font-semibold mb-4">Take action with the ad or advertiser</p>
                                                 <div class="flex flex-col justify-end gap-4">
                                                     <button id="confirmReport" class="bg-[#C10D10] text-white text-[12px] px-4 py-2 rounded-md">Send a report about the advertisement</button>
                                                     <button id="block" class="bg-[#C10D10] text-white text-[12px] px-4 py-2 rounded-md">Block the advertiser</button>
                                                 </div>
                                             </div>
                                         </div>
-                                        
-                                        
+
+                                        <div id="reportWritingModal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50">
+                                            <div class="bg-white p-6 rounded-lg max-w-md">
+                                                <button id="closeReportWritingModal" class="top-2 right-2 text-gray-500 hover:text-gray-700">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                    </svg>
+                                                </button>
+                                                <p class="text-[14px] font-semibold mb-4">Take action with the ad or advertiser</p>
+                                                <p class="text-[14px] font-semibold mb-4 text-center rounded-md py-3 bg-[#FFE2E2] text-[#C10D10]">Send a report about the ad</p>
+                                                <textarea id="reportTextArea" rows="4" class="w-full border border-gray-300 p-2 rounded-md mb-4" placeholder="Write a report letter..."></textarea>
+                                                <div class="flex flex-col justify-end gap-4">
+                                                    <button id="submitReportButton" class="bg-[#C10D10] text-white text-[12px] px-4 py-2 rounded-md">Send</button>
+                                                    <button id="cancelReportButton" class="bg-gray-300 text-black text-[12px] px-4 py-2 rounded-md">Cancel</button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    
                                 </td>
                             </tr>
                         </tbody>
@@ -336,20 +350,48 @@
 
         <!-- POP UP -->
         <script>
-            const reportButton = document.getElementById('reportButton');
-            const confirmationModal = document.getElementById('confirmationModal');
-            const confirmReportButton = document.getElementById('confirmReport');
-            const closeModalButton = document.getElementById('closeModal');
-            
-            reportButton.addEventListener('click', () => {
-                confirmationModal.classList.remove('hidden');
-            });
+            document.addEventListener('DOMContentLoaded', () => {
+                const reportButton = document.getElementById('reportButton');
+                const confirmationModal = document.getElementById('confirmationModal');
+                const confirmReportButton = document.getElementById('confirmReport');
+                const closeModalButton = document.getElementById('closeModal');
+                const reportWritingModal = document.getElementById('reportWritingModal');
+                const closeReportWritingModalButton = document.getElementById('closeReportWritingModal');
+                const submitReportButton = document.getElementById('submitReportButton');
+                const cancelReportButton = document.getElementById('cancelReportButton');
+                const reportTextArea = document.getElementById('reportTextArea');
         
-            closeModalButton.addEventListener('click', () => {
-                confirmationModal.classList.add('hidden');
+                reportButton.addEventListener('click', () => {
+                    confirmationModal.classList.remove('hidden');
+                });
+        
+                closeModalButton.addEventListener('click', () => {
+                    confirmationModal.classList.add('hidden');
+                });
+        
+                confirmReportButton.addEventListener('click', () => {
+                    confirmationModal.classList.add('hidden');
+                    reportWritingModal.classList.remove('hidden'); 
+                });
+        
+                closeReportWritingModalButton.addEventListener('click', () => {
+                    reportWritingModal.classList.add('hidden');
+                });
+        
+                submitReportButton.addEventListener('click', () => {
+                    const reportText = reportTextArea.value;
+                    if (reportText.trim() !== "") {
+                        console.log("Report submitted:", reportText);
+                        reportWritingModal.classList.add('hidden'); 
+                        reportTextArea.value = "";
+                    }
+                });
+        
+                cancelReportButton.addEventListener('click', () => {
+                    reportWritingModal.classList.add('hidden');
+                });
             });
         </script>
-        
         
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
         <script src="./js/script.js"></script>
