@@ -273,10 +273,27 @@
                                             <ion-icon name="link-outline"></ion-icon>
                                             نشر الإعلان
                                         </button>
-                                        <button class="text-[#C10D10] bg-white border border-[#C10D10] flex items-center justify-center gap-2 font-medium rounded-lg text-sm w-56 px-4 py-2 mt-2 lg:mt-0">
+                                        <button id="reportButton" class="text-[#C10D10] bg-white border border-[#C10D10] flex items-center justify-center gap-2 font-medium rounded-lg text-sm w-56 px-4 py-2 mt-2 lg:mt-0">
                                             <ion-icon name="warning-outline"></ion-icon>
                                             الابلاغ عن الاعلان
                                         </button>
+                                        
+                                        <div id="confirmationModal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50">
+                                            <div class="bg-white p-6 rounded-lg sm:max-w-md w-[350px]">
+                                                <button id="closeModal" class=" top-2 right-2 text-gray-500 hover:text-gray-700">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                    </svg>
+                                                </button>
+                                                <p class="text-sm text-center font-semibold mb-4">Take action with the ad or advertiser</p>
+                                                <div class="flex flex-col justify-end gap-4">
+                                                    <button id="confirmReport" class="bg-[#C10D10] text-white text-[12px] px-4 py-2 rounded-md">Send a report about the advertisement</button>
+                                                    <button id="block" class="bg-[#C10D10] text-white text-[12px] px-4 py-2 rounded-md">Block the advertiser</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
                                     </div>
                                     
                                 </td>
@@ -316,6 +333,23 @@
                 modal.classList.add('hidden');
             }
         </script>
+
+        <!-- POP UP -->
+        <script>
+            const reportButton = document.getElementById('reportButton');
+            const confirmationModal = document.getElementById('confirmationModal');
+            const confirmReportButton = document.getElementById('confirmReport');
+            const closeModalButton = document.getElementById('closeModal');
+            
+            reportButton.addEventListener('click', () => {
+                confirmationModal.classList.remove('hidden');
+            });
+        
+            closeModalButton.addEventListener('click', () => {
+                confirmationModal.classList.add('hidden');
+            });
+        </script>
+        
         
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
         <script src="./js/script.js"></script>
