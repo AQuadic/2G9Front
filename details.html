@@ -29,6 +29,11 @@
         --swiper-navigation-color: #C10D10;
     }
 
+    .modalSwiper {
+        --swiper-navigation-size: 24px;
+        --swiper-navigation-color: #C10D10;
+    }
+
     @media (max-width: 640px) {
         .mySwiper {
         --swiper-navigation-size: 30px;
@@ -42,42 +47,49 @@
         <!-- End Navbar -->
 
         <!-- Start Slider -->
-            <div class="container mx-auto mt-5">
-                <swiper-container  class="mySwiper"
-                    thumbs-swiper=".mySwiper2" space-between="10" navigation="true">
-                    <swiper-slide class="flex justify-center pr-12 pl-12">
-                        <img src="./images/photo.png" class="w-[828px] sm:h-[620px] h-[200px] rounded-[10px] object-cover" />
-                    </swiper-slide>
-                    <swiper-slide class="flex justify-center pr-12 pl-12">
-                        <img src="./images/photo.png" class="w-[828px] sm:h-[620px] h-[200px] rounded-[10px] object-cover" />
-                    </swiper-slide>
-                    <swiper-slide class="flex justify-center pr-12 pl-12">
-                        <img src="./images/photo.png" class="w-[828px] sm:h-[620px] h-[200px] rounded-[10px] object-cover" />
-                    </swiper-slide>
-                </swiper-container>
-            
-                <swiper-container class="mySwiper2 p-10 mx-auto w-full max-w-[600px] " space-between="10" slides-per-view="4" free-mode="true"
-                    watch-slides-progress="true">
-                    <swiper-slide>
-                        <img src="./images/photo.png" class="w-full h-[75px] object-cover rounded-[10px] border-2 border-[#C10D10]" />
-                    </swiper-slide>
-                    <swiper-slide>
-                        <img src="./images/photo.png" class="w-full h-[75px] object-cover rounded-[10px]" />
-                    </swiper-slide>
-                    <swiper-slide>
-                        <img src="./images/photo.png" class="w-full h-[75px] object-cover rounded-[10px]" />
-                    </swiper-slide>
-                    <swiper-slide>
-                        <img src="./images/photo.png" class="w-full h-[75px] object-cover rounded-[10px]" />
-                    </swiper-slide>
-                    <swiper-slide>
-                        <img src="./images/photo.png" class="w-full h-[75px] object-cover rounded-[10px]" />
-                    </swiper-slide>
-                    <swiper-slide>
-                        <img src="./images/photo.png" class="w-full h-[75px] object-cover rounded-[10px]" />
-                    </swiper-slide>
-                </swiper-container>
+        <div class="relative container mx-auto mt-5">
+            <swiper-container  class="mySwiper" 
+                thumbs-swiper=".mySwiper2" space-between="10" navigation="true">
+                <swiper-slide class="flex justify-center pr-12 pl-12">
+                    <img src="./images/photo.png" class="w-[828px] sm:h-[620px] h-[200px] rounded-[10px] object-cover" onclick="openModal(0)" />
+                </swiper-slide>
+                <swiper-slide class="flex justify-center pr-12 pl-12">
+                    <img src="./images/photo.png" class="w-[828px] sm:h-[620px] h-[200px] rounded-[10px] object-cover" onclick="openModal(1)" />
+                </swiper-slide>
+                <swiper-slide class="flex justify-center pr-12 pl-12">
+                    <img src="./images/photo.png" class="w-[828px] sm:h-[620px] h-[200px] rounded-[10px] object-cover" onclick="openModal(2)" />
+                </swiper-slide>
+            </swiper-container>
+        
+            <swiper-container class="mySwiper2 p-10 mx-auto w-full max-w-[600px] " space-between="10" slides-per-view="4" free-mode="true" 
+                watch-slides-progress="true">
+                <swiper-slide>
+                    <img src="./images/photo.png" class="w-full h-[75px] object-cover rounded-[10px] border-2 border-[#C10D10]" />
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="./images/photo.png" class="w-full h-[75px] object-cover rounded-[10px]" />
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="./images/photo.png" class="w-full h-[75px] object-cover rounded-[10px]" />
+                </swiper-slide>
+            </swiper-container>
+            <div id="modal" class="fixed inset-0 z-50 hidden flex justify-center items-center bg-gray-900 bg-opacity-75">
+                <div class=" w-full max-w-[930px]">
+                    <button class="absolute top-2 right-2 text-white text-3xl z-50" onclick="closeModal()">&times;</button>
+                    <swiper-container class="modalSwiper" space-between="10" navigation="true">
+                        <swiper-slide>
+                            <img src="./images/photo.png" class="w-full h-[620px] rounded-[10px] object-cover" />
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img src="./images/photo.png" class="w-full h-[620px] rounded-[10px] object-cover" />
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img src="./images/photo.png" class="w-full h-[620px] rounded-[10px] object-cover" />
+                        </swiper-slide>
+                    </swiper-container>
+                </div>
             </div>
+        </div>
         <!-- End Slider -->
 
         <!-- Start Content -->
@@ -272,6 +284,22 @@
         <!-- Start Footer --> 
             <div id="footer" class="md:block hidden"></div>
         <!-- End Footer -->
+
+        
+        <script>
+            function openModal(index) {
+                const modal = document.getElementById('modal');
+                const modalSwiper = document.querySelector('.modalSwiper').swiper;
+        
+                modal.classList.remove('hidden');
+                modalSwiper.slideTo(index);
+            }
+        
+            function closeModal() {
+                const modal = document.getElementById('modal');
+                modal.classList.add('hidden');
+            }
+        </script>
         
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
         <script src="./js/script.js"></script>
