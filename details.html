@@ -94,8 +94,8 @@
 
         <!-- Start Content -->
             <div class="container mx-auto">
-                <div class="lg:pr-10 flex md:flex-row flex-col items-center justify-between gap-10 ml-10 ">
-                    <div class="flex items-center justify-between w-full max-w-md  border border-[#BCBEC0] rounded-lg p-2 space-x-4">
+                <div class="lg:pr-10 flex md:flex-row flex-col md:items-center items-start justify-between gap-10 md:ml-10 pl-4 sm:pl-0">
+                    <div class="flex items-center justify-between w-auto max-w-md  border border-[#BCBEC0] rounded-lg p-2 space-x-4 mx-4 md:mx-0">
                         <div class="flex items-center gap-2 space-x-2">
                             <span class="text-[#6D6E70] font-bold">خليجي</span>
                             <img src="./images/global.svg" alt="global">
@@ -110,7 +110,7 @@
                         </div>
                     </div>
 
-                    <div class="flex gap-5">
+                    <div class="flex gap-5 pr-4">
                         <img src="./images/trash-can-outline.svg" class="border-[1px] border-[#C10D10] rounded-md cursor-pointer p-1" alt="">
                         <button class="font-normal text-[18px] text-[#1C1C1C] border border-[#1C1C1C] rounded-[10px] w-[125px] ">تعديل الاعلان</button>
                         <a href="./adsPromotion.html">
@@ -119,9 +119,9 @@
                     </div>
                     
                 </div>
-                <h2 class="font-bold mt-3 rtl:pr-10 ltr:pl-10 md:text-2xl">تسلا موديل اكس - بحالة جيدة جدا شامل الشاحن الاصلي ومحطة شحن المنزل</h2>
+                <h2 class="font-bold mt-3 rtl:md:pr-10 ltr:md:pl-10 rtl:pr-4 ltr:pl-4 md:text-2xl">تسلا موديل اكس - بحالة جيدة جدا شامل الشاحن الاصلي ومحطة شحن المنزل</h2>
 
-                <div class="pr-10 sm:flex gap-2  ml-10 justify-between items-center text-2xl">
+                <div class="md:rtl:pr-10 rtl:pr-4  ltr:md:pl-0 ltr:pl-4 sm:flex gap-2  md:ml-10 justify-between items-center text-2xl">
                     <p class="text-[#C10D10] font-bold mt-4">80,000 <span class="text-black">د.إ</span> </p>                    
                 </div>
 
@@ -247,36 +247,43 @@
                             </tr>
                             <tr class="bg-white border-b">
                                 <th scope="row" class="px-2 py-2 whitespace-normal">
-                                    <h1 class="text-[#C10D10] font-bold mb-2">تواصل مع البائع</h1>
-                                    <div class="relative flex items-center gap-2">
+                                    <h1 class="text-[#C10D10] font-bold mb-2">بيانات المعلن</h1>
+                                </th>
+                                <td class="px-2 py-2 text-black">
+                                    <div class="relative flex items-center gap-2 mr-6 mb-[10px]">
                                         <img src="./images/Ellipse1830.webp" class="w-10 h-10 rounded-full" alt="user">
                                         <img src="./images/Vector.svg" class="absolute rtl:right-8 ltr:left-8 top-0" alt="check">
                                         <div class="rtl:mr-2 ltr:ml-2">
-                                            <h2>سلطان</h2>
-                                            <p class="font-normal text-xs">حساب موثق</p>
+                                            <h2 class="font-medium text-[20px] leading-[27.8px]">سلطان</h2>
+                                            <p class="font-bold text-xs text-[#39CE8A]">حساب موثق</p>
                                         </div>
                                     </div>
-                                </th>
-                                <td class="px-2 py-2 text-black">
                                     <div class="flex gap-3 mr-6">
-                                        <button class="bg-[#B8B8B8] text-white font-semibold py-2 px-3 border rounded-md flex items-center gap-5">
-                                            الهاتف
+                                        <button class="bg-[#B8B8B8] text-white font-semibold py-2 px-3 border rounded-md flex items-center gap-5 sm:w-[133px] w-[48px] h-[48px] justify-center">
                                             <ion-icon name="call"></ion-icon>
+                                            <p class="sm:flex hidden">الهاتف</p>
                                         </button>
-                                        <button class="bg-[#39CE8A] text-white font-semibold py-2 px-3 border rounded-md flex items-center gap-5">
-                                            واتساب
+                                        <button class="bg-[#39CE8A] text-white font-semibold py-2 px-3 border rounded-md flex items-center gap-5 sm:w-[143px] w-[48px] h-[48px] justify-center">
                                             <ion-icon name="logo-whatsapp"></ion-icon>
+                                            <p class="sm:flex hidden">واتساب</p>
+                                        </button>
+                                        <button class="text-white bg-[#C10D10] flex items-center justify-center gap-2 font-medium rounded-lg text-sm sm:w-[141.39px] w-[48.39px] px-4 py-2">
+                                            <ion-icon name="link-outline"></ion-icon>
+                                            <p class="sm:flex hidden">نشر الإعلان</p>
                                         </button>
                                     </div>
                                     <div class="flex lg:flex-row flex-col mt-4 gap-2 mr-6">
-                                        <button class="text-white bg-[#C10D10] flex items-center justify-center gap-2 font-medium rounded-lg text-sm w-56 px-4 py-2">
-                                            <ion-icon name="link-outline"></ion-icon>
-                                            نشر الإعلان
-                                        </button>
-                                        <button id="reportButton" class="text-[#C10D10] bg-white border border-[#C10D10] flex items-center justify-center gap-2 font-medium rounded-lg text-sm w-56 px-4 py-2 mt-2 lg:mt-0">
+                                    
+                                    <tr>
+                                        <th></th>
+                                        <td class="py-5 md:pr-24">
+                                            <button id="reportButton" class="text-[#C10D10] bg-white border border-[#C10D10] flex items-center justify-center gap-2 font-medium rounded-lg text-sm w-56 px-4 py-2 mt-2 lg:mt-0">
                                             <ion-icon name="warning-outline"></ion-icon>
                                             الابلاغ عن الاعلان
-                                        </button>
+                                            </button>
+                                    </td>
+                                    </tr>
+                                    
 
                                         <div id="confirmationModal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50">
                                             <div class="bg-white p-6 rounded-lg sm:max-w-md w-[350px]">
