@@ -48,8 +48,7 @@
 
         <!-- Start Slider -->
         <div class="relative container mx-auto mt-5">
-            <swiper-container  class="mySwiper" 
-                thumbs-swiper=".mySwiper2" space-between="10" navigation="true">
+            <swiper-container class="mySwiper" thumbs-swiper=".mySwiper2" space-between="10" navigation="true">
                 <swiper-slide class="flex justify-center pr-12 pl-12">
                     <img src="./images/photo.png" class="w-[828px] sm:h-[620px] h-[200px] rounded-[10px] object-cover" onclick="openModal(0)" />
                 </swiper-slide>
@@ -60,19 +59,19 @@
                     <img src="./images/photo.png" class="w-[828px] sm:h-[620px] h-[200px] rounded-[10px] object-cover" onclick="openModal(2)" />
                 </swiper-slide>
             </swiper-container>
-        
-            <swiper-container class="mySwiper2 p-10 mx-auto w-full max-w-[600px] " space-between="10" slides-per-view="4" free-mode="true" 
-                watch-slides-progress="true">
+            
+            <swiper-container class="mySwiper2 p-10 w-full max-w-[600px]" space-between="10" slides-per-view="4" free-mode="true" watch-slides-progress="true">
                 <swiper-slide>
-                    <img src="./images/photo.png" class="w-full h-[75px] object-cover rounded-[10px] border-2 border-[#C10D10]" />
+                    <img src="./images/photo.png" class="thumbnail w-full h-[75px] object-cover rounded-[10px]" onclick="highlightThumbnail(this)" />
                 </swiper-slide>
                 <swiper-slide>
-                    <img src="./images/photo.png" class="w-full h-[75px] object-cover rounded-[10px]" />
+                    <img src="./images/photo.png" class="thumbnail w-full h-[75px] object-cover rounded-[10px]" onclick="highlightThumbnail(this)" />
                 </swiper-slide>
                 <swiper-slide>
-                    <img src="./images/photo.png" class="w-full h-[75px] object-cover rounded-[10px]" />
+                    <img src="./images/photo.png" class="thumbnail w-full h-[75px] object-cover rounded-[10px]" onclick="highlightThumbnail(this)" />
                 </swiper-slide>
             </swiper-container>
+            
             <div id="modal" class="fixed inset-0 z-50 hidden flex justify-center items-center bg-gray-900 bg-opacity-75">
                 <div class=" w-full max-w-[930px]">
                     <button class="absolute top-2 right-2 text-white text-3xl z-50" onclick="closeModal()">&times;</button>
@@ -250,7 +249,7 @@
                                     <h1 class="text-[#C10D10] font-bold mb-2">بيانات المعلن</h1>
                                 </th>
                                 <td class="px-2 py-2 text-black">
-                                    <div class="relative flex items-center gap-2 mr-6 mb-[10px]">
+                                    <div class="relative flex items-center gap-2 mb-[10px]">
                                         <img src="./images/Ellipse1830.webp" class="w-10 h-10 rounded-full" alt="user">
                                         <img src="./images/Vector.svg" class="absolute rtl:right-8 ltr:left-8 top-0" alt="check">
                                         <div class="rtl:mr-2 ltr:ml-2">
@@ -258,7 +257,7 @@
                                             <p class="font-bold text-xs text-[#39CE8A]">حساب موثق</p>
                                         </div>
                                     </div>
-                                    <div class="flex gap-3 mr-6">
+                                    <div class="flex gap-3">
                                         <button class="bg-[#B8B8B8] text-white font-semibold py-2 px-3 border rounded-md flex items-center gap-5 sm:w-[133px] w-[48px] h-[48px] justify-center">
                                             <ion-icon name="call"></ion-icon>
                                             <p class="sm:flex hidden">الهاتف</p>
@@ -276,7 +275,7 @@
                                     
                                     <tr>
                                         <th></th>
-                                        <td class="py-5 md:pr-24">
+                                        <td class="py-5 flex items-center md:rtl:pr-24 md:ltr:pl-24">
                                             <button id="reportButton" class="text-[#C10D10] bg-white border border-[#C10D10] flex items-center justify-center gap-2 font-medium rounded-lg text-sm w-56 px-4 py-2 mt-2 lg:mt-0">
                                             <ion-icon name="warning-outline"></ion-icon>
                                             الابلاغ عن الاعلان
@@ -323,10 +322,10 @@
                     </table>
                 </div>
                 
-                <div class="flex items-center justify-center gap-2">
+                <!-- <div class="flex items-center justify-center gap-2">
                     <img src="./images/warning.svg" alt="warning">
                     <p class="text-[17px] font-medium text-[#C10D10] cursor-pointer">حذف الاعلان</p>
-                </div>
+                </div> -->
                 
             </div>
         <!-- End Content -->
@@ -398,6 +397,14 @@
                     reportWritingModal.classList.add('hidden');
                 });
             });
+        </script>
+
+        <script>
+            function highlightThumbnail(selectedImage) {
+                const thumbnails = document.querySelectorAll('.thumbnail');
+                thumbnails.forEach(img => img.classList.remove('border-2', 'border-[#C10D10]'));
+                selectedImage.classList.add('border-2', 'border-[#C10D10]');
+            }
         </script>
         
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
