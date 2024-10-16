@@ -25,6 +25,29 @@
     body {
             font-family: "Noto Kufi Arabic", sans-serif;
         }
+        .filter-btn {
+    position: relative;
+    background-color: transparent;
+    transition: color 0.3s;
+}
+
+.filter-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #C10D10;
+    transition: width 0.4s ease-in-out;
+}
+
+.filter-btn.active::after {
+    width: 100%;
+    right: 0;
+    left: auto;
+}
+
     .gradient-border {
     border-width: 3px;
     border-style: solid;
@@ -71,13 +94,15 @@
             <div class="container mx-auto mt-4 px-4 mb-8">
                 <!-- Buttons -->
                 <div class="flex gap-3 flex-row lg:gap-5 mb-6">
-                    <button onclick="filterCards('all')" class="filter-btn bg-[#C10D10] font-semibold py-2 px-4 border text-white rounded w-full text-[12px] md:text-base sm:text-[15px] lg:w-[200px]">
+                    <button onclick="filterCards('all')" class="filter-btn active font-semibold py-2 px-4  text-black rounded  text-[12px] md:text-base sm:text-[15px] w-auto">
                         الكل
+                        <div class="w-6 h-2 text-[#C10D10]"></div>
+
                     </button>
-                    <button onclick="filterCards('ads')" class="filter-btn bg-transparent text-black font-semibold py-2 px-4 border border-[#C10D10] rounded w-full text-[12px] md:text-base sm:text-[15px] lg:w-[200px]">
+                    <button onclick="filterCards('ads')" class="filter-btn bg-transparent text-black font-semibold py-2 px-4  rounded text-[12px] md:text-base sm:text-[15px] w-auto">
                         أبرز الإعلانات التجارية
                     </button>
-                    <button onclick="filterCards('personal')" class="filter-btn bg-transparent text-black font-semibold py-2 px-4 border border-[#C10D10] rounded w-full text-[12px] md:text-base sm:text-[15px] lg:w-[200px]">
+                    <button onclick="filterCards('personal')" class="filter-btn bg-transparent text-black font-semibold py-2 px-4 rounded text-[12px] md:text-base sm:text-[15px] w-auto">
                         أبرز الإعلانات الشخصية
                     </button>
                 </div>

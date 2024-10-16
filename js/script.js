@@ -45,27 +45,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Swap Buttons in Index
 function filterCards(category) {
-const cards = document.querySelectorAll('.card');
-const buttons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.card');
+    const buttons = document.querySelectorAll('.filter-btn');
 
-buttons.forEach(btn => {
-if (btn.textContent.trim() === getButtonText(category)) {
-    btn.classList.remove('bg-transparent', 'text-black', 'border-[#C10D10]');
-    btn.classList.add('bg-[#C10D10]', 'text-white');
-} else {
-    btn.classList.remove('bg-[#C10D10]', 'text-white');
-    btn.classList.add('bg-transparent', 'text-black', 'border-[#C10D10]');
-}
-});
+    buttons.forEach(btn => {
+        if (btn.textContent.trim() === getButtonText(category)) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
 
-cards.forEach(card => {
-    if (category === 'all' || card.dataset.category === category) {
-        card.classList.remove('hidden');
-    } else {
-        card.classList.add('hidden');
-    }
-});
+    cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+            card.classList.remove('hidden');
+        } else {
+            card.classList.add('hidden');
+        }
+    });
 }
+
 
 function getButtonText(category) {
 switch(category) {
