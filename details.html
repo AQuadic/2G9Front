@@ -128,7 +128,7 @@
                     <table class="min-w-full table-fixed text-sm text-left rtl:text-right border border-[#E0E0E0]">
                         <tbody>
                             <tr class="bg-white border-b">
-                                <th scope="row" class="px-2 py-2 font-medium text-black whitespace-normal">
+                                <th scope="row" class="w-full sm:w-auto px-2 py-2 font-medium text-black whitespace-normal">
                                     نوع الجسم
                                 </th>
                                 <td class="px-2 py-2 text-black">
@@ -199,20 +199,20 @@
                                     <div class="w-100 h-4 rounded-[2px] border border-black" style="background-color: #c51010"></div>
                                 </td>
                             </tr>
-                            <tr class="bg-white border-b">
-                                <th scope="row" class="px-2 py-2 font-medium text-black whitespace-normal">
+                            <tr class="relative bg-white border-b">
+                                <th scope="row" class="align-top  px-2 py-2 font-medium text-black whitespace-normal">
                                     الوصف
                                 </th>
                                 <td class="px-2 py-2 text-black">
-                                    <p class="w-1/2">
+                                    <p>
                                         تسلا موديل اكس هي سيارة كهربائية فاخرة بتصميم مبتكر و أداء مذهل .
                                         تتميز بمقصورة فسيحة و مريحة تتسع للعديد من الركاب، وتأتي مزودة
                                         بتقنيات حديثة تجعل تجربة القيادة أكثر راحة و سهولة.
                                     </p>
                                 </td>
                             </tr>
-                            <tr class="bg-white border-b">
-                                <th scope="row" class="px-2 py-2 font-medium text-gray-900 whitespace-normal">
+                            <tr class="relative bg-white border-b">
+                                <th scope="row" class="align-top  px-2 py-2 font-medium text-gray-900 whitespace-normal">
                                     مواصفات أضافية
                                 </th>
                                 <td class="px-2 py-2 text-black">
@@ -244,8 +244,8 @@
                                     </div>
                                 </td>
                             </tr>
-                            <tr class="bg-white border-b">
-                                <th scope="row" class="px-2 py-2 whitespace-normal">
+                            <tr class="relative bg-white border-b">
+                                <th scope="row" class="align-top  px-2 py-2 whitespace-normal">
                                     <h1 class="text-[#C10D10] font-bold mb-2">بيانات المعلن</h1>
                                 </th>
                                 <td class="px-2 py-2 text-black">
@@ -273,16 +273,15 @@
                                     </div>
                                     <div class="flex lg:flex-row flex-col mt-4 gap-2 mr-6">
                                     
-                                    <tr>
-                                        <th></th>
-                                        <td class="py-5 flex items-center md:rtl:pr-24 md:ltr:pl-24">
-                                            <button id="reportButton" class="text-[#C10D10] bg-white border border-[#C10D10] flex items-center justify-center gap-2 font-medium rounded-lg text-sm w-56 px-4 py-2 mt-2 lg:mt-0">
-                                            <ion-icon name="warning-outline"></ion-icon>
-                                            الابلاغ عن الاعلان
-                                            </button>
-                                    </td>
-                                    </tr>
-                                    
+                                        <tr>
+                                            <th colspan="2" class="p-5 md:rtl:pr-56 md:ltr:pl-56">
+                                                <button id="reportButton" class="sm:w-[317px] text-[#C10D10] bg-white border border-[#C10D10] flex items-center justify-center gap-2 font-medium rounded-lg text-sm w-full px-4 py-2 mt-2 lg:mt-0 ">
+                                                    <ion-icon name="warning-outline"></ion-icon>
+                                                    الابلاغ عن الاعلان
+                                                </button>
+                                            </th>
+                                        </tr>
+                                                                            
 
                                         <div id="confirmationModal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50">
                                             <div class="bg-white p-6 rounded-lg sm:max-w-md w-[350px]">
